@@ -686,7 +686,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				 accessibilityName="{ResourceUtil.getInstance().getString('bbb.chat.input.accessibilityName')}" />
     <mx:VBox verticalScrollPolicy="off" verticalAlign="middle" height="100%" >
       <mx:Button label="{ResourceUtil.getInstance().getString('bbb.chat.sendBtn')}" id="sendBtn"
-                 styleName="chatControlBarSendButtonStyle"
+                 styleName="chatControlBarSendButtonStyle" fillColors="{[579fd7,42aefc,32a5fd,229cfd]}"
                  toolTip="{ResourceUtil.getInstance().getString('bbb.chat.sendBtn.toolTip')}" 
                  click="sendMessages()"
                  tabIndex="{baseIndex+2}"
