@@ -509,7 +509,7 @@
 		itemRollOut="onItemRollOut(event)"
 		tabIndex="{partOptions.baseTabIndex+5}"
 		accessibilityName="{ResourceUtil.getInstance().getString('bbb.users.usersGrid.accessibilityName')}"  
-		horizontalGridLines="false" verticalGridLines="false" showHeaders="false">
+		horizontalGridLines="false" verticalGridLines="false" showHeaders="false" alternatingItemColors="{[0xffffff,0xffffff]}">
     	<mx:columns>
     		<mx:DataGridColumn dataField="userStatus" headerText="{ResourceUtil.getInstance().getString('bbb.users.usersGrid.statusItemRenderer')}" editable="false" width="45" minWidth="45"
     			itemRenderer="org.bigbluebutton.modules.users.views.StatusItemRenderer" sortable="false" />
