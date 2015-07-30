@@ -16,3 +16,5 @@ bbb-api-demo/.project
 bigbluebutton-web/.settings*
 bigbluebutton-web/.classpath
 bigbluebutton-web/.project
+bigbluebutton-client/bin-release
+bigbluebutton-client/bin-release/*.*
