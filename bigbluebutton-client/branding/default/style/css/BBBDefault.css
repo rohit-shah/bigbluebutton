@@ -371,6 +371,11 @@ DataGrid {
 
 
 
+.presentationFileUploadWindowTitleStyle, .presentationUploadTitleStyle {
+	fontFamily: Arial;
+	fontSize: 20;  
+	fontWeight: bold;
+}
 
 .presentationNamesLabelStyle {
   fontFamily: Arial;
@@ -853,11 +858,6 @@ Alert {
 	fontWeight: 12;
 }
 
-.presentationFileUploadWindowTitleStyle, .presentationUploadTitleStyle {
-	fontFamily: Arial;
-	fontSize: 24;  
-	fontWeight: bold;
-}
 
 .listLikeDatagridStyle{
 	horizontalGridLines: false;
