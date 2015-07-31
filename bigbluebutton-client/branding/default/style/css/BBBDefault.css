@@ -851,7 +851,7 @@ Alert {
 .whiteButtonStyle{
 	cornerRadius: 5;
 	fontWeight: 12;
-	fillColors: #fefeff, #e1e2e5, #ffffff, #eeeeee;
+	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
 .lightBlueButtonStyle{
 	color: #ffffff;
