@@ -46,6 +46,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			import mx.accessibility.AlertAccImpl;
 			import mx.controls.Alert;
 			import mx.core.FlexGlobals;
+			import mx.core.IFlexDisplayObject;
 			import mx.core.UIComponent;
 			import mx.events.CloseEvent;
 			import mx.managers.PopUpManager;
@@ -206,6 +207,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				if (e.detail==Alert.YES) {
 					doLogout();
 				}
+				PopUpManager.removePopUp(e.target as IFlexDisplayObject);
 			}
 			
 			private function doLogout():void {

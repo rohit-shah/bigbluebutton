@@ -44,11 +44,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				 text="{ResourceUtil.getInstance().getString('bbb.logout.confirm.message')}"/>
 		<mx:HBox width="100%" paddingLeft="5" paddingTop="0" horizontalAlign="right" verticalAlign="middle"> 
 			<mx:Button id="closeButton" label="{ResourceUtil.getInstance().getString('bbb.window.closeBtn.toolTip')}" 
-					   click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE,false,Alert.NO))" styleName="whiteButtonStyle"
+					   click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE))" styleName="whiteButtonStyle"
 					   fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"/>
-			<mx:Button id="uploadBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn')}" 
-					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn.toolTip')}"  
-					   click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE,false,Alert.YES))"
+			<mx:Button id="uploadBtn" label="{ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn')}" 
+					   click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE,false,false,Alert.YES))"
 					   styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}" />
 		</mx:HBox>
 	</mx:VBox>
