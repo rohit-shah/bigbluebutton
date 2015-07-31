@@ -153,16 +153,7 @@ DataGrid {
   fontSize: 12;
 }
 
-/*new button styles*/
-.whiteButtonStyle{
-	cornerRadius: 5;
-}
-.lightBlueButtonStyle{
-	color: #ffffff;
-	cornerRadius: 5;
-}
 
-/*new button styles*/
 
 .whiteboardUndoButtonStyle, .whiteboardCircleButtonStyle, .whiteboardClearButtonStyle,
 .whiteboardTriangleButtonStyle, .whiteboardTextButtonStyle, .whiteboardRectangleButtonStyle,
@@ -378,20 +369,6 @@ DataGrid {
   icon:   Embed('assets/images/webcam-private-chat.png');
 }
 
-.presentationFileUploadWindowStyle {
-  borderAlpha: 0;
-  borderThicknessLeft: 0;
-  borderThicknessTop: 0;
-  borderThicknessBottom: 0;
-  borderThicknessRight: 0;
-  roundedBottomCorners: true;
-  cornerRadius: 5;
-  headerHeight: 0;
-  backgroundAlpha: 1;
-  backgroundColor: #ffffff;
-  dropShadowEnabled: false;
-  titleStyleName: "presentationFileUploadWindowTitleStyle";
-}
 
 .presentationFileUploadWindowTitleStyle, .presentationUploadTitleStyle {
   fontFamily: Arial;
@@ -868,3 +845,39 @@ Alert {
   fontSize: 12;
   paddingTop: 0;
 }
+
+/*new styles*/
+.whiteButtonStyle{
+	cornerRadius: 5;
+}
+.lightBlueButtonStyle{
+	color: #ffffff;
+	cornerRadius: 5;
+}
+.listLikeDatagridStyle{
+	horizontalGridLines: false;
+	verticalGridLines: false;
+	showHeaders: false;
+	alternatingItemColors: #ffffff, #ffffff;
+}
+
+
+.presentationFileUploadWindowStyle {
+	borderAlpha: 0;
+	borderThicknessLeft: 0;
+	borderThicknessTop: 0;
+	borderThicknessBottom: 0;
+	borderThicknessRight: 0;
+	roundedBottomCorners: true;
+	cornerRadius: 5;
+	headerHeight: 0;
+	backgroundAlpha: 1;
+	backgroundColor: #ffffff;
+	dropShadowEnabled: false;
+	paddingLeft: 20;
+	paddingRight: 20;
+	paddingTop: 20;
+	paddingBottom: 20;
+	titleStyleName: "presentationFileUploadWindowTitleStyle";
+}
+/*new styles*/
