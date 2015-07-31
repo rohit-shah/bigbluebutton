@@ -865,7 +865,6 @@ Alert {
 .listLikeDatagridStyle{
 	horizontalGridLines: false;
 	verticalGridLines: false;
-	showHeaders: false;
 	alternatingItemColors: #ffffff, #ffffff;
 }
 
