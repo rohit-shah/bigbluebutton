@@ -191,13 +191,14 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function confirmLogout():void {
 				if (toolbarOptions.confirmLogout){
 					// Confirm logout using built-in alert
-					var alert:Alert = Alert.show(ResourceUtil.getInstance().getString('bbb.logout.confirm.message'), ResourceUtil.getInstance().getString('bbb.logout.confirm.title'), Alert.YES | Alert.NO, this, alertLogout, null, Alert.YES);
+					var alert:Alert = Alert.show(ResourceUtil.getInstance().getString('bbb.logout.confirm.message'), ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn'), Alert.YES | Alert.NO, this, alertLogout, null, Alert.YES);
 					
 					var newX:Number = btnLogout.x + btnLogout.width - alert.width;
 					var newY:Number = btnLogout.y + btnLogout.height + 5;
 					alert.mx_internal::alertForm.addEventListener(FlexEvent.UPDATE_COMPLETE, alertForm_updateHandler);					
 					alert.validateNow();
 					alert.move(newX, newY);
+					alert.setStyle('styleName','presentationFileUploadWindowStyle');
 					//Accessibility.updateProperties();
 				}
 				else{
@@ -340,15 +341,21 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			protected function alertForm_updateHandler(event:FlexEvent):void
 			{
+				var form:UIComponent=event.target as UIComponent;
 				var buttons:Array = event.target.mx_internal::buttons;
-				buttons[0].setStyle('styleName','whiteButtonStyle');
-				buttons[1].setStyle('styleName','lightBlueButtonStyle');
 				
+				var closeButton:Button=buttons[1] as Button;
+				closeButton.setStyle('styleName','whiteButtonStyle');
+				closeButton.label=ResourceUtil.getInstance().getString('bbb.window.closeBtn.toolTip');
+				
+				var logoutButton:Button=buttons[0] as Button;
+				logoutButton.setStyle('styleName','lightBlueButtonStyle');
+				logoutButton.label=ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn');
+
 			}
 			
 		]]>
 	</mx:Script>
-	
 	<mx:HBox id="quickLinks" width="1" includeInLayout="false">
 		<mx:LinkButton id="usersLinkBtn" click="onQuickLinkClicked('users')" label="{ResourceUtil.getInstance().getString('bbb.users.quickLink.label')}"
 					   accessibilityDescription="{usersLinkBtn.label}" toolTip="{usersLinkBtn.label}"
