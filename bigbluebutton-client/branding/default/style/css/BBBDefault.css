@@ -370,11 +370,7 @@ DataGrid {
 }
 
 
-.presentationFileUploadWindowTitleStyle, .presentationUploadTitleStyle {
-  fontFamily: Arial;
-  fontSize: 20;  
-  fontWeight: bold;
-}
+
 
 .presentationNamesLabelStyle {
   fontFamily: Arial;
@@ -849,11 +845,20 @@ Alert {
 /*new styles*/
 .whiteButtonStyle{
 	cornerRadius: 5;
+	fontWeight: 12;
 }
 .lightBlueButtonStyle{
 	color: #ffffff;
 	cornerRadius: 5;
+	fontWeight: 12;
 }
+
+.presentationFileUploadWindowTitleStyle, .presentationUploadTitleStyle {
+	fontFamily: Arial;
+	fontSize: 24;  
+	fontWeight: bold;
+}
+
 .listLikeDatagridStyle{
 	horizontalGridLines: false;
 	verticalGridLines: false;
@@ -876,4 +881,6 @@ Alert {
 	dropShadowEnabled: false;
 	titleStyleName: "presentationFileUploadWindowTitleStyle";
 }
+
+
 /*new styles*/
