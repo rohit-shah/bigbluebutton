@@ -20,12 +20,12 @@
 		<mx:TextArea borderSkin="{null}" width="100%"
 					 text="{ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn')}"
 					 editable="false" styleName="presentationUploadTitleStyle"/>
-		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="11"
+		<mx:Text width="100%" paddingLeft="20" paddingBottom="20" fontSize="11"
 				 text="{ResourceUtil.getInstance().getString('bbb.logout.confirm.message')}"/>
 		<mx:HBox width="100%" paddingLeft="5" paddingTop="0" horizontalAlign="right" verticalAlign="middle"> 
 			<mx:Button id="closeButton" label="{ResourceUtil.getInstance().getString('bbb.window.closeBtn.toolTip')}" 
-					   click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE))" styleName="whiteButtonStyle"
-					   fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"/>
+					   click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE))" 
+					   styleName="whiteButtonStyle"  fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"/>
 			<mx:Button id="uploadBtn" label="{ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn')}" 
 					   click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE,false,false,Alert.YES))"
 					   styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}" />
