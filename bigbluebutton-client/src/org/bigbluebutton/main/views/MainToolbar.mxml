@@ -45,8 +45,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			import mx.accessibility.AlertAccImpl;
 			import mx.controls.Alert;
+			import mx.core.FlexGlobals;
 			import mx.core.UIComponent;
 			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
 			
 			import org.bigbluebutton.common.IBbbToolbarComponent;
 			import org.bigbluebutton.common.events.ToolbarButtonEvent;
@@ -185,7 +187,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				if (toolbarOptions.confirmLogout){
 					// Confirm logout using built-in alert
 					var logoutAlert:LogoutAlertWindow = new LogoutAlertWindow;
-					
+					PopUpManager.addPopUp(logoutAlert,FlexGlobals.topLevelApplication as DisplayObject,true);
 					var newX:Number = btnLogout.x + btnLogout.width - logoutAlert.width;
 					var newY:Number = btnLogout.y + btnLogout.height + 5;
 					logoutAlert.validateNow();
