@@ -22,7 +22,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 
 <mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" 
 				xmlns:mate="http://mate.asfusion.com/"
-				minWidth="450" minHeight="400" styleName="presentationFileUploadWindowStyle"
+				minWidth="450" minHeight="500" styleName="presentationFileUploadWindowStyle"
 				initialize="initData();">
 	
 	<mate:Dispatcher id="globalDispatch" />
@@ -310,7 +310,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn.toolTip')}"  click="startUpload()"
 					   enabled="false" styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}" />
 		</mx:HBox>
-		<mx:HBox id="progressReportBox" width="100%" paddingLeft="10" paddingTop="5" paddingBottom="10" includeInLayout="true" visible="false">
+		<mx:HBox id="progressReportBox" width="100%" paddingLeft="10" paddingTop="5" paddingBottom="0" includeInLayout="true" visible="false">
 			<mx:Label id="progBarLbl" text="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}" 
 					  styleName="presentationUploadProgressBarLabelStyle" visible="false"/>
 			<mx:ProgressBar id="progressBar" mode="manual" label="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}"
@@ -319,7 +319,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="11"
 				 text="{ResourceUtil.getInstance().getString('bbb.fileupload.fileFormatHint')}"/>
 		<mx:Canvas width="100%" height="100%" verticalScrollPolicy="off">
-			<mx:List width="100%" height="100%" left="5" top="5" right="5" bottom="5" id="uploadedFilesList" alternatingItemColors="[#FFFFFF, #FFFFFF]" allowMultipleSelection="false"
+			<mx:List width="100%" height="100%" left="0" top="0" right="0" bottom="0" id="uploadedFilesList" alternatingItemColors="[#FFFFFF, #FFFFFF]" allowMultipleSelection="false"
 					 itemRenderer="org.bigbluebutton.modules.present.ui.views.UploadedPresentationRenderer"
 					 dragEnabled="false" dataProvider="{presentationNamesAC}">
 			</mx:List>
