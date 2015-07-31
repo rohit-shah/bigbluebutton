@@ -298,7 +298,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					 editable="false" styleName="presentationUploadTitleStyle"
 					 width="400" left="0"/>
 		<mx:HBox id="fileUploadBox" width="100%" paddingLeft="5" paddingTop="0" verticalAlign="middle"> 
-			<mx:Label id="lblFileName" fontSize="24" width="{fileUploadBox.width-selectBtn.width-uploadBtn.width-30}" selectable="false" click="selectFile()" text="{ResourceUtil.getInstance().getString('bbb.fileupload.lblFileName.defaultText')}" />
+			<mx:Label id="lblFileName" fontSize="12" width="{fileUploadBox.width-selectBtn.width-uploadBtn.width-30}" selectable="false" click="selectFile()" text="{ResourceUtil.getInstance().getString('bbb.fileupload.lblFileName.defaultText')}" />
 			<mx:Button id="selectBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.label')}" 
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.toolTip')}" 
 					   click="selectFile()" styleName="whiteButtonStyle" fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}" 
@@ -313,7 +313,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			<mx:ProgressBar id="progressBar" mode="manual" label="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}"
 							styleName="presentationUploadProgressBarStyle" labelPlacement="center" width="460" visible="false"/>
 		</mx:HBox>
-		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="22"
+		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="11"
 				 text="{ResourceUtil.getInstance().getString('bbb.fileupload.fileFormatHint')}" fontWeight="bold"/>
 		<mx:Canvas width="100%" height="145" verticalScrollPolicy="off">
 			<mx:List width="100%" height="142" left="5" top="5" right="5" bottom="5" id="uploadedFilesList" alternatingItemColors="[#FFFFFF, #FFFFFF]" allowMultipleSelection="false"
