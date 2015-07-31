@@ -159,7 +159,7 @@ DataGrid {
 }
 .lightBlueButtonStyle{
 	color: #ffffff;
-	fillColors: 0x579fd7,0x42aefc;
+	fillColors: #579fd7,#42aefc,#2a5fd,#229cfd;
 	cornerRadius: 5;
 }
 
