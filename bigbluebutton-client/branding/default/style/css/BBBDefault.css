@@ -874,10 +874,6 @@ Alert {
 	backgroundAlpha: 1;
 	backgroundColor: #ffffff;
 	dropShadowEnabled: false;
-	paddingLeft: 20;
-	paddingRight: 20;
-	paddingTop: 20;
-	paddingBottom: 20;
 	titleStyleName: "presentationFileUploadWindowTitleStyle";
 }
 /*new styles*/
