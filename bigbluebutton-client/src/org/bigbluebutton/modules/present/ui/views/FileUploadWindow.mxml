@@ -22,7 +22,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 
 <mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" 
 				xmlns:mate="http://mate.asfusion.com/"
-				layout="absolute" width="415" height="380" styleName="presentationFileUploadWindowStyle"
+				styleName="presentationFileUploadWindowStyle"
 				initialize="initData();">
 	
 	<mate:Dispatcher id="globalDispatch" />
@@ -295,14 +295,16 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mx:VBox width="100%" height="100%" verticalAlign="top" paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20">
 		<mx:TextArea borderSkin="{null}"
 					 text="{ResourceUtil.getInstance().getString('bbb.fileupload.title')}"
-					 editable="false" styleName="presentationUploadTitleStyle"
-					 width="400" left="0"/>
+					 editable="false" styleName="presentationUploadTitleStyle"/>
+		
 		<mx:HBox id="fileUploadBox" width="100%" paddingLeft="5" paddingTop="0" verticalAlign="middle"> 
-			<mx:Label id="lblFileName" fontSize="12" width="{fileUploadBox.width-selectBtn.width-uploadBtn.width-30}" selectable="false" click="selectFile()" text="{ResourceUtil.getInstance().getString('bbb.fileupload.lblFileName.defaultText')}" />
+			<mx:Label id="lblFileName" fontSize="12" 
+					  width="{fileUploadBox.width-selectBtn.width-uploadBtn.width-30}" 
+					  selectable="false" click="selectFile()" 
+					  text="{ResourceUtil.getInstance().getString('bbb.fileupload.lblFileName.defaultText')}" />
 			<mx:Button id="selectBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.label')}" 
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.toolTip')}" 
-					   click="selectFile()" styleName="whiteButtonStyle" fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}" 
-					   cornerRadius="5"/>
+					   click="selectFile()" styleName="whiteButtonStyle" fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"/>
 			<mx:Button id="uploadBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn')}" 
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn.toolTip')}"  click="startUpload()"
 					   enabled="false" styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}" />
@@ -311,7 +313,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			<mx:Label id="progBarLbl" text="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}" 
 					  styleName="presentationUploadProgressBarLabelStyle" visible="false"/>
 			<mx:ProgressBar id="progressBar" mode="manual" label="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}"
-							styleName="presentationUploadProgressBarStyle" labelPlacement="center" width="460" visible="false"/>
+							styleName="presentationUploadProgressBarStyle" labelPlacement="center" width="100%" visible="false"/>
 		</mx:HBox>
 		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="11"
 				 text="{ResourceUtil.getInstance().getString('bbb.fileupload.fileFormatHint')}" fontWeight="bold"/>
