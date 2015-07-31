@@ -301,10 +301,12 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
       <mx:Label id="lblFileName" width="{fileUploadBox.width-selectBtn.width-uploadBtn.width-30}" selectable="false" click="selectFile()" text="{ResourceUtil.getInstance().getString('bbb.fileupload.lblFileName.defaultText')}" />
 	  <mx:Button id="selectBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.label')}" 
 				   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.toolTip')}" 
-				   click="selectFile()" styleName="presentationUploadChooseFileButtonStyle"/>
+				   click="selectFile()" styleName="presentationUploadChooseFileButtonStyle"
+				   cornerRadius="5"/>
       <mx:Button id="uploadBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn')}" 
                  toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn.toolTip')}"  click="startUpload()"
-                 enabled="false" icon="{bulletGoIcon}"/>
+                 enabled="false" icon="{bulletGoIcon}" 
+				 fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}"  color="0xffffff" cornerRadius="5"/>
     </mx:HBox>
     <mx:HBox id="progressReportBox" width="100%" paddingLeft="10" paddingTop="5" paddingBottom="10" includeInLayout="true" visible="false">
       <mx:Label id="progBarLbl" text="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}" 
