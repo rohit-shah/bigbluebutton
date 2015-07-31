@@ -154,10 +154,10 @@ DataGrid {
 }
 
 /*new button styles*/
-.whiteButtonStyle{
+.whiteButtonStyle mx|Button{
 	cornerRadius: 5;
 }
-.lightBlueButtonStyle{
+.lightBlueButtonStyle mx|Button{
 	color: #ffffff;
 	fillColors: 0x579fd7,0x42aefc,0x32a5fd,0x229cfd;
 	cornerRadius: 5;
