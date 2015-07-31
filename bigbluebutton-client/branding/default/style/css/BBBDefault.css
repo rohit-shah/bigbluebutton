@@ -854,6 +854,9 @@ Alert {
 }
 .lightBlueButtonStyle{
 	color: #ffffff;
+	disabledColor: #ffffff;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff;
 	cornerRadius: 5;
 	fontWeight: 12;
 }
