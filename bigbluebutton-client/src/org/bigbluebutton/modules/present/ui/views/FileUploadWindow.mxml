@@ -318,13 +318,13 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		</mx:HBox>
 		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="11"
 				 text="{ResourceUtil.getInstance().getString('bbb.fileupload.fileFormatHint')}"/>
-		<mx:Canvas width="100%" height="145" verticalScrollPolicy="off">
-			<mx:List width="100%" height="142" left="5" top="5" right="5" bottom="5" id="uploadedFilesList" alternatingItemColors="[#FFFFFF, #FFFFFF]" allowMultipleSelection="false"
+		<mx:Canvas width="100%" height="100%" verticalScrollPolicy="off">
+			<mx:List width="100%" height="100%" left="5" top="5" right="5" bottom="5" id="uploadedFilesList" alternatingItemColors="[#FFFFFF, #FFFFFF]" allowMultipleSelection="false"
 					 itemRenderer="org.bigbluebutton.modules.present.ui.views.UploadedPresentationRenderer"
 					 dragEnabled="false" dataProvider="{presentationNamesAC}">
 			</mx:List>
 		</mx:Canvas>
-		<mx:Canvas width="100%" height="100%">
+		<mx:Canvas width="100%">
 			<mx:Button id="okCancelBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.okCancelBtn')}"
 					   styleName="whiteButtonStyle" fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"  right="5" bottom="15"
 					   click="globalDispatch.dispatchEvent(new UploadEvent(UploadEvent.CLOSE_UPLOAD_WINDOW))"
