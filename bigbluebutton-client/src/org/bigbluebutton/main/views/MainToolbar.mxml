@@ -189,10 +189,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					// Confirm logout using built-in alert
 					var logoutAlert:LogoutAlertWindow = new LogoutAlertWindow;
 					PopUpManager.addPopUp(logoutAlert,FlexGlobals.topLevelApplication as DisplayObject,true);
-					var newX:Number = btnLogout.x + btnLogout.width - logoutAlert.width;
-					var newY:Number = btnLogout.y + btnLogout.height + 5;
-					logoutAlert.validateNow();
-					logoutAlert.move(newX, newY);
+					PopUpManager.centerPopUp(logoutAlert);
 					logoutAlert.addEventListener(CloseEvent.CLOSE,alertLogout);
 					//Accessibility.updateProperties();
 				}
