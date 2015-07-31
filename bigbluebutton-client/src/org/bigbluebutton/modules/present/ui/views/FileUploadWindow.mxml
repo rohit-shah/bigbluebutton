@@ -307,7 +307,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   click="selectFile()" styleName="whiteButtonStyle"/>
 			<mx:Button id="uploadBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn')}" 
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn.toolTip')}"  click="startUpload()"
-					   enabled="false" styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}" />
+					   enabled="false" styleName="lightBlueButtonStyle"/>
 		</mx:HBox>
 		<mx:HBox id="progressReportBox" width="100%" paddingLeft="10" paddingTop="5" paddingBottom="0" includeInLayout="true" visible="false">
 			<mx:Label id="progBarLbl" text="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}" 

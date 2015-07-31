@@ -117,14 +117,14 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			<mx:VBox id="vboxMic" height="100%" width="30%" horizontalAlign="center">
 				<mx:Image source="@Embed('assets/microphone80.png')" />
 				<mx:Button id="btnMicrophone" tabIndex="{baseIndex+1}" click="onMicClick()"
-						   styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}"
+						   styleName="lightBlueButtonStyle"
 						   label="{ResourceUtil.getInstance().getString('bbb.audioSelection.btnMicrophone.label')}"
 						   accessibilityName="{ResourceUtil.getInstance().getString('bbb.audioSelection.btnMicrophone.toolTip')}"/>
 			</mx:VBox>
 			<mx:VBox id="vboxListen" height="100%" width="30%" horizontalAlign="center">
 				<mx:Image source="@Embed('assets/speaker80.png')" />
 				<mx:Button id="btnListenOnly" tabIndex="{baseIndex+2}" click="onListenClick()"
-						   styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}"
+						   styleName="lightBlueButtonStyle"
 						   label="{ResourceUtil.getInstance().getString('bbb.audioSelection.btnListenOnly.label')}"
 						   accessibilityName="{ResourceUtil.getInstance().getString('bbb.audioSelection.btnListenOnly.toolTip')}" />
 			</mx:VBox>

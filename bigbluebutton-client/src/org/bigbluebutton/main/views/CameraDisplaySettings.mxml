@@ -334,7 +334,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
                  label="{ResourceUtil.getInstance().getString('bbb.video.publish.closeBtn.label')}"
                  accessibilityName="{ResourceUtil.getInstance().getString('bbb.video.publish.closeBtn.accessName')}"/>
 		<mx:Button id="btnStartPublish" toolTip="{ResourceUtil.getInstance().getString('bbb.publishVideo.startPublishBtn.toolTip')}" 
-				   styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}"
+				   styleName="lightBlueButtonStyle"
 				   click="startPublishing()" enabled="false"
 				   label="{ResourceUtil.getInstance().getString('bbb.publishVideo.startPublishBtn.labelText')}" tabIndex="{baseIndex+3}"  />
 
