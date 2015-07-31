@@ -22,7 +22,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
                 xmlns:view="org.bigbluebutton.main.views.*"
 				styleName="presentationFileUploadWindowStyle"
                 verticalScrollPolicy="off" horizontalScrollPolicy="off"
-                creationComplete="onCreationComplete()" styleName="cameraDisplaySettingsWindowStyle" 
+                creationComplete="onCreationComplete()"
                 showCloseButton="false" close="onCancelClicked()" keyDown="handleKeyDown(event)">
   <mx:Script>
     <![CDATA[
