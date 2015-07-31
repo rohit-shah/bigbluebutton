@@ -888,6 +888,7 @@ Alert {
 .cameraSettingsResolutionCombo {
 	fillColors: #fefeff, #e1e2e5, #ffffff, #eeeeee;
 	fontSize: 12;
+	skin:"org.bigbluebutton.main.views.BlueArrowDropDownListSkin";
 }
 
 /*new styles*/

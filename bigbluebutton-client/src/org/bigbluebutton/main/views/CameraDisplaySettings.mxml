@@ -23,7 +23,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				styleName="presentationFileUploadWindowStyle"
                 verticalScrollPolicy="off" horizontalScrollPolicy="off"
                 creationComplete="onCreationComplete()"
-				width="630" height="450" 
+				height="450" 
                 showCloseButton="false" close="onCancelClicked()" keyDown="handleKeyDown(event)">
   <mx:Script>
     <![CDATA[
@@ -327,8 +327,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
     </mx:HBox>
         
     <mx:HBox width="100%" height="10%" horizontalAlign="right" paddingRight="5" paddingBottom="5" paddingTop="1">
-         <mx:Button id="btnClosePublish"   
-                 click="onCancelClicked()" 
+         <mx:Button id="btnClosePublish"
+                 click="onCancelClicked()"
 				 styleName="whiteButtonStyle"
                  enabled="true" tabIndex="{baseIndex+4}"
                  label="{ResourceUtil.getInstance().getString('bbb.video.publish.closeBtn.label')}"
