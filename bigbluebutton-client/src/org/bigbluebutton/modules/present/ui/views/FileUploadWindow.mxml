@@ -301,11 +301,11 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
       <mx:Label id="lblFileName" width="{fileUploadBox.width-selectBtn.width-uploadBtn.width-30}" selectable="false" click="selectFile()" text="{ResourceUtil.getInstance().getString('bbb.fileupload.lblFileName.defaultText')}" />
 	  <mx:Button id="selectBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.label')}" 
 				   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.selectBtn.toolTip')}" 
-				   click="selectFile()" styleName="whiteButtonStyle"
+				   click="selectFile()" styleName="whiteButtonStyle" fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}" 
 				   cornerRadius="5"/>
       <mx:Button id="uploadBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn')}" 
                  toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.uploadBtn.toolTip')}"  click="startUpload()"
-                 enabled="false" styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}"/>
+                 enabled="false" styleName="lightBlueButtonStyle" fillColors="{[0x579fd7,0x42aefc,0x32a5fd,0x229cfd]}" />
     </mx:HBox>
     <mx:HBox id="progressReportBox" width="100%" paddingLeft="10" paddingTop="5" paddingBottom="10" includeInLayout="true" visible="false">
       <mx:Label id="progBarLbl" text="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}" 
@@ -319,14 +319,14 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		</mx:Box>
     </mx:Box>
     <mx:Canvas width="100%" height="145" verticalScrollPolicy="off">
-      <mx:List width="100%" height="142" left="5" top="5" right="5" bottom="5" id="uploadedFilesList" alternatingItemColors="[#EFEFEF, #FEFEFE]" allowMultipleSelection="false"
+      <mx:List width="100%" height="142" left="5" top="5" right="5" bottom="5" id="uploadedFilesList" alternatingItemColors="[#FFFFFF, #FFFFFF]" allowMultipleSelection="false"
                itemRenderer="org.bigbluebutton.modules.present.ui.views.UploadedPresentationRenderer"
                dragEnabled="false" dataProvider="{presentationNamesAC}">
       </mx:List>
     </mx:Canvas>
     <mx:Canvas width="100%" height="100%">
       <mx:Button id="okCancelBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.okCancelBtn')}"
-                 styleName="presentationUploadCancelButtonStyle" right="5" bottom="15"
+				 styleName="whiteButtonStyle" fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"  right="5" bottom="15"
                  click="globalDispatch.dispatchEvent(new UploadEvent(UploadEvent.CLOSE_UPLOAD_WINDOW))"
                  toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.okCancelBtn.toolTip')}"/>
     </mx:Canvas>	
