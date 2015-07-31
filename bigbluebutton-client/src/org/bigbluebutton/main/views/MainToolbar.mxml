@@ -46,18 +46,11 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			import mx.accessibility.AlertAccImpl;
 			import mx.controls.Alert;
 			import mx.core.UIComponent;
-			import mx.core.mx_internal;
 			import mx.events.CloseEvent;
-			import mx.events.FlexEvent;
 			
 			import org.bigbluebutton.common.IBbbToolbarComponent;
-			import org.bigbluebutton.common.LogUtil;
-			import org.bigbluebutton.common.events.CloseWindowEvent;
-			import org.bigbluebutton.common.events.OpenWindowEvent;
 			import org.bigbluebutton.common.events.ToolbarButtonEvent;
 			import org.bigbluebutton.core.BBB;
-			import org.bigbluebutton.core.managers.UserManager;
-			import org.bigbluebutton.core.services.BandwidthMonitor;
 			import org.bigbluebutton.main.events.BBBEvent;
 			import org.bigbluebutton.main.events.ConfigEvent;
 			import org.bigbluebutton.main.events.LogoutEvent;
@@ -191,14 +184,13 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function confirmLogout():void {
 				if (toolbarOptions.confirmLogout){
 					// Confirm logout using built-in alert
-					var alert:Alert = Alert.show(ResourceUtil.getInstance().getString('bbb.logout.confirm.message'), ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn'), Alert.YES | Alert.NO, this, alertLogout, null, Alert.YES);
+					var logoutAlert:LogoutAlertWindow = new LogoutAlertWindow;
 					
-					var newX:Number = btnLogout.x + btnLogout.width - alert.width;
+					var newX:Number = btnLogout.x + btnLogout.width - logoutAlert.width;
 					var newY:Number = btnLogout.y + btnLogout.height + 5;
-					alert.mx_internal::alertForm.addEventListener(FlexEvent.UPDATE_COMPLETE, alertForm_updateHandler);					
-					alert.validateNow();
-					alert.move(newX, newY);
-					alert.setStyle('styleName','presentationFileUploadWindowStyle');
+					logoutAlert.validateNow();
+					logoutAlert.move(newX, newY);
+					logoutAlert.addEventListener(CloseEvent.CLOSE,alertLogout);
 					//Accessibility.updateProperties();
 				}
 				else{
@@ -339,20 +331,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				}
 			}
 			
-			protected function alertForm_updateHandler(event:FlexEvent):void
-			{
-				var form:UIComponent=event.target as UIComponent;
-				var buttons:Array = event.target.mx_internal::buttons;
-				
-				var closeButton:Button=buttons[1] as Button;
-				closeButton.setStyle('styleName','whiteButtonStyle');
-				closeButton.label=ResourceUtil.getInstance().getString('bbb.window.closeBtn.toolTip');
-				
-				var logoutButton:Button=buttons[0] as Button;
-				logoutButton.setStyle('styleName','lightBlueButtonStyle');
-				logoutButton.label=ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn');
-
-			}
+			
 			
 		]]>
 	</mx:Script>
