@@ -860,6 +860,7 @@ Alert {
 	textSelectedColor: #ffffff;
 	cornerRadius: 5;
 	fontWeight: 12;
+	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
 
 

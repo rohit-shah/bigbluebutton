@@ -135,7 +135,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			</mx:VBox>
 		</mx:HBox>
 		<mx:Button id="cancelBtn" label="{ResourceUtil.getInstance().getString('bbb.window.closeBtn.toolTip')}" accessibilityName="{ResourceUtil.getInstance().getString('bbb.micSettings.cancel.toolTip')}"
-				   styleName="whiteButtonStyle"  fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"
+				   styleName="whiteButtonStyle"
 				   tabIndex="{baseIndex+3}" click="onCancelClicked()" />
 	</mx:VBox>
 </mx:TitleWindow>
