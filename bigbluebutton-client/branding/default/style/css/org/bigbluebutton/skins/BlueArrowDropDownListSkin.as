@@ -1,4 +1,4 @@
-package org.bigbluebutton.main.views
+package org.bigbluebutton.skins
 {
 	import flash.display.GradientType;
 	import flash.display.Graphics;
