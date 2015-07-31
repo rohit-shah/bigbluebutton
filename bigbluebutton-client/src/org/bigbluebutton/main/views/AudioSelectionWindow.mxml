@@ -21,7 +21,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 
 <mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" 
 				xmlns:mate="http://mate.asfusion.com/"
-				width="700" height="350" 
+				minWidth="700" height="350" 
 				initialize="init()" 
 				styleName="presentationFileUploadWindowStyle"
 				showCloseButton="false">
@@ -63,7 +63,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				} else {
 					vrulePhone.visible = vrulePhone.includeInLayout = false;
 					vboxPhone.visible = vboxPhone.includeInLayout = false;
-					this.width = 450;
+					this.minWidth = 450;
 					this.height = 325;
 					vboxMic.percentWidth = 50;
 					vboxListen.percentWidth = 50;
@@ -107,12 +107,12 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			}
 		]]>
 	</mx:Script>
-	<mx:VBox width="100%" height="100%"  paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20" horizontalAlign="center">
+	<mx:VBox width="100%" height="100%"  paddingLeft="20" paddingRight="20" paddingTop="20" paddingBottom="20" horizontalAlign="right">
 		<mx:TextArea borderSkin="{null}" verticalScrollPolicy="off" 
 					 editable="false" tabIndex="{baseIndex}"
 					 text="{ResourceUtil.getInstance().getString('bbb.audioSelection.title')}"
 					 styleName="presentationUploadTitleStyle"
-					 width="100%" />
+					 width="100%" textAlign="center"/>
 		<mx:HBox width="100%" height="100%">
 			<mx:VBox id="vboxMic" height="100%" width="30%" horizontalAlign="center">
 				<mx:Image source="@Embed('assets/microphone80.png')" />
