@@ -320,7 +320,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			<mx:ComboBox id="cmbResolution" styleName="cameraSettingsResolutionCombo" 
 						 dataProvider="{resolutions}" visible="false" change="updateCamera()" tabIndex="{baseIndex+2}"
 						 toolTip="{ResourceUtil.getInstance().getString('bbb.publishVideo.cmbResolution.tooltip')}" height="30" />
-			<mx:Button id="changeCamera" styleName="whiteButtonStyle"  fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"
+			<mx:Button id="changeCamera" styleName="whiteButtonStyle"
 					   label="{ResourceUtil.getInstance().getString('bbb.publishVideo.changeCameraBtn.labelText')}" 
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.publishVideo.changeCameraBtn.toolTip')}" 
 					   click="showCameraSettings()" tabIndex="{baseIndex+1}"/>
