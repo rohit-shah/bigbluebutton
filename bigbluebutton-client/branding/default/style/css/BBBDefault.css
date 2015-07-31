@@ -851,6 +851,7 @@ Alert {
 .whiteButtonStyle{
 	cornerRadius: 5;
 	fontWeight: 12;
+	fillColors: #fefeff, #e1e2e5, #ffffff, #eeeeee;
 }
 .lightBlueButtonStyle{
 	color: #ffffff;
@@ -883,5 +884,9 @@ Alert {
 	titleStyleName: "presentationFileUploadWindowTitleStyle";
 }
 
+.cameraSettingsResolutionCombo {
+	fillColors: #fefeff, #e1e2e5, #ffffff, #eeeeee;
+	fontSize: 12;
+}
 
 /*new styles*/

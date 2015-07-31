@@ -23,6 +23,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				styleName="presentationFileUploadWindowStyle"
                 verticalScrollPolicy="off" horizontalScrollPolicy="off"
                 creationComplete="onCreationComplete()"
+				width="630" height="450" 
                 showCloseButton="false" close="onCancelClicked()" keyDown="handleKeyDown(event)">
   <mx:Script>
     <![CDATA[
@@ -31,12 +32,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		import flash.ui.Keyboard;
 		
 		import mx.events.CloseEvent;
-		import mx.events.ItemClickEvent;
 		import mx.managers.PopUpManager;
 		
 		import org.bigbluebutton.common.Images;
 		import org.bigbluebutton.common.LogUtil;
-		import org.bigbluebutton.core.UsersUtil;
 		import org.bigbluebutton.main.events.BBBEvent;
 		import org.bigbluebutton.modules.videoconf.model.VideoConfOptions;
 		import org.bigbluebutton.util.i18n.ResourceUtil;
@@ -313,16 +312,15 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
     <mx:TextArea width="100%" borderSkin="{null}" editable="false" 
 				 text="{ResourceUtil.getInstance().getString('bbb.users.settings.webcamSettings')}" 
 				 styleName="presentationUploadTitleStyle" tabIndex="{baseIndex}"/>
-    <mx:HRule width="100%"/>
     <mx:Spacer height="1"/>
     
 		<view:VideoHolder id="_videoHolder" width="100%" height="75%" />
         
 		<mx:HBox width="100%" height="10%" horizontalAlign="center" horizontalGap="13" paddingRight="5"> 	
-			<mx:ComboBox id="cmbResolution" styleName="cameraDisplaySettingsWindowChangeResolutionCombo" 
+			<mx:ComboBox id="cmbResolution" styleName="cameraSettingsResolutionCombo" 
 						 dataProvider="{resolutions}" visible="false" change="updateCamera()" tabIndex="{baseIndex+2}"
 						 toolTip="{ResourceUtil.getInstance().getString('bbb.publishVideo.cmbResolution.tooltip')}" height="30" />
-			<mx:Button id="changeCamera" styleName="cameraDisplaySettingsWindowChangeCamBtn" 
+			<mx:Button id="changeCamera" styleName="whiteButtonStyle"  fillColors="{[0xFFFFFF,0xFEFEFE,0xFDFDFD,0xFCFCFC]}"
 					   label="{ResourceUtil.getInstance().getString('bbb.publishVideo.changeCameraBtn.labelText')}" 
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.publishVideo.changeCameraBtn.toolTip')}" 
 					   click="showCameraSettings()" tabIndex="{baseIndex+1}"/>
