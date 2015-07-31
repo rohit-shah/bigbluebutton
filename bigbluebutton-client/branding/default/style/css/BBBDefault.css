@@ -153,6 +153,17 @@ DataGrid {
   fontSize: 12;
 }
 
+/*new button styles*/
+.whiteButtonStyle{
+	cornerRadius: 5;
+}
+.lightBlueButtonStyle{
+	color: #ffffff;
+	fillColors: [0x579fd7,0x42aefc,0x32a5fd,0x229cfd];
+	cornerRadius: 5;
+}
+
+/*new button styles*/
 
 .whiteboardUndoButtonStyle, .whiteboardCircleButtonStyle, .whiteboardClearButtonStyle,
 .whiteboardTriangleButtonStyle, .whiteboardTextButtonStyle, .whiteboardRectangleButtonStyle,
@@ -369,20 +380,17 @@ DataGrid {
 }
 
 .presentationFileUploadWindowStyle {
-  borderColor: #b9babc;
-  borderAlpha: 1;
-  borderThicknessLeft: 10;
+  borderAlpha: 0;
+  borderThicknessLeft: 0;
   borderThicknessTop: 0;
-  borderThicknessBottom: 10;
-  borderThicknessRight: 10;
+  borderThicknessBottom: 0;
+  borderThicknessRight: 0;
   roundedBottomCorners: true;
   cornerRadius: 5;
-  headerHeight: 20;
+  headerHeight: 0;
   backgroundAlpha: 1;
-  headerColors: #b9babc, #b9babc;
-  footerColors: #b9babc, #b9babc;
-  backgroundColor: #EFEFEF;
-  dropShadowEnabled: true;
+  backgroundColor: #ffffff;
+  dropShadowEnabled: false;
   titleStyleName: "presentationFileUploadWindowTitleStyle";
 }
 
