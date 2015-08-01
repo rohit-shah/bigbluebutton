@@ -37,6 +37,8 @@ package org.bigbluebutton.skins
 			var highlightAlphas:Array = getStyle("highlightAlphas");
 			var themeColor:uint = getStyle("themeColor");
 			
+			var iconFillColor:uint=fillColors[0];
+			
 			// The dropdownBorderColor is currently only used
 			// when displaying an error state.
 			if (!isNaN(dropdownBorderColor)) {
@@ -50,6 +52,9 @@ package org.bigbluebutton.skins
 			var cr:Object = { tl: 0, tr: cornerRadius, bl: 0, br: cornerRadius };
 			var cr1:Object = { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 };
 			var arrowOnly:Boolean = true;
+			
+			var lineWeight:Number=3;
+			var arrowWidth:Number=12;
 			
 			// If our name doesn't include "editable", we are drawing the non-edit
 			// skin which spans the entire control
@@ -86,6 +91,10 @@ package org.bigbluebutton.skins
 						{ tl: cornerRadius1, tr: cornerRadius1, bl: 0, br: 0 },
 						[ 0xFFFFFF, 0xFFFFFF ], highlightAlphas,
 						verticalGradientMatrix(1, 1, w - 2, (h - 2) / 2));
+					
+					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+						[0x579fd7, 0x42aefc], [1,1],
+						verticalGradientMatrix(1, 1, w - 2, h - 2));
 					
 					break;
 				}
@@ -124,6 +133,9 @@ package org.bigbluebutton.skins
 						[ 0xFFFFFF, 0xFFFFFF ], highlightAlphas,
 						verticalGradientMatrix(0, 0, w - 2, (h - 2) / 2));
 					
+					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+						[0x42aefc, 0x32a5fd], [1,1],
+						verticalGradientMatrix(1, 1, w - 2, h - 2));
 					break;
 				}
 					
@@ -145,6 +157,10 @@ package org.bigbluebutton.skins
 						[ 0xFFFFFF, 0xFFFFFF ], highlightAlphas,
 						verticalGradientMatrix(1, 1, w - 2, (h - 2) / 2));
 					
+					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+						[0x579fd7, 0x32a5fd], [1,1],
+						verticalGradientMatrix(1, 1, w - 2, h - 2));
+					
 					break;
 				}
 					
@@ -165,17 +181,29 @@ package org.bigbluebutton.skins
 						disFillColors, disFillAlphas,
 						verticalGradientMatrix(0, 0, w - 2, h - 2));
 					
+					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+						[0x32a5fd, 0x229cfd], disFillAlphas,
+						verticalGradientMatrix(1, 1, w - 2, h - 2));
 					arrowColor = getStyle("disabledIconColor");
 					break;
 				}
 			}
 			
-			// Draw the triangle.
-			g.beginFill(arrowColor);
-			g.moveTo(w - 11.5, h / 2 + 3);
-			g.lineTo(w - 15, h / 2 - 2);
-			g.lineTo(w - 8, h / 2 - 2);
-			g.lineTo(w - 11.5, h / 2 + 3);
+			
+			g.beginFill(0xffffff);
+			
+			
+			g.moveTo(w - 11.5, h / 2 + 3 + h/4);
+			g.lineTo(w - 15, h / 2 - 2 + h/4);
+			g.lineTo(w - 8, h / 2 - 2 + h/4);
+			g.lineTo(w - 11.5, h / 2 + 3 + h/4);
+			
+			g.moveTo(w - 11.5, h / 2 - 3 - h/4);
+			g.lineTo(w - 15, h / 2 + 2 - h/4);
+			g.lineTo(w - 8, h / 2 + 2 - h/4);
+			g.lineTo(w - 11.5, h / 2 - 3 - h/4);
+			
+			
 			g.endFill();
 		}
 	}
