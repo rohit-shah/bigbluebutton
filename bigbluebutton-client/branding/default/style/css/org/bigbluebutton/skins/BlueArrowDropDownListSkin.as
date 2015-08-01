@@ -53,8 +53,8 @@ package org.bigbluebutton.skins
 			var cr1:Object = { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 };
 			var arrowOnly:Boolean = true;
 			
-			var lineWeight:Number=3;
-			var arrowWidth:Number=12;
+			
+			var conteinerWidth:Number=24
 			
 			// If our name doesn't include "editable", we are drawing the non-edit
 			// skin which spans the entire control
@@ -92,7 +92,7 @@ package org.bigbluebutton.skins
 						[ 0xFFFFFF, 0xFFFFFF ], highlightAlphas,
 						verticalGradientMatrix(1, 1, w - 2, (h - 2) / 2));
 					
-					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+					drawRoundRect(w-conteinerWidth-1, 1, conteinerWidth, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
 						[0x579fd7, 0x42aefc], [1,1],
 						verticalGradientMatrix(1, 1, w - 2, h - 2));
 					
@@ -133,7 +133,7 @@ package org.bigbluebutton.skins
 						[ 0xFFFFFF, 0xFFFFFF ], highlightAlphas,
 						verticalGradientMatrix(0, 0, w - 2, (h - 2) / 2));
 					
-					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+					drawRoundRect(w-conteinerWidth-1, 1, conteinerWidth, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
 						[0x42aefc, 0x32a5fd], [1,1],
 						verticalGradientMatrix(1, 1, w - 2, h - 2));
 					break;
@@ -157,7 +157,7 @@ package org.bigbluebutton.skins
 						[ 0xFFFFFF, 0xFFFFFF ], highlightAlphas,
 						verticalGradientMatrix(1, 1, w - 2, (h - 2) / 2));
 					
-					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+					drawRoundRect(w-conteinerWidth-1, 1, conteinerWidth, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
 						[0x579fd7, 0x32a5fd], [1,1],
 						verticalGradientMatrix(1, 1, w - 2, h - 2));
 					
@@ -181,7 +181,7 @@ package org.bigbluebutton.skins
 						disFillColors, disFillAlphas,
 						verticalGradientMatrix(0, 0, w - 2, h - 2));
 					
-					drawRoundRect(w-(arrowWidth+12)-1, 1, arrowWidth+12, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
+					drawRoundRect(w-conteinerWidth-1, 1, conteinerWidth, h - 2, { tl: 0, tr: cornerRadius1, bl: 0, br: cornerRadius1 },
 						[0x32a5fd, 0x229cfd], disFillAlphas,
 						verticalGradientMatrix(1, 1, w - 2, h - 2));
 					arrowColor = getStyle("disabledIconColor");
@@ -192,17 +192,31 @@ package org.bigbluebutton.skins
 			
 			g.beginFill(0xffffff);
 			
+			var lineWeight:Number=3;
+			var arrowSize:Number=12;
+			var arrowCenter:Number=(conteinerWidth-1)/2;
+			var arrowLeft:Number=arrowCenter+arrowSize/2;
+			var arrowRight:Number=arrowCenter-arrowSize/2;
 			
-			g.moveTo(w - 11.5, h / 2 + 3 + h/4);
-			g.lineTo(w - 15, h / 2 - 2 + h/4);
-			g.lineTo(w - 8, h / 2 - 2 + h/4);
-			g.lineTo(w - 11.5, h / 2 + 3 + h/4);
+			g.moveTo(w - arrowCenter, h / 2 + 3 + h/4+3);
+			g.lineTo(w - arrowLeft-2, h / 2 - 2 + h/8);
+			g.lineTo(w - arrowRight+2, h / 2 - 2 + h/8);
+			g.lineTo(w - arrowCenter, h / 2 + 3 + h/4+3);
 			
-			g.moveTo(w - 11.5, h / 2 - 3 - h/4);
-			g.lineTo(w - 15, h / 2 + 2 - h/4);
-			g.lineTo(w - 8, h / 2 + 2 - h/4);
-			g.lineTo(w - 11.5, h / 2 - 3 - h/4);
+			g.moveTo(w - arrowCenter, h / 2 + 3 + h/4);
+			g.lineTo(w - arrowLeft, h / 2 - 2 + h/8);
+			g.lineTo(w - arrowRight, h / 2 - 2 + h/8);
+			g.lineTo(w - arrowCenter, h / 2 + 3 + h/4);
 			
+			g.moveTo(w - arrowCenter, h / 2 - 3 - h/4-3);
+			g.lineTo(w - arrowLeft-2, h / 2 + 2 - h/8);
+			g.lineTo(w - arrowRight+2, h / 2 + 2 - h/8);
+			g.lineTo(w - arrowCenter, h / 2 - 3 - h/4-3);
+			
+			g.moveTo(w - arrowCenter, h / 2 - 3 - h/4);
+			g.lineTo(w - arrowLeft, h / 2 + 2 - h/8);
+			g.lineTo(w - arrowRight, h / 2 + 2 - h/8);
+			g.lineTo(w - arrowCenter, h / 2 - 3 - h/4);
 			
 			g.endFill();
 		}
