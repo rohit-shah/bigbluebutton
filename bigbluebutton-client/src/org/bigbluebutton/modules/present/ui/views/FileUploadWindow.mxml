@@ -42,6 +42,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mate:Listener type="{RemovePresentationEvent.PRESENTATION_REMOVED_EVENT}" method="handlePresentationRemoved" />
 	<mx:Script>
 		<![CDATA[
+			import com.adobe.utils.StringUtil;
 			import com.asfusion.mate.events.Dispatcher;
 			
 			import mx.collections.ArrayCollection;
