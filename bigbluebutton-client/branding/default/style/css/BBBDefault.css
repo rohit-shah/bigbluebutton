@@ -893,21 +893,25 @@ Alert {
 }
 
 /*new styles*/
+.presentationUploadTitleStyle {
+	fontFamily: Roboto-Light;
+	fontSize: 20;  
+}
+.regularLabelStyle {
+	fontFamily: HelveticaNeue-Medium;
+	fontSize: 12; 
+}
+.boldObliqueabelStayle{
+	fontFamily: Avenir-BlackOblique;
+	fontStyle: italic;
+	fontSize: 11;
+}
 .whiteButtonStyle{
 	cornerRadius: 5;
 	fontSize: 12;
 	fontFamily: HelveticaNeue-Bold;
 	fontWeight: bold;
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
-}
-.presentationUploadTitleStyle {
-	fontFamily: Roboto-Light;
-	fontSize: 20;  
-}
-.boldObliqueabelStayle{
-	fontFamily: Avenir-BlackOblique;
-	fontStyle: italic;
-	fontSize: 11;
 }
 .lightBlueButtonStyle{
 	color: #ffffff;
@@ -916,7 +920,7 @@ Alert {
 	textSelectedColor: #ffffff;
 	cornerRadius: 5;
 	fontSize: 12;
-	fontWeight:bold;
+	fontWeight: bold;
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }

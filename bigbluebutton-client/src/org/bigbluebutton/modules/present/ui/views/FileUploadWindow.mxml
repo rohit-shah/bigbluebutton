@@ -292,7 +292,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					 editable="false" styleName="presentationUploadTitleStyle"/>
 		
 		<mx:HBox id="fileUploadBox" width="100%" paddingLeft="5" paddingTop="0" verticalAlign="middle"> 
-			<mx:Label id="lblFileName" fontSize="12" 
+			<mx:Label id="lblFileName" styleName="regularLabelStyle"
 					  width="{fileUploadBox.width-selectBtn.width-uploadBtn.width-30}" 
 					  selectable="false" click="selectFile()" 
 					  text="{ResourceUtil.getInstance().getString('bbb.fileupload.lblFileName.defaultText')}" />

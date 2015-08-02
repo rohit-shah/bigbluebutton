@@ -33,13 +33,14 @@
       }
     ]]>
   </mx:Script>
-  <mx:Label id="presentationNameLabel" width="{this.width-showBtn.width-deleteBtn.width-30}" text="{data.name as String}" styleName="presentationNameLabelStyle"/>
+  <mx:Label id="presentationNameLabel" width="{this.width-showBtn.width-deleteBtn.width-30}" 
+			text="{data.name as String}" styleName="regularLabelStyle"/>
   <mx:Button id="showBtn" label="{ResourceUtil.getInstance().getString('bbb.fileupload.showBtn')}" 
              toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.showBtn.toolTip')}" 
              styleName="whiteButtonStyle" height="26"
              click="showPresentation()" enabled="{!data.current}"/>
   <mx:Button id="deleteBtn" label="" toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.deleteBtn.toolTip')}" 
-             styleName="presentationUploadDeleteButtonStyle"
+             styleName="lightBlueButtonStyle"
              click="deletePresentation()" visible="{String(data.name) != 'default.pdf'}"/>
   
 </mx:HBox>
