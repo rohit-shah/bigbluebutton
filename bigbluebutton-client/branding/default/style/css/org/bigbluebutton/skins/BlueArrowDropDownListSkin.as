@@ -198,25 +198,25 @@ package org.bigbluebutton.skins
 			var arrowLeft:Number=arrowCenter+arrowSize/2;
 			var arrowRight:Number=arrowCenter-arrowSize/2;
 			
-			g.moveTo(w - arrowCenter, h / 2 + 3 + h/4+3);
-			g.lineTo(w - arrowLeft-2, h / 2 - 2 + h/4);
-			g.lineTo(w - arrowRight+2, h / 2 - 2 + h/4);
-			g.lineTo(w - arrowCenter, h / 2 + 3 + h/4+3);
+			g.moveTo(w - arrowCenter, h / 4 + 3 +3);
+			g.lineTo(w - arrowLeft-2, h / 4 - 2 );
+			g.lineTo(w - arrowRight+2, h / 4 - 2 );
+			g.lineTo(w - arrowCenter, h / 4 + 3 +3);
 			
-			g.moveTo(w - arrowCenter, h / 2 + 3 + h/4);
-			g.lineTo(w - arrowLeft, h / 2 - 2 + h/4);
-			g.lineTo(w - arrowRight, h / 2 - 2 + h/4);
-			g.lineTo(w - arrowCenter, h / 2 + 3 + h/4);
+			g.moveTo(w - arrowCenter, h / 4 + 3 );
+			g.lineTo(w - arrowLeft, h / 4 - 2 );
+			g.lineTo(w - arrowRight, h / 4 - 2 );
+			g.lineTo(w - arrowCenter, h / 4 + 3 );
 			
-			g.moveTo(w - arrowCenter, h / 2 - 3 - h/4-3);
-			g.lineTo(w - arrowLeft-2, h / 2 + 2 - h/4);
-			g.lineTo(w - arrowRight+2, h / 2 + 2 - h/4);
-			g.lineTo(w - arrowCenter, h / 2 - 3 - h/4-3);
+			g.moveTo(w - arrowCenter, h / 4 - 3 -3);
+			g.lineTo(w - arrowLeft-2, h / 4 + 2 );
+			g.lineTo(w - arrowRight+2, h / 4 + 2 );
+			g.lineTo(w - arrowCenter, h / 4 - 3 -3);
 			
-			g.moveTo(w - arrowCenter, h / 2 - 3 - h/4);
-			g.lineTo(w - arrowLeft, h / 2 + 2 - h/4);
-			g.lineTo(w - arrowRight, h / 2 + 2 - h/4);
-			g.lineTo(w - arrowCenter, h / 2 - 3 - h/4);
+			g.moveTo(w - arrowCenter, h / 4 - 3 );
+			g.lineTo(w - arrowLeft, h / 4 + 2 );
+			g.lineTo(w - arrowRight, h / 4 + 2 );
+			g.lineTo(w - arrowCenter, h / 4 - 3 );
 			
 			g.endFill();
 		}
