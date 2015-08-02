@@ -961,7 +961,8 @@ Alert {
 
 .cameraSettingsResolutionCombo {
 	fillColors: #fefeff, #e1e2e5, #ffffff, #eeeeee;
-	fontSize: 12;
+	fontFamily: HelveticaNeue-Medium;
+	fontSize: 12; 
 	skin: ClassReference("org.bigbluebutton.skins.BlueArrowDropDownListSkin");
 }
 
