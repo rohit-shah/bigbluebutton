@@ -45,7 +45,7 @@
 	embedAsCFF: true;
 	
 }
-@font-face {
+/*@font-face {
 	src:url("fonts/Roboto-Light.ttf");
 	fontFamily: Roboto-Light;
 	embedAsCFF: true;
@@ -56,7 +56,7 @@
 	fontFamily: Roboto-Medium;
 	embedAsCFF: true;
 	
-}
+}*/
 /*fonts*/
 
 Application {
