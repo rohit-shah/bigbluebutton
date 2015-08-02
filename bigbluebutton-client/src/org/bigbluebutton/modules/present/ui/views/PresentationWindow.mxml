@@ -30,16 +30,15 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  showCloseButton="false" layout="absolute"
 					  verticalScrollPolicy="off" 
 					  horizontalScrollPolicy="off" 
-					  showControls="false" resize="resizeHandler()"
+					  resize="resizeHandler()"
 					  styleNameFocus="presentationWindowStyleFocus"
 					  styleNameNoFocus="presentationWindowStyleNoFocus"
 					  implements="org.bigbluebutton.common.IBbbModuleWindow"
-					  initialize="init()"
+					  initialize="init()" cornerRadius="0"
 					  creationComplete="onCreationComplete()" 
 					  width="{DEFAULT_WINDOW_WIDTH}" height="{DEFAULT_WINDOW_HEIGHT}" 
 					  x="{DEFAULT_X_POSITION}" y="{DEFAULT_Y_POSITION}"
 					  titleStyleName="mediumLabelStyle"
-					  styleName="greyWindowStyle"
 					  title="{ResourceUtil.getInstance().getString('bbb.presentation.titleWithPres',[currentPresentation])}"
 					  xmlns:views="org.bigbluebutton.modules.present.ui.views.*"
 					  >
@@ -141,6 +140,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function init():void{
 				presentOptions = new PresentOptions();
 				baseIndex = presentOptions.baseTabIndex;;
+				minimizeBtn.visible=false;
+				maximizeRestoreBtn.visible=false;
 			}
 			
 			private function onCreationComplete():void{
