@@ -1,3 +1,57 @@
+@font-face {
+	src:url("./fonts/Avenir-Black.ttf");
+	fontFamily: Avenir-Black;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/Avenir-BlackOblique.ttf");
+	fontFamily: Avenir-BlackOblique;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/Avenir-Light.ttf");
+	fontFamily: Avenir-Light;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/Avenir-Medium.ttf");
+	fontFamily: Avenir-Medium;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/Avenir-MediumOblique.ttf");
+	fontFamily: Avenir-MediumOblique;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/HelveticaNeue-Bold.ttf");
+	fontFamily: HelveticaNeue-Bold;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/HelveticaNeue-Medium.ttf");
+	fontFamily: HelveticaNeue-Medium;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/Roboto-Light.ttf");
+	fontFamily: Roboto-Light;
+	embedAsCFF: true;
+	
+}
+@font-face {
+	src:url("./fonts/Roboto-Medium.ttf");
+	fontFamily: Roboto-Medium;
+	embedAsCFF: true;
+	
+}
 Application {
   backgroundColor: #ffffff;
 }
