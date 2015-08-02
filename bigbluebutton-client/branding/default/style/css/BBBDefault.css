@@ -28,14 +28,13 @@
 	embedAsCFF: true;
 	
 }
-
+*/
 @font-face {
-	src:url("../branding/default/style/css/fonts/HelveticaNeue-Bold.ttf");
+	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
 	embedAsCFF: true;
 	
 }
-*/
 /*@font-face {
 	src:url("./branding/default/style/css/fonts/HelveticaNeue-Medium.ttf");
 	fontFamily: HelveticaNeue-Medium;
