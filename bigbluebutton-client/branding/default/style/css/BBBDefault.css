@@ -372,7 +372,7 @@ DataGrid {
 
 
 .presentationFileUploadWindowTitleStyle{
-	fontFamily: Roboto-Light;
+	fontFamily: Arial;
 	fontSize: 20;  
 }
 
@@ -853,7 +853,7 @@ Alert {
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
-presentationUploadTitleStyle {
+.presentationUploadTitleStyle {
 	fontFamily: Roboto-Light;
 	fontSize: 20;  
 }
