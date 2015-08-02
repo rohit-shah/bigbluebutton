@@ -49,12 +49,11 @@ Application {
 }
 
 ApplicationControlBar {
-  highlightAlphas: 0.1, 0;
-  fillAlphas: 0, 0;
+  fillAlphas: 1, 1;
   fillColors: #e8e7e8, #dfdedf, #e6e5e6, #d8d7d8;
   backgroundAlpha: 1;
   cornerRadius: 0;
-  shadowDirection: center;
+  dropShadowEnabled: false;
 }
 
 Panel {
