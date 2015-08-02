@@ -98,7 +98,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			private function onCreationComplete():void {				
 				this.showCloseButton = false;		
-				this.showControls = options.showControls;
+				this.showControls = false;
 				
 				this.minWidth = options.width;
 				this.minHeight = options.height;
