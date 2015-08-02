@@ -27,7 +27,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	       implements="org.bigbluebutton.common.IBbbModuleWindow" 
 	       initialize="init()"
 	       creationComplete="onCreationComplete()"
-		   titleStyleName="presentationUploadTitleStyle"
+		   titleStyleName="mediumLabelStyle"
 	       xmlns:components="org.bigbluebutton.modules.chat.view.components.*" 
 		   xmlns:mate="http://mate.asfusion.com/" 
 		   xmlns:views="org.bigbluebutton.modules.chat.views.*">
