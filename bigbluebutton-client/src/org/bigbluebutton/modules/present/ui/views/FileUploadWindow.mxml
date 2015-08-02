@@ -43,15 +43,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mx:Script>
 		<![CDATA[
 			import com.adobe.utils.StringUtil;
-			import com.asfusion.mate.events.Dispatcher;
 			
 			import mx.collections.ArrayCollection;
-			import mx.events.FlexEvent;
-			import mx.events.ValidationResultEvent;
-			import mx.managers.PopUpManager;
 			
 			import org.bigbluebutton.common.Images;
-			import org.bigbluebutton.common.LogUtil;
 			import org.bigbluebutton.modules.present.commands.UploadFileCommand;
 			import org.bigbluebutton.modules.present.events.ConversionCompletedEvent;
 			import org.bigbluebutton.modules.present.events.ConversionPageCountError;
@@ -327,14 +322,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   styleName="whiteButtonStyle" right="5" bottom="15"
 					   click="globalDispatch.dispatchEvent(new UploadEvent(UploadEvent.CLOSE_UPLOAD_WINDOW))"
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.okCancelBtn.toolTip')}"/>
-		</mx:Canvas>	
-		<mx:ComboBox dataProvider="{new ArrayCollection(['Avenir-Black','Avenir-BlackOblique','Avenir-Light','Avenir-Medium','Avenir-MediumOblique','HelveticaNeue-Bold','HelveticaNeue-Medium','Roboto Light','Roboto-Light','Roboto-Medium'])}">
-			<mx:itemRenderer>
-				<mx:Component>
-					<mx:Label text="{data}" fontFamily="{data}"/>
-				</mx:Component>
-			</mx:itemRenderer>
-		</mx:ComboBox>
+		</mx:Canvas>
 	</mx:VBox>
 	
 </mx:TitleWindow> 
