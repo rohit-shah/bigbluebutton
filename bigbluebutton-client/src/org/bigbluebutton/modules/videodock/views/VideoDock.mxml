@@ -27,6 +27,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
        verticalScrollPolicy="off"
 		   creationComplete="onCreationComplete()" 
 		   implements="org.bigbluebutton.common.IBbbModuleWindow"
+		   titleStyleName="mediumLabelStyle"
 		   title="{ResourceUtil.getInstance().getString('bbb.videodock.title')}"
 		   xmlns:mate="http://mate.asfusion.com/" styleNameFocus="videoDockStyleFocus"
 		   layout="absolute" visible="false" styleNameNoFocus="videoDockStyleNoFocus"

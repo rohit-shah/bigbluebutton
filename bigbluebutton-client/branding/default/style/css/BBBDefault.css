@@ -900,6 +900,11 @@ Alert {
 	textRollOverColor: #3b4056;
 	textSelectedColor: #3b4056;
 }
+.mediumLabelStyle {
+	fontFamily: HelveticaNeue-Medium;
+	fontSize: 12; 
+	
+}
 .regularLabelStyle {
 	fontFamily: HelveticaNeue-Medium;
 	fontSize: 12; 

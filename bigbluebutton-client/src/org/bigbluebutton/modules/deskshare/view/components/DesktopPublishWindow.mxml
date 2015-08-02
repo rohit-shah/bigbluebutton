@@ -26,6 +26,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	xmlns:mate="http://mate.asfusion.com/"
 	xmlns:dspub="org.bigbluebutton.common.*"
 	backgroundColor="#C0C0C0"
+	titleStyleName="presentationUploadTitleStyle"
 	initialize="init()"
 	creationComplete="onCreationComplete()"	
 	verticalScrollPolicy="off" horizontalScrollPolicy="off"
@@ -434,14 +435,14 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
                     <mx:Button id="btnFSPublish" 
                                toolTip="{ResourceUtil.getInstance().getString('bbb.desktopPublish.fullscreen.tooltip')}" 
                                label="{ResourceUtil.getInstance().getString('bbb.desktopPublish.fullscreen.label')}" 
-                               visible="true" 
+                               visible="true" styleName="whiteButtonStyle"
                                click="shareScreen(true)" 
                                tabIndex="{baseIndex+4}"/>
                     <mx:Spacer width="100%"/>
                     <mx:Button id="btnClosePublish" 
                                toolTip="{ResourceUtil.getInstance().getString('bbb.desktopPublish.stop.tooltip')}" 
                                label="{ResourceUtil.getInstance().getString('bbb.desktopPublish.stop.label')}" 
-                               visible="true" 
+                               visible="true"  styleName="whiteButtonStyle"
                                enabled="false" 
                                click="stopSharing()" 
                                tabIndex="{baseIndex+5}"/>
@@ -449,7 +450,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
                     <mx:Button id="btnRegionPublish"
                                toolTip="{ResourceUtil.getInstance().getString('bbb.desktopPublish.region.tooltip')}" 
                                label="{ResourceUtil.getInstance().getString('bbb.desktopPublish.region.label')}" 
-                               visible="true" 
+                               visible="true"  styleName="whiteButtonStyle"
                                click="shareScreen(false)" 
                                tabIndex="{baseIndex+6}"
                                focusEnabled="false"
