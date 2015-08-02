@@ -315,7 +315,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			<mx:ProgressBar id="progressBar" mode="manual" label="{ResourceUtil.getInstance().getString('bbb.fileupload.progBarLbl')}"
 							styleName="presentationUploadProgressBarStyle" labelPlacement="center" width="100%" visible="false"/>
 		</mx:HBox>
-		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="11" fontFamily="Avenir-BlackOblique"
+		<mx:Text width="100%" id="fileFormatHintLbl" textAlign="center" fontSize="11" fontFamily="Avenir-BlackOblique" fontStyle="italic"
 				 text="{ResourceUtil.getInstance().getString('bbb.fileupload.fileFormatHint')}"/>
 		<mx:Canvas width="100%" height="100%" verticalScrollPolicy="off">
 			<mx:List width="100%" height="100%" left="0" top="0" right="0" bottom="0" id="uploadedFilesList" alternatingItemColors="[#FFFFFF, #FFFFFF]" allowMultipleSelection="false"
