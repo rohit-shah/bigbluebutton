@@ -528,7 +528,7 @@
 			description="Build BBB client skipping compiling of locales"/>	
 	<target name="clean-build-all" depends="clean, init-ant-contrib, generate-html-wrapper, compile-deskshare-standalone, build-mic-check,
 	                                         build-cam-check, build-conn-check, build-webcam-preview-standalone, build-webcam-view-standalone, 
-	                                         compile-bbb, branding, branding-black" 
+	                                         compile-bbb, branding, branding-black, branding-font" 
 			description="Build BBB client including locales"/>
 	<target name="modules" depends="init-ant-contrib, generate-html-wrapper, compile-deskshare-standalone, 
 	                                         build-webcam-preview-standalone, build-webcam-view-standalone, compile-bbb"
