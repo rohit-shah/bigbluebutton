@@ -51,6 +51,6 @@
 @font-face {
 	src:url("fonts/Roboto-Medium.ttf");
 	fontFamily: Roboto-Medium;
-/*	embedAsCFF: true;*/
+	embedAsCFF: true;
 	
 }
