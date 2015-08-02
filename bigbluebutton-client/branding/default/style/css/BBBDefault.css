@@ -2,60 +2,47 @@
 @font-face {
 	src:url("fonts/Avenir-Black.ttf");
 	fontFamily: Avenir-Black;
-	fontWeight: bold;
-	embedAsCFF: true;
-	
+	fontWeight: bold;	
 }
 @font-face {
 	src:url("fonts/Avenir-BlackOblique.ttf");
 	fontFamily: Avenir-BlackOblique;
-	embedAsCFF: true;
 	fontWeight: bold;
 	fontStyle: italic;
 }
 @font-face {
 	src:url("fonts/Avenir-Light.ttf");
-	fontFamily: Avenir-Light;
-	embedAsCFF: true;
-	
+	fontFamily: Avenir-Light;	
 }
 @font-face {
 	src:url("fonts/Avenir-Medium.ttf");
 	fontFamily: Avenir-Medium;
 	fontWeight: bold;
-	embedAsCFF: true;
 	
 }
 @font-face {
 	src:url("fonts/Avenir-MediumOblique.ttf");
 	fontFamily: Avenir-MediumOblique;
-	embedAsCFF: true;
 	fontStyle: italic;
 }
 @font-face {
 	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
-	embedAsCFF: true;
 	fontWeight: bold;
+	unicodeRange:U+0-10FFFF;
 	
 }
 @font-face {
 	src:url("fonts/HelveticaNeue-Medium.ttf");
-	fontFamily: HelveticaNeue-Medium;
-	embedAsCFF: true;
-	
+	fontFamily: HelveticaNeue-Medium;	
 }
 @font-face {
 	src:url("fonts/Roboto-Light.ttf");
 	fontFamily: Roboto-Light;
-	embedAsCFF: true;
-
 }
 @font-face {
 	src:url("fonts/Roboto-Medium.ttf");
-	fontFamily: Roboto-Medium;
-	embedAsCFF: true;
-	
+	fontFamily: Roboto-Medium;	
 }
 /*fonts*/
 
