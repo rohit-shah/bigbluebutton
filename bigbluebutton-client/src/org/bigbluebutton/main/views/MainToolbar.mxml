@@ -23,7 +23,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 <mx:ApplicationControlBar xmlns:mx="http://www.adobe.com/2006/mxml" 
 						  xmlns:mate="http://mate.asfusion.com/" visible="{showToolbar}"
 						  enabled="true" xmlns:views="org.bigbluebutton.main.views.*"
-						  initialize="init()" creationComplete="onCreationComplete()" >   
+						  initialize="init()" creationComplete="onCreationComplete()" 
+						  fillColors="{[0xe8e7e8,0xdfdedf]}">   
 	
 	<mate:Listener type="{ToolbarButtonEvent.ADD}" method="handleAddToolbarButtonEvent" />	
 	<mate:Listener type="{ToolbarButtonEvent.REMOVE}" method="handleRemoveToolbarButtonEvent"/>
