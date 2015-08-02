@@ -96,7 +96,7 @@
 				mxml.compatibility-version="3.0.0" 
 				swf-version="13" 
 				optimize="true">
-				<fonts>
+				<fonts>;
 					<manager>flash.fonts.AFEFontManager</manager>
 				</fonts>
 			</mxmlc>
