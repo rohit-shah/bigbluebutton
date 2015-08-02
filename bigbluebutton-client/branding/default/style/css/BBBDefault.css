@@ -51,14 +51,10 @@ Application {
 ApplicationControlBar {
   highlightAlphas: 0.1, 0;
   fillAlphas: 0, 0;
-  fillColors: #e8e7e8, #dfdedf;
-  backgroundColor: #e8e7e8;
+  fillColors: #e8e7e8, #dfdedf, #e6e5e6, #d8d7d8;
   backgroundAlpha: 1;
   cornerRadius: 0;
-  dropShadowEnabled: true;
-  shadowDistance: 1;
   shadowDirection: center;
-  dropShadowColor: #000000;
 }
 
 Panel {
@@ -908,7 +904,7 @@ Alert {
 	textSelectedColor: #3b4056;
 }
 .mediumLabelStyle {
-	fontFamily: HelveticaNeue-Medium;
+	fontFamily: Avenir-Medium;
 	fontSize: 12; 
 	
 }
@@ -917,13 +913,9 @@ Alert {
 	fontSize: 12; 
 	
 }
+
 .boldLabelStyle {
-	fontFamily: HelveticaNeue-Medium;
-	fontSize: 12; 
-	
-}
-.boldLabelStyle {
-	fontFamily: HelveticaNeue-Medium;
+	fontFamily: HelveticaNeue-Bold;
 	fontSize: 12; 
 	
 }
