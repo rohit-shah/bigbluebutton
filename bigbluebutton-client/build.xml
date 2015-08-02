@@ -98,7 +98,7 @@
 				incremental="true"
 				optimize="true">
 				<fonts>
-			          <manager>flash.fonts.CFFFontManager</manager>
+			          <manager>flash.fonts.JREFontManager</manager>
 			    </fonts>
 			</mxmlc>
 		</sequential>
