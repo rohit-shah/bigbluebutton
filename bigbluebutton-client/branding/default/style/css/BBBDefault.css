@@ -911,7 +911,6 @@ Alert {
 }
 .boldObliqueabelStayle{
 	fontFamily: Avenir-BlackOblique;
-	fontStyle: italic;
 	fontSize: 11;
 }
 .lightBlueButtonStyle{
