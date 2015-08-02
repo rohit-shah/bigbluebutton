@@ -2,6 +2,7 @@
 @font-face {
 	src:url("fonts/Avenir-Black.ttf");
 	fontFamily: Avenir-Black;
+	fontStyle: bold;
 	embedAsCFF: true;
 	
 }
@@ -9,6 +10,7 @@
 	src:url("fonts/Avenir-BlackOblique.ttf");
 	fontFamily: Avenir-BlackOblique;
 	embedAsCFF: true;
+	fontStyle: bold;
 	fontStyle: italic;
 }
 @font-face {
