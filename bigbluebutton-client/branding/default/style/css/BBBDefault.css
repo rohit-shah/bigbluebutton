@@ -29,7 +29,7 @@
 	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
 	fontWeight: bold;
-	unicodeRange:U+0-10FFFF;
+	unicode-range: U+0-U+10FFFF;
 	
 }
 @font-face {
@@ -39,6 +39,7 @@
 @font-face {
 	src:url("fonts/Roboto-Light.ttf");
 	fontFamily: Roboto-Light;
+	unicode-range: U+0-U+10FFFF;
 }
 @font-face {
 	src:url("fonts/Roboto-Medium.ttf");
@@ -908,7 +909,6 @@ Alert {
 .boldObliqueabelStayle{
 	fontFamily: Avenir-BlackOblique;
 	fontSize: 11;
-	fontStyle: italic;
 }
 .lightBlueButtonStyle{
 	color: #ffffff;
@@ -916,7 +916,6 @@ Alert {
 	textRollOverColor: #ffffff;
 	textSelectedColor: #ffffff;
 	cornerRadius: 5;
-	fontWeight: bold;
 	fontSize: 12;
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
