@@ -1,6 +1,6 @@
 @namespace s "library://ns.adobe.com/flex/spark";
 @namespace mx "library://ns.adobe.com/flex/mx";
-/*@font-face {
+@font-face {
 	src:url("fonts/Avenir-Black.ttf");
 	fontFamily: Avenir-Black;
 	embedAsCFF: true;
@@ -29,7 +29,7 @@
 	fontFamily: Avenir-MediumOblique;
 	embedAsCFF: true;
 	
-}*/
+}
 @font-face {
 	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
