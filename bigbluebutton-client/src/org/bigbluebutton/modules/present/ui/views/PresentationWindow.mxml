@@ -30,7 +30,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  showCloseButton="false" layout="absolute"
 					  verticalScrollPolicy="off" 
 					  horizontalScrollPolicy="off" 
-					  showControls="true" resize="resizeHandler()"
+					  showControls="false" resize="resizeHandler()"
 					  styleNameFocus="presentationWindowStyleFocus"
 					  styleNameNoFocus="presentationWindowStyleNoFocus"
 					  implements="org.bigbluebutton.common.IBbbModuleWindow"

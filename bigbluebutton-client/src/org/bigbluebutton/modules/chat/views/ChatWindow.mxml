@@ -26,6 +26,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	       showCloseButton="false"
 	       implements="org.bigbluebutton.common.IBbbModuleWindow" 
 	       initialize="init()"
+		   showControls="false"
 	       creationComplete="onCreationComplete()"
 		   titleStyleName="mediumLabelStyle"
 		   styleName="greyWindowStyle"

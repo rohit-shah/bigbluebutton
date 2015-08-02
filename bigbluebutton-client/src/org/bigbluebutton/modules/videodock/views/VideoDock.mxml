@@ -21,20 +21,21 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 -->
 
 <CustomMdiWindow xmlns="org.bigbluebutton.common.*" 
-		   xmlns:mx="http://www.adobe.com/2006/mxml" 
-		   initialize="init()" 
-       horizontalScrollPolicy="off"
-       verticalScrollPolicy="off"
-		   creationComplete="onCreationComplete()" 
-		   implements="org.bigbluebutton.common.IBbbModuleWindow"
-		   titleStyleName="mediumLabelStyle"
-		   styleName="greyWindowStyle"
-		   title="{ResourceUtil.getInstance().getString('bbb.videodock.title')}"
-		   xmlns:mate="http://mate.asfusion.com/" styleNameFocus="videoDockStyleFocus"
-		   layout="absolute" visible="false" styleNameNoFocus="videoDockStyleNoFocus"
-		   horizontalAlign="center" 
-		   verticalAlign="middle"
-		   resize="onChildAdd()">
+				 xmlns:mx="http://www.adobe.com/2006/mxml" 
+				 initialize="init()" 
+				 horizontalScrollPolicy="off"
+				 verticalScrollPolicy="off"
+				 creationComplete="onCreationComplete()" 
+				 implements="org.bigbluebutton.common.IBbbModuleWindow"
+				 titleStyleName="mediumLabelStyle"
+				 styleName="greyWindowStyle"
+				 showControls="false"
+				 title="{ResourceUtil.getInstance().getString('bbb.videodock.title')}"
+				 xmlns:mate="http://mate.asfusion.com/" styleNameFocus="videoDockStyleFocus"
+				 layout="absolute" visible="false" styleNameNoFocus="videoDockStyleNoFocus"
+				 horizontalAlign="center" 
+				 verticalAlign="middle"
+				 resize="onChildAdd()">
 	
 	<mate:Listener type="{LocaleChangeEvent.LOCALE_CHANGED}" method="localeChanged" />
 	<mate:Listener type="{ShortcutEvent.FOCUS_VIDEO_WINDOW}" method="focusWindow" />
@@ -42,29 +43,29 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mate:Listener type="{ShortcutEvent.MAXIMIZE_DOCK}" method="remoteMaximize" />
 	<mx:Script>
 		<![CDATA[ 
-	  import org.bigbluebutton.main.events.ShortcutEvent;
-      import com.asfusion.mate.events.Dispatcher;
-      
-      import flexlib.mdi.containers.MDIWindow;
-
-      import mx.events.ChildExistenceChangedEvent;
-      
-      import org.bigbluebutton.common.Images;
-
-      import org.bigbluebutton.common.LogUtil;
-      import org.bigbluebutton.common.events.CloseWindowEvent;
-      import org.bigbluebutton.common.events.DragWindowEvent;
-      import org.bigbluebutton.common.events.OpenWindowEvent;
-      import org.bigbluebutton.core.BBB;
-      import org.bigbluebutton.core.events.ConnectAppEvent;
-      import org.bigbluebutton.main.model.users.Conference;
-      import org.bigbluebutton.main.views.MainCanvas;
-      import org.bigbluebutton.modules.videoconf.business.VideoWindowItf;
-      import org.bigbluebutton.modules.videoconf.events.OpenVideoWindowEvent;
-      import org.bigbluebutton.modules.videoconf.events.UserTalkingEvent;
-      import org.bigbluebutton.modules.videoconf.model.VideoConfOptions;
-      import org.bigbluebutton.util.i18n.ResourceUtil;
-	  import org.bigbluebutton.common.events.LocaleChangeEvent;
+			import org.bigbluebutton.main.events.ShortcutEvent;
+			import com.asfusion.mate.events.Dispatcher;
+			
+			import flexlib.mdi.containers.MDIWindow;
+			
+			import mx.events.ChildExistenceChangedEvent;
+			
+			import org.bigbluebutton.common.Images;
+			
+			import org.bigbluebutton.common.LogUtil;
+			import org.bigbluebutton.common.events.CloseWindowEvent;
+			import org.bigbluebutton.common.events.DragWindowEvent;
+			import org.bigbluebutton.common.events.OpenWindowEvent;
+			import org.bigbluebutton.core.BBB;
+			import org.bigbluebutton.core.events.ConnectAppEvent;
+			import org.bigbluebutton.main.model.users.Conference;
+			import org.bigbluebutton.main.views.MainCanvas;
+			import org.bigbluebutton.modules.videoconf.business.VideoWindowItf;
+			import org.bigbluebutton.modules.videoconf.events.OpenVideoWindowEvent;
+			import org.bigbluebutton.modules.videoconf.events.UserTalkingEvent;
+			import org.bigbluebutton.modules.videoconf.model.VideoConfOptions;
+			import org.bigbluebutton.util.i18n.ResourceUtil;
+			import org.bigbluebutton.common.events.LocaleChangeEvent;
 			
 			private var childrenDimension:Dictionary = new Dictionary();
 			private var borderColor:String;
@@ -91,14 +92,14 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			}
 			
 			private var images:Images = new Images();
-      
+			
 			[Bindable]
 			private var backgroundImage:Class = images.video_dock_bg;
-      
+			
 			private function onCreationComplete():void {				
 				this.showCloseButton = false;		
 				this.showControls = options.showControls;
-        
+				
 				this.minWidth = options.width;
 				this.minHeight = options.height;
 				this.maxWidth = this.parent.width;
@@ -123,10 +124,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				closeBtn.tabIndex = baseIndex+3;
 				
 				if (options.maximize) this.maximize();
-        
-		        var gDispatcher:Dispatcher = new Dispatcher();
-		        var evt:ConnectAppEvent = new ConnectAppEvent(ConnectAppEvent.CONNECT_VIDEO_APP);
-		        gDispatcher.dispatchEvent(evt);
+				
+				var gDispatcher:Dispatcher = new Dispatcher();
+				var evt:ConnectAppEvent = new ConnectAppEvent(ConnectAppEvent.CONNECT_VIDEO_APP);
+				gDispatcher.dispatchEvent(evt);
 			}
 			
 			private function remoteMinimize(e:ShortcutEvent):void{
@@ -143,33 +144,33 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					this.restore();
 				}				
 			}
-
-		    private function loadKeyCombos(modifier:String):void {
+			
+			private function loadKeyCombos(modifier:String):void {
 				keyCombos = new Object(); // always start with a fresh array
-			    keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.general.maximize') as String)] = ShortcutEvent.MAXIMIZE_DOCK;
+				keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.general.maximize') as String)] = ShortcutEvent.MAXIMIZE_DOCK;
 				keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.general.minimize') as String)] = ShortcutEvent.MINIMIZE_DOCK;
 			}
-		
-		    private function hotkeyCapture():void{
-		      this.addEventListener(KeyboardEvent.KEY_DOWN, handleKeyDown);
-		      ResourceUtil.getInstance().addEventListener(Event.CHANGE, localeChanged); // Listen for locale changing
-		    }
-		
+			
+			private function hotkeyCapture():void{
+				this.addEventListener(KeyboardEvent.KEY_DOWN, handleKeyDown);
+				ResourceUtil.getInstance().addEventListener(Event.CHANGE, localeChanged); // Listen for locale changing
+			}
+			
 			// Handle general-access hotkeys, regardless of what window the user is focused in
-		    private function handleKeyDown(e:KeyboardEvent) :void {
-		      var modifier:String = ExternalInterface.call("determineModifier");
-			  loadKeyCombos(modifier);			  
-			  var keyPress:String = (e.ctrlKey  ? "control+" : "") + (e.shiftKey ? "shift+"   : "") +
-		                            (e.altKey   ? "alt+"     : "") + e.keyCode;		                              
-		      if (keyCombos[keyPress]) {
-		        dispatcher.dispatchEvent(new ShortcutEvent(keyCombos[keyPress]));
-		      }
-		    }
+			private function handleKeyDown(e:KeyboardEvent) :void {
+				var modifier:String = ExternalInterface.call("determineModifier");
+				loadKeyCombos(modifier);			  
+				var keyPress:String = (e.ctrlKey  ? "control+" : "") + (e.shiftKey ? "shift+"   : "") +
+					(e.altKey   ? "alt+"     : "") + e.keyCode;		                              
+				if (keyCombos[keyPress]) {
+					dispatcher.dispatchEvent(new ShortcutEvent(keyCombos[keyPress]));
+				}
+			}
 			
 			private function focusWindow(e:ShortcutEvent):void{
 				focusManager.setFocus(titleBarOverlay);
 			}
-		
+			
 			private function localeChanged(e:Event):void{
 				resourcesChanged();
 			}
@@ -185,9 +186,9 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function updateMinAspectRatio(children:Array):void {
 				minChildAspectRatio = 0;
 				for each(var window:VideoWindowItf in children) {
-				    const windowAspectRatio:Number = (window.width - VideoWindowItf.PADDING_HORIZONTAL) / (window.height - VideoWindowItf.PADDING_VERTICAL);
-				    if (minChildAspectRatio == 0 || windowAspectRatio < minChildAspectRatio)
-				        minChildAspectRatio = windowAspectRatio;				        
+					const windowAspectRatio:Number = (window.width - VideoWindowItf.PADDING_HORIZONTAL) / (window.height - VideoWindowItf.PADDING_VERTICAL);
+					if (minChildAspectRatio == 0 || windowAspectRatio < minChildAspectRatio)
+						minChildAspectRatio = windowAspectRatio;				        
 				}
 				LogUtil.debug("Using aspect ratio grid = " + minChildAspectRatio);
 			}
@@ -211,7 +212,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				
 				if (e.relatedObject == priorityWindow || mutableChildrenArray.length <= 1)
 					deprioritizeWindow();
-					
+				
 				updateMinAspectRatio(mutableChildrenArray);
 				updateChildrenDimensions(mutableChildrenArray);
 			}
@@ -220,7 +221,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				//return MainCanvas.BOTTOM_RIGHT;
 				return options.position;
 			}
-					
+			
 			private function saveWindowDimensions(window:MDIWindow):void {
 				var dimensions:Object = {width:window.width, height:window.height};
 				childrenDimension[window] = dimensions;
@@ -244,15 +245,15 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function onCloseWindow(e:CloseWindowEvent):void {
 				// it should not just undock the window, it should close the window forever
 				if (isVideoWindow(e.window) && this.contains(e.window as VideoWindowItf)) {
-          this.removeChild(e.window as VideoWindowItf);
-        }
-					
+					this.removeChild(e.window as VideoWindowItf);
+				}
+				
 			}
 			
 			private function onOpenWindow(e:OpenVideoWindowEvent):void {
 				if (isVideoWindow(e.window) && options.autoDock) {
-          addVideoChild(e.window as VideoWindowItf);
-        }					
+					addVideoChild(e.window as VideoWindowItf);
+				}					
 			}
 			
 			private function addVideoChild(window:VideoWindowItf):void {
@@ -272,8 +273,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				window.minimizeBtn.visible = false;
 				window.maximizeRestoreBtn.visible = false;
 				window.resizable = false;
-       			window.draggable = false;
-
+				window.draggable = false;
+				
 				window.addEventListener(MouseEvent.CLICK, onWindowClick);
 				window.addEventListener(UserTalkingEvent.TALKING, onTalking);
 				
@@ -285,10 +286,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			}
 			
 			override public function close(event:MouseEvent = null):void {
-        for each(var windowItf:VideoWindowItf in mutableChildrenArray) {
-          windowItf.close();
-        }
-        
+				for each(var windowItf:VideoWindowItf in mutableChildrenArray) {
+					windowItf.close();
+				}
+				
 				removeAllChildren();
 				super.close(event);
 			}
@@ -312,7 +313,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					// if the aspect ratio of the dock is smaller than the window (like 1:1 against 16:9)
 					// the window will be on top of the dock 
 					if (availableWidth / availableHeight < priorityWindow.width / priorityWindow.height
-							|| options.layout == DockOptions.LAYOUT_HANGOUT) {
+						|| options.layout == DockOptions.LAYOUT_HANGOUT) {
 						priorityWindow.width = availableWidth;
 						priorityWindow.updateHeight();
 						if (priorityWindow.height > availableHeight * priorityWindowWeight) {
@@ -371,7 +372,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				
 				childWidth += VideoWindowItf.PADDING_HORIZONTAL;
 				childHeight += VideoWindowItf.PADDING_VERTICAL;
-
+				
 				const horizontalBorder:int = availableWidth - nColumns * childWidth - (nColumns - 1) * horizontalGap;
 				const verticalBorder:int = availableHeight - nRows * childHeight - (nRows - 1) * verticalGap;
 				// this couple of lines will center the priority window on the available space for it
@@ -390,7 +391,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					borderTop += verticalBorder / 2;
 					borderLeft += horizontalBorder / 2;
 				}
-									
+				
 				for (var childIndex:int = (_prioritizeWindow? 1: 0); childIndex < children.length; ++childIndex) {
 					var window:VideoWindowItf = children[childIndex];
 					const wWidth:int = childWidth;
@@ -422,7 +423,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			private function prioritizeWindow(window:Object):void {
 				if (mutableChildrenArray.length <= 1
-						|| options.layout == DockOptions.LAYOUT_NONE)
+					|| options.layout == DockOptions.LAYOUT_NONE)
 					return;
 				
 				if (_prioritizeWindow && window == priorityWindow && !options.oneAlwaysBigger) {
@@ -444,7 +445,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			private function prioritizeTalking(window:Object):void {
 				if (mutableChildrenArray.length <= 1
-						|| options.layout == DockOptions.LAYOUT_NONE)
+					|| options.layout == DockOptions.LAYOUT_NONE)
 					return;
 				
 				if (window == priorityWindow) //window already prioritized
@@ -486,7 +487,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					minimizeBtn.accessibilityName = ResourceUtil.getInstance().getString('bbb.video.minimizeBtn.accessibilityName');
 				}
 			}			
-						
+			
 		]]>
 	</mx:Script>
 	
