@@ -861,6 +861,7 @@ Alert {
 	textSelectedColor: #ffffff;
 	cornerRadius: 5;
 	fontWeight: 12;
+	fontFamily: HelveticaNeue-Bold;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
 
