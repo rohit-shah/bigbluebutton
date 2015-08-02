@@ -44,6 +44,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		<![CDATA[
 			import com.asfusion.mate.events.Dispatcher;
 			
+			import mx.collections.ArrayCollection;
 			import mx.events.FlexEvent;
 			import mx.events.ValidationResultEvent;
 			import mx.managers.PopUpManager;
