@@ -22,6 +22,7 @@
 @font-face {
 	src:url("fonts/Avenir-Medium.ttf");
 	fontFamily: Avenir-Medium;
+	fontWeight: bold;
 	embedAsCFF: true;
 	
 }
