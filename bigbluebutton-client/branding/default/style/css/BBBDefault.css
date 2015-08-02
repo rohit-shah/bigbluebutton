@@ -1,7 +1,7 @@
 /*fonts*/
 @font-face {
 	src:url("fonts/Avenir-Black.ttf");
-	fontFamily: Avenir-Black;
+	fontFamily: 'Avenir Black';
 	embedAsCFF: true;
 	
 }
