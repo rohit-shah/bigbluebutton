@@ -94,7 +94,8 @@
 				output="${OUTPUT_DIR}/branding/css/${fontFile}.swf" 
 				debug="${DEBUG}" 
 				mxml.compatibility-version="3.0.0" 
-				swf-version="13" 
+				swf-version="13"
+				incremental="true"
 				optimize="true">
 				<fonts>
 			          <manager>flash.fonts.CFFFontManager</manager>
