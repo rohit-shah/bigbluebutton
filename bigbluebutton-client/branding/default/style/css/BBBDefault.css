@@ -31,9 +31,7 @@
 */
 @font-face {
 	src:url("fonts/HelveticaNeue-Bold.ttf");
-	fontFamily: HelveticaNeue-Bold;
-	embedAsCFF: true;
-	
+	fontFamily: HelveticaNeue-Bold;	
 }
 /*@font-face {
 	src:url("./branding/default/style/css/fonts/HelveticaNeue-Medium.ttf");
