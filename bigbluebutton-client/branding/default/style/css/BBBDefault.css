@@ -895,11 +895,15 @@ Alert {
 /*new styles*/
 .presentationUploadTitleStyle {
 	fontFamily: Roboto-Light;
-	fontSize: 20;  
+	fontSize: 24;  
+	color: #3b4056;
+	textRollOverColor: #3b4056;
+	textSelectedColor: #3b4056;
 }
 .regularLabelStyle {
 	fontFamily: HelveticaNeue-Medium;
 	fontSize: 12; 
+	
 }
 .boldObliqueabelStayle{
 	fontFamily: Avenir-BlackOblique;
@@ -923,7 +927,7 @@ Alert {
 	textSelectedColor: #ffffff;
 	cornerRadius: 5;
 	fontSize: 12;
-/*	fontWeight: bold;*/
+	fontWeight: bold;
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
