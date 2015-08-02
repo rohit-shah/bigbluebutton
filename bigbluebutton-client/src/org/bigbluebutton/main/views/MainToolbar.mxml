@@ -273,7 +273,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			}
 			
 			private function gotConfigParameters(e:ConfigEvent):void{
-				shortcutKeysBtn.includeInLayout = shortcutKeysBtn.visible = e.config.shortcutKeysShowButton; 
+				shortcutKeysBtn.includeInLayout = shortcutKeysBtn.visible = false; 
 				DEFAULT_HELP_URL = e.config.helpURL;
 			}
 			

@@ -897,6 +897,7 @@ Alert {
 	cornerRadius: 5;
 	fontSize: 12;
 	fontFamily: HelveticaNeue-Bold;
+	fontWeight: bold;
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
 .presentationUploadTitleStyle {
@@ -905,6 +906,7 @@ Alert {
 }
 .boldObliqueabelStayle{
 	fontFamily: Avenir-BlackOblique;
+	fontStyle: italic;
 	fontSize: 11;
 }
 .lightBlueButtonStyle{
@@ -914,6 +916,7 @@ Alert {
 	textSelectedColor: #ffffff;
 	cornerRadius: 5;
 	fontSize: 12;
+	fontWeight:bold;
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
