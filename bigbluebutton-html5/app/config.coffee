@@ -8,8 +8,8 @@ config.appName = 'BigBlueButton HTML5 Client'
 config.bbbServerVersion = '0.9.0'
 config.copyrightYear = '2015'
 config.dateOfBuild = 'Feb 06, 2015' #TODO
-config.defaultWelcomeMessage = ''
-config.defaultWelcomeMessageFooter = ""
+config.defaultWelcomeMessage = '$$$'
+config.defaultWelcomeMessageFooter = "$$$"
 
 config.maxUsernameLength = 30
 config.maxChatLength = 140
