@@ -853,6 +853,11 @@ Alert {
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
+.boldObliqueabelStayle{
+	fontFamily: Avenir-BlackOblique;
+	fontStyle: italic;
+	fontSize: 11;
+}
 .lightBlueButtonStyle{
 	color: #ffffff;
 	disabledColor: #ffffff;
