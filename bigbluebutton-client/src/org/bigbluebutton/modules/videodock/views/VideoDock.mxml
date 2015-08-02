@@ -28,7 +28,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				 creationComplete="onCreationComplete()" 
 				 implements="org.bigbluebutton.common.IBbbModuleWindow"
 				 titleStyleName="mediumLabelStyle"
-				 styleName="greyWindowStyle"
+				 styleName="greyWindowStyle"  cornerRadius="0"
 				 showControls="false"
 				 title="{ResourceUtil.getInstance().getString('bbb.videodock.title')}"
 				 xmlns:mate="http://mate.asfusion.com/" styleNameFocus="videoDockStyleFocus"
