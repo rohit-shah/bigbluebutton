@@ -51,8 +51,8 @@ Application {
 ApplicationControlBar {
   highlightAlphas: 0.1, 0;
   fillAlphas: 0, 0;
-  fillColors: #32343b, #32343b;
-  backgroundColor: #42444c;
+  fillColors: #e8e7e8, #dfdedf;
+  backgroundColor: #e8e7e8;
   backgroundAlpha: 1;
   cornerRadius: 0;
   dropShadowEnabled: true;
