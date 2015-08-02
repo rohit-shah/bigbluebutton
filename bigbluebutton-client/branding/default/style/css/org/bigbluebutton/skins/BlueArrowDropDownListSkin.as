@@ -208,15 +208,15 @@ package org.bigbluebutton.skins
 			g.lineTo(w - arrowRight, h / 4 - 2 + h/4-3);
 			g.lineTo(w - arrowCenter, h / 4 + 3 + h/4-3);
 			
-			g.moveTo(w - arrowCenter, h / 4 - 3 - h/4-3-3);
-			g.lineTo(w - arrowLeft-2, h / 4 + 2 - h/4-3);
-			g.lineTo(w - arrowRight+2, h / 4 + 2 - h/4-3);
-			g.lineTo(w - arrowCenter, h / 4 - 3 - h/4-3-3);
+			g.moveTo(w - arrowCenter, h / 4 - 3 - h/4-3+3);
+			g.lineTo(w - arrowLeft-2, h / 4 + 2 - h/4+3);
+			g.lineTo(w - arrowRight+2, h / 4 + 2 - h/4+3);
+			g.lineTo(w - arrowCenter, h / 4 - 3 - h/4-3+3);
 			
-			g.moveTo(w - arrowCenter, h / 4 - 3 - h/4-3);
-			g.lineTo(w - arrowLeft, h / 4 + 2 - h/4-3);
-			g.lineTo(w - arrowRight, h / 4 + 2 - h/4-3);
-			g.lineTo(w - arrowCenter, h / 4 - 3 - h/4-3);
+			g.moveTo(w - arrowCenter, h / 4 - 3 - h/4+3);
+			g.lineTo(w - arrowLeft, h / 4 + 2 - h/4+3);
+			g.lineTo(w - arrowRight, h / 4 + 2 - h/4+3);
+			g.lineTo(w - arrowCenter, h / 4 - 3 - h/4+3);
 			
 			g.endFill();
 		}
