@@ -28,12 +28,13 @@
 	embedAsCFF: true;
 	
 }
-*/
+
 @font-face {
 	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;	
+	embedAsCFF: true;
 }
-/*@font-face {
+@font-face {
 	src:url("./branding/default/style/css/fonts/HelveticaNeue-Medium.ttf");
 	fontFamily: HelveticaNeue-Medium;
 	embedAsCFF: true;
@@ -45,12 +46,14 @@
 	embedAsCFF: true;
 	
 }
+*/
+
 @font-face {
-	src:url("./branding/default/style/css/fonts/Roboto-Medium.ttf");
+	src:url("fonts/Roboto-Medium.ttf");
 	fontFamily: Roboto-Medium;
 	embedAsCFF: true;
 	
-}*/
+}
 Application {
   backgroundColor: #ffffff;
 }
