@@ -900,6 +900,13 @@ Alert {
 	textRollOverColor: #3b4056;
 	textSelectedColor: #3b4056;
 }
+.mediumTitleStyle {
+	fontFamily: Roboto-Medium;
+	fontSize: 12;  
+	color: #3b4056;
+	textRollOverColor: #3b4056;
+	textSelectedColor: #3b4056;
+}
 .mediumLabelStyle {
 	fontFamily: HelveticaNeue-Medium;
 	fontSize: 12; 
@@ -976,6 +983,9 @@ Alert {
 	fontFamily: HelveticaNeue-Medium;
 	fontSize: 12; 
 	skin: ClassReference("org.bigbluebutton.skins.BlueArrowDropDownListSkin");
+}
+.greyWindowStyle{
+	backgroundColor: #f2f2f2;
 }
 
 /*new styles*/

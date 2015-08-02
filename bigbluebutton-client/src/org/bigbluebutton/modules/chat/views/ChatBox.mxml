@@ -25,7 +25,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
   xmlns:chat="org.bigbluebutton.modules.chat.views.*"
   implements="org.bigbluebutton.modules.chat.views.IChatTab"
 	click="setMessageRead()" verticalScrollPolicy="off"
-	creationComplete="onCreationComplete()">
+	creationComplete="onCreationComplete()"
+	styleName="greyWindowStyle">
 
   <mx:Style>
     .chatColorPickerStyle {

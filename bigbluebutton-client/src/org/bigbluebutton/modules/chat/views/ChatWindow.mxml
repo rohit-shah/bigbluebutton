@@ -28,6 +28,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	       initialize="init()"
 	       creationComplete="onCreationComplete()"
 		   titleStyleName="mediumLabelStyle"
+		   styleName="greyWindowStyle"
 	       xmlns:components="org.bigbluebutton.modules.chat.view.components.*" 
 		   xmlns:mate="http://mate.asfusion.com/" 
 		   xmlns:views="org.bigbluebutton.modules.chat.views.*">
