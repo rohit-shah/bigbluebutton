@@ -328,7 +328,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   click="globalDispatch.dispatchEvent(new UploadEvent(UploadEvent.CLOSE_UPLOAD_WINDOW))"
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.okCancelBtn.toolTip')}"/>
 		</mx:Canvas>	
-		<mx:ComboBox dataProvider="{new ArrayCollection(['Avenir-Black','Avenir-BlackOblique','Avenir-Light','Avenir-Medium','Avenir-MediumOblique','HelveticaNeue-Bold','HelveticaNeue-Medium','Roboto-Light','Roboto-Medium'])}">
+		<mx:ComboBox dataProvider="{new ArrayCollection(['Avenir-Black','Avenir-BlackOblique','Avenir-Light','Avenir-Medium','Avenir-MediumOblique','HelveticaNeue-Bold','HelveticaNeue-Medium','Roboto Light','Roboto-Light','Roboto-Medium'])}">
 			<mx:itemRenderer>
 				<mx:Component>
 					<mx:Label text="{data}" fontFamily="{data}"/>

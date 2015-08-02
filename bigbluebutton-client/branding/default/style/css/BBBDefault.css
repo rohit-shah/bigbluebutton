@@ -912,7 +912,7 @@ Alert {
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
 .presentationUploadTitleStyle {
-	fontFamily: Roboto-Light;
+	fontFamily: "Roboto Light";
 	fontSize: 20;  
 }
 .boldObliqueabelStayle{
