@@ -364,7 +364,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mx:Button id="shortcutKeysBtn" label="{ResourceUtil.getInstance().getString('bbb.mainToolbar.shortcutBtn')}" styleName="shortcutButtonStyle"
 			   click="onShortcutButtonClick()" height="22" 
 			   toolTip="{ResourceUtil.getInstance().getString('bbb.mainToolbar.shortcutBtn.toolTip')}" 
-			   tabIndex="{baseIndex+numButtons+13}" />
+			   tabIndex="{baseIndex+numButtons+13}" visible="false" />
 	<mx:LinkButton id="helpBtn" visible="{showHelpBtn}" includeInLayout="{showHelpBtn}" label="?" click="onHelpButtonClicked()" height="22" 
 				   styleName="helpLinkButtonStyle" tabIndex="{baseIndex+numButtons+14}" 
 				   toolTip="{ResourceUtil.getInstance().getString('bbb.mainToolbar.helpBtn')}"

@@ -28,9 +28,7 @@
 @font-face {
 	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
-	fontWeight: bold;
-	unicode-range: U+0-U+10FFFF;
-	
+	fontWeight: bold;	
 }
 @font-face {
 	src:url("fonts/HelveticaNeue-Medium.ttf");
@@ -39,7 +37,6 @@
 @font-face {
 	src:url("fonts/Roboto-Light.ttf");
 	fontFamily: Roboto-Light;
-	unicode-range: U+0-U+10FFFF;
 }
 @font-face {
 	src:url("fonts/Roboto-Medium.ttf");
