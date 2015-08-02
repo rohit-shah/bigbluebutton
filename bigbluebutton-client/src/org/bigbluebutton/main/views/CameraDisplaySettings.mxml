@@ -254,7 +254,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		private function onActivityEvent(e:ActivityEvent):void {
 			if (_waitingForActivation && e.activating) {
 				_activationTimer.stop();
-				_videoHolder.showWarning('bbb.video.publish.hint.videoPreview', false, "0xFFFF00");
+				_videoHolder.showWarning('bbb.video.publish.hint.videoPreview', false, "0xed0707");
 				//        controls.btnStartPublish.enabled = true;
 				_waitingForActivation = false;
 				btnStartPublish.enabled = true;

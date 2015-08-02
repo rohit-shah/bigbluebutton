@@ -39,7 +39,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
         _videoHolder.addChild(video);
       }
       
-      public function showWarning(resourceName:String, autoHide:Boolean=false, color:String="0xFF0000"):void {
+      public function showWarning(resourceName:String, autoHide:Boolean=false, color:String="0xed0707"):void {
         const text:String = ResourceUtil.getInstance().getString(resourceName);
         
         if (hideWarningTimer != null) {
@@ -74,6 +74,6 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
   <mx:Image id="imgChromeHelp" y="60" x="{this.width/2 - imgChromeHelp.width/2}" visible="false"
 			source="@Embed('assets/chrome-allow-mic-access.png')"/>
   <mx:Text id="lblWarning" width="100%" textAlign="center" fontSize="14" fontWeight="bold" 
-           y="{this.height - lblWarning.height - 30}" 
+           y="{this.height - lblWarning.height - 30}" styleName="boldObliqueLabelStyle"
            visible="true" selectable="false" hideEffect="{dissolveOut}" showEffect="{dissolveIn}"/>
 </mx:Canvas>

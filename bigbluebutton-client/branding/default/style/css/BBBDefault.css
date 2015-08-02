@@ -910,7 +910,12 @@ Alert {
 	fontSize: 12; 
 	
 }
-.boldObliqueabelStayle{
+.boldLabelStyle {
+	fontFamily: HelveticaNeue-Medium;
+	fontSize: 12; 
+	
+}
+.boldObliqueLabelStyle{
 	fontFamily: Avenir-BlackOblique;
 	fontStyle: italic;
 	fontSize: 11;
