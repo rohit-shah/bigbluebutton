@@ -849,7 +849,7 @@ Alert {
 /*new styles*/
 .whiteButtonStyle{
 	cornerRadius: 5;
-	fontWeight: 12;
+	fontSize: 12;
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
@@ -859,7 +859,8 @@ Alert {
 	textRollOverColor: #ffffff;
 	textSelectedColor: #ffffff;
 	cornerRadius: 5;
-	fontWeight: 12;
+	fontWeight: bold;
+	fontSize: 12;
 	fontFamily: HelveticaNeue-Bold;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
