@@ -21,20 +21,21 @@
 	fontFamily: Avenir-Medium;
 	embedAsCFF: true;
 	
-}*/
+}
 @font-face {
 	src:url("./branding/default/style/css/fonts/Avenir-MediumOblique.ttf");
 	fontFamily: Avenir-MediumOblique;
 	embedAsCFF: true;
 	
 }
-/*@font-face {
-	src:url("./branding/default/style/css/fonts/HelveticaNeue-Bold.ttf");
+*/
+@font-face {
+	src:url("../branding/default/style/css/fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
 	embedAsCFF: true;
 	
 }
-@font-face {
+/*@font-face {
 	src:url("./branding/default/style/css/fonts/HelveticaNeue-Medium.ttf");
 	fontFamily: HelveticaNeue-Medium;
 	embedAsCFF: true;
