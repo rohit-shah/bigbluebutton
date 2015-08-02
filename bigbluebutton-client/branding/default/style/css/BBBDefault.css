@@ -1,7 +1,7 @@
 /*fonts*/
-/*@font-face {
+@font-face {
 	src:url("fonts/Avenir-Black.ttf");
-	fontFamily: 'Avenir Black';
+	fontFamily: Avenir-Black;
 	embedAsCFF: true;
 	
 }
@@ -41,19 +41,19 @@
 	fontFamily: HelveticaNeue-Medium;
 	embedAsCFF: true;
 	
-}*/
+}
 @font-face {
 	src:url("fonts/Roboto-Light.ttf");
-	fontFamily: 'Roboto Lt';
+	fontFamily: "Roboto Light";
 	embedAsCFF: true;
 
 }
-/*@font-face {
+@font-face {
 	src:url("fonts/Roboto-Medium.ttf");
 	fontFamily: Roboto-Medium;
 	embedAsCFF: true;
 	
-}*/
+}
 /*fonts*/
 
 Application {
