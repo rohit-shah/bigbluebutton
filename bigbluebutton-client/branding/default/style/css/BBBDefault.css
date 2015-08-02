@@ -928,6 +928,7 @@ Alert {
 	textSelectedColor: #6e6e6e;
 	fontFamily: HelveticaNeue-Bold;
 	fontWeight: bold;
+	dropShadowEnabled: false;
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
 .lightBlueButtonStyle{
@@ -939,6 +940,7 @@ Alert {
 	fontSize: 12;
 	fontWeight: bold;
 	fontFamily: HelveticaNeue-Bold;
+	dropShadowEnabled: false;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
 
