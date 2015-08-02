@@ -95,7 +95,6 @@
 				debug="${DEBUG}" 
 				mxml.compatibility-version="3.0.0" 
 				swf-version="13"
-				incremental="true"
 				optimize="true">
 				<fonts>
 			          <manager>flash.fonts.JREFontManager</manager>
