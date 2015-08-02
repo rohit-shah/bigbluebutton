@@ -34,6 +34,7 @@
 	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
 	embedAsCFF: true;
+	fontWeight: bold;
 	
 }
 @font-face {
