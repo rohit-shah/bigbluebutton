@@ -44,12 +44,9 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		<![CDATA[
 			import com.asfusion.mate.events.Dispatcher;
 			
-			import mx.collections.*;
 			import mx.events.FlexEvent;
 			import mx.events.ValidationResultEvent;
 			import mx.managers.PopUpManager;
-			import mx.utils.*;
-			import mx.validators.*;
 			
 			import org.bigbluebutton.common.Images;
 			import org.bigbluebutton.common.LogUtil;
@@ -329,6 +326,13 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   click="globalDispatch.dispatchEvent(new UploadEvent(UploadEvent.CLOSE_UPLOAD_WINDOW))"
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.fileupload.okCancelBtn.toolTip')}"/>
 		</mx:Canvas>	
+		<mx:ComboBox dataProvider="{new ArrayCollection(['Avenir-Black','Avenir-BlackOblique','Avenir-Light','Avenir-Medium','Avenir-MediumOblique','HelveticaNeue-Bold','HelveticaNeue-Medium','Roboto-Light','Roboto-Medium'])}">
+			<mx:itemRenderer>
+				<mx:Component>
+					<mx:Label text="{data}" fontFamily="{data}"/>
+				</mx:Component>
+			</mx:itemRenderer>
+		</mx:ComboBox>
 	</mx:VBox>
 	
 </mx:TitleWindow> 
