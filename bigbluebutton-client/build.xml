@@ -97,10 +97,8 @@
 				swf-version="13" 
 				optimize="true">
 				<fonts>
-			           <managers>
-			              <manager>flash.fonts.CFFFontManager</manager>
-			           </managers>
-			      </fonts>
+			          <manager>flash.fonts.CFFFontManager</manager>
+			    </fonts>
 			</mxmlc>
 		</sequential>
 	</target>
