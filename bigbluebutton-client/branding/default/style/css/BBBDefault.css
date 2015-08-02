@@ -950,7 +950,6 @@ Alert {
 @font-face {
 	src:url("fonts/Roboto-Light.ttf");
 	fontFamily: Roboto-Light;
-	embedAsCFF: true;
 	
 }
 @font-face {
