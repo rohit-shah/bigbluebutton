@@ -25,13 +25,11 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
   xmlns:chat="org.bigbluebutton.modules.chat.views.*"
   implements="org.bigbluebutton.modules.chat.views.IChatTab"
 	click="setMessageRead()" verticalScrollPolicy="off"
-	creationComplete="onCreationComplete()"
-	styleName="greyWindowStyle">
+	creationComplete="onCreationComplete()" backgroundAlpha="0">
 
   <mx:Style>
     .chatColorPickerStyle {
       backgroundColor:#E5E6E7;
-	  backgroundColor:0;
       columnCount:12;
       horizontalGap:0;
       previewHeight:22;
@@ -675,7 +673,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
     <chat:AdvancedList width="100%" height="{chatListHeight}" id="chatMessagesList" selectable="false" variableRowHeight="true" 
              itemRenderer="org.bigbluebutton.modules.chat.views.ChatMessageRenderer" verticalScrollPolicy="on" horizontalScrollPolicy="off" wordWrap="true"
              dataProvider="{chatMessages.messages}"
-             tabIndex="{baseIndex}"
+             tabIndex="{baseIndex}" backgroundAlpha="0"
              accessibilityName="{ResourceUtil.getInstance().getString('bbb.chat.messageList')}" />    
   </mx:HBox>
   
