@@ -978,6 +978,7 @@ Alert {
 .greyWindowStyle{
 	backgroundColor: #f2f2f2;
 	cornerRadius: 0;
+	titleStyleName: "mediumLabelStyle";
 }
 
 /*new styles*/
