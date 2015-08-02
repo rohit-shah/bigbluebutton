@@ -31,6 +31,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
   <mx:Style>
     .chatColorPickerStyle {
       backgroundColor:#E5E6E7;
+	  backgroundColor:0;
       columnCount:12;
       horizontalGap:0;
       previewHeight:22;

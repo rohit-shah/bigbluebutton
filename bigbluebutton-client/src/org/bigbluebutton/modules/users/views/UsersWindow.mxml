@@ -29,6 +29,7 @@
 	title="{ResourceUtil.getInstance().getString('bbb.users.title')}"
 	titleStyleName="mediumLabelStyle"
 	styleName="greyWindowStyle"
+	showControls="false"
 	showCloseButton="false">
 
 	<mate:Listener type="{LocaleChangeEvent.LOCALE_CHANGED}" method="localeChanged" />

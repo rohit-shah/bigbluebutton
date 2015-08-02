@@ -663,9 +663,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   visible="{showToolbarOpt}" 
 					   verticalAlign="middle" 
 					   toolbarOptions="{layoutOptions}" 
-					   paddingTop="{toolbarPaddingTop}"
-					   paddingBottom="-10"/>
-					   
+					   paddingTop="{toolbarPaddingTop}"/>
+	<mx:Spacer height="-10"/>				   
 	<views:MainCanvas id="mdiCanvas" 
 					  horizontalScrollPolicy="off" 
 					  verticalScrollPolicy="off" 
