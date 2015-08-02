@@ -20,7 +20,7 @@
 		<mx:TextArea borderSkin="{null}" width="100%"
 					 text="{ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn')}"
 					 editable="false" styleName="presentationUploadTitleStyle"/>
-		<mx:Text width="100%" paddingBottom="20" fontSize="11"
+		<mx:Text width="100%" paddingBottom="20" styleName="boldLabelStyle"
 				 text="{ResourceUtil.getInstance().getString('bbb.logout.confirm.message')}"/>
 		<mx:HBox width="100%" paddingLeft="5" paddingTop="0" horizontalAlign="right" verticalAlign="middle"> 
 			<mx:Button id="closeButton" label="{ResourceUtil.getInstance().getString('bbb.window.closeBtn.toolTip')}" 
