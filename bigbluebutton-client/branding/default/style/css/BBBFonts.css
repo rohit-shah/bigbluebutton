@@ -29,13 +29,13 @@
 	fontFamily: Avenir-MediumOblique;
 	embedAsCFF: true;
 	
-}
+}*/
 @font-face {
 	src:url("fonts/HelveticaNeue-Bold.ttf");
 	fontFamily: HelveticaNeue-Bold;
 	embedAsCFF: true;
 	
-}*/
+}
 @font-face {
 	src:url("fonts/HelveticaNeue-Medium.ttf");
 	fontFamily: HelveticaNeue-Medium;
