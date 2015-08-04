@@ -606,7 +606,7 @@ DataGrid {
 
 
 
-.mdiWindowFocus, .presentationWindowStyleFocus, .videoDockStyleFocus
+.presentationWindowStyleFocus, .videoDockStyleFocus
 {
   headerHeight: 26;
   roundedBottomCorners: true;
