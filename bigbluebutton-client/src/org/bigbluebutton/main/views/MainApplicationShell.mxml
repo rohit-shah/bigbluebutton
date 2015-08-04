@@ -664,13 +664,13 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   verticalAlign="middle" 
 					   toolbarOptions="{layoutOptions}" 
 					   paddingTop="{toolbarPaddingTop}"/>
-	<mx:Spacer height="-10"/>				   
+	<mx:Spacer height="-12"/>				   
 	<views:MainCanvas id="mdiCanvas" 
 					  horizontalScrollPolicy="off" 
 					  verticalScrollPolicy="off" 
 					  effectsLib="{flexlib.mdi.effects.effectsLib.MDIVistaEffects}" 
 					  width="100%" 
-					  height="{globalHeight - toolbarHeight - 12+10}">
+					  height="{globalHeight - toolbarHeight}">
 		<views:LoadingBar id="progressBar" horizontalCenter="0" verticalCenter="0" width="50%" />
 		<views:BrandingLogo x="{this.width - 300}" y="{this.height - 300}" />
 	</views:MainCanvas>	
