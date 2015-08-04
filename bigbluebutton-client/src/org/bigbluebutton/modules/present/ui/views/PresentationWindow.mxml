@@ -34,7 +34,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  resizable="false" layout="absolute"
 					  styleName="greyWindowStyle"
 					  implements="org.bigbluebutton.common.IBbbModuleWindow"
-					  initialize="init()" paddingLeft="0" paddingRight="0"
+					  initialize="init()" paddingLeft="-10" paddingRight="-10"
 					  creationComplete="onCreationComplete()" 
 					  width="{DEFAULT_WINDOW_WIDTH}" height="{DEFAULT_WINDOW_HEIGHT}" 
 					  x="{DEFAULT_X_POSITION}" y="{DEFAULT_Y_POSITION}"
@@ -603,7 +603,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				{
 					lineUI.graphics.clear();
 					lineUI.graphics.beginFill(0xcecece);
-					lineUI.graphics.drawRect(-50,0,w+35,2);
+					lineUI.graphics.drawRect(-10,0,w+5,2);
 					lineUI.graphics.endFill();
 				}
 			}
