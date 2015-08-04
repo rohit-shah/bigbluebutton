@@ -487,15 +487,6 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					minimizeBtn.accessibilityName = ResourceUtil.getInstance().getString('bbb.video.minimizeBtn.accessibilityName');
 				}
 			}	
-			
-			override protected function updateDisplayList(w:Number, h:Number):void
-			{
-				super.updateDisplayList(w, h);
-				this.graphics.clear();
-				this.graphics.beginFill(0xcecece);
-				this.graphics.drawRect(0,this.titleBar.height,w,2);
-				this.graphics.endFill();
-			}
 		]]>
 	</mx:Script>
 	
