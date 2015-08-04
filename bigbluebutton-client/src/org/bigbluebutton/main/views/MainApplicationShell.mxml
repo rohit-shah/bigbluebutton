@@ -670,7 +670,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  verticalScrollPolicy="off" 
 					  effectsLib="{flexlib.mdi.effects.effectsLib.MDIVistaEffects}" 
 					  width="100%" 
-					  height="{globalHeigh - toolbarHeight - 12+10}">
+					  height="{globalHeight - toolbarHeight - 12+10}">
 		<views:LoadingBar id="progressBar" horizontalCenter="0" verticalCenter="0" width="50%" />
 		<views:BrandingLogo x="{this.width - 300}" y="{this.height - 300}" />
 	</views:MainCanvas>	
