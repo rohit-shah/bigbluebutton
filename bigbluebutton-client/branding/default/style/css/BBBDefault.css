@@ -942,8 +942,6 @@ Alert {
 	borderColor: #cecece;
 	borderStyle: solid;
 	borderThickness: 2;
-	styleNameFocus: null;
-	styleNameNoFocus: null;
 }
 
 /*new styles*/
