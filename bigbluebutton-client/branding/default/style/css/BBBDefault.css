@@ -949,5 +949,10 @@ Alert {
 	borderStyle: solid;
 	borderThickness: 2;
 }
-
+.progressBarStyle {
+	trackColors: #dfe3ea, #dfe3ea;
+	barColor: #41e2f9;
+	trackHeight: 18;
+	barSkin: ClassReference("org.bigbluebutton.skins.ProgresBarRoundedSkin");
+}
 /*new styles*/
