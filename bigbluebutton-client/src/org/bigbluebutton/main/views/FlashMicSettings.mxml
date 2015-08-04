@@ -361,9 +361,9 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					<mx:HBox>
 						<mx:ComboBox id="comboMicList"  styleName="cameraSettingsResolutionCombo"
 									 dataProvider="{microphoneList}" change="selectMicrophone(event)"
-									 height="30" dropdownWidth="390" width="390" tabIndex="{baseIndex+2}" 
+									 height="30" width="100%" tabIndex="{baseIndex+2}" 
 									 toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.comboMicList.toolTip')}" />
-						<mx:HSlider id="micRecordVolume"
+						<mx:HSlider id="micRecordVolume" width="100%" height="30"
 									maximum="100" snapInterval="1"  styleName="hSliderStyle"          
 									labels="[0%,{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.label')},100%]"
 									liveDragging="true" change="changeRecordVolume(event);"
