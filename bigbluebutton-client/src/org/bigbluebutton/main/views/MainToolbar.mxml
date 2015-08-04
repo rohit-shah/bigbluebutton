@@ -23,7 +23,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 <mx:ApplicationControlBar xmlns:mx="http://www.adobe.com/2006/mxml" 
 						  xmlns:mate="http://mate.asfusion.com/" visible="{showToolbar}"
 						  enabled="true" xmlns:views="org.bigbluebutton.main.views.*"
-						  initialize="init()" creationComplete="onCreationComplete()" xmlns:shapes="org.bigbluebutton.modules.whiteboard.business.shapes.*">   
+						  initialize="init()" creationComplete="onCreationComplete()" 
+						  xmlns:shapes="org.bigbluebutton.modules.whiteboard.business.shapes.*">   
 	
 	<mate:Listener type="{ToolbarButtonEvent.ADD}" method="handleAddToolbarButtonEvent" />	
 	<mate:Listener type="{ToolbarButtonEvent.REMOVE}" method="handleRemoveToolbarButtonEvent"/>
@@ -340,7 +341,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				if(bgUI.width>0&&bgUI.height>0)
 				{
 					bgUI.graphics.clear();
-					bgUI.graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0xe0dfe0,0xecebec],[1,1,1],[0,0,0]);
+					bgUI.graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0x000000,0xe0dfe0,0x000000,0xecebec],[1,1,1,1,1],[90,90,90,90,90]);
 					bgUI.graphics.drawRect(0,0,bgUI.width,bgUI.height);
 					bgUI.graphics.endFill();
 				}

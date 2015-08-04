@@ -54,6 +54,9 @@ ApplicationControlBar {
   backgroundAlpha: 1;
   cornerRadius: 0;
   dropShadowEnabled: false;
+  borderColor: 0x000000;
+  borderStyle: outset;
+  borderColor: 1;
 }
 
 Panel {
