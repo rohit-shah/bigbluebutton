@@ -20,10 +20,10 @@ package org.bigbluebutton.common
 {
   import flash.ui.ContextMenu;
   
+  import mx.utils.ObjectUtil;
+  
   import flexlib.mdi.containers.MDIWindow;
   import flexlib.mdi.managers.MDIManager;
-  
-  import mx.utils.ObjectUtil;
   
   /**
    *  This class exists so we can properly handle context menus on MDIWindow
@@ -45,7 +45,16 @@ package org.bigbluebutton.common
     private function filterContextMenu(item:*, index:int, array:Array):Boolean {
       return IGNORED_MENU_ITEMS.indexOf(item.caption) < 0;
     }
-    
+	
+	override protected function updateDisplayList(w:Number, h:Number):void
+	{
+		super.updateDisplayList(w, h);
+		this.graphics.clear();
+		this.graphics.beginFill(getStyle('borderColor'));
+		this.graphics.drawRect(0,this.titleBar.height,w,getStyle('borderThickness'));
+		this.graphics.endFill();
+	}
+	
 	
     override public function updateContextMenu():void {
       super.updateContextMenu();

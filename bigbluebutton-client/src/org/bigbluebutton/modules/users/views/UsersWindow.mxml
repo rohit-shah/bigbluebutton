@@ -29,6 +29,7 @@
 	title="{ResourceUtil.getInstance().getString('bbb.users.title')}"
 	titleStyleName="mediumLabelStyle"
 	showControls="false"
+	styleName="greyWindowStyle"
 	resizable="false"
 	showCloseButton="false">
 
