@@ -94,7 +94,7 @@ package org.bigbluebutton.common
 		override public function set width(value:Number):void
 		{
 			super.width=value;
-			if(width>0)
+			if(width>0&&titleBar!=null&&titleBar.height>0)
 			{
 				this.graphics.clear();
 				this.graphics.beginFill(0xcecece);
