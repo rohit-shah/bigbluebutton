@@ -509,7 +509,7 @@
 	
 	<mx:DataGrid id="usersGrid" dataProvider="{users}" editable="false" sortableColumns="true"
     	dragEnabled="false" width="100%" height="100%" draggableColumns="false"
-    	itemRollOver="onItemRollOver(event)"
+    	itemRollOver="onItemRollOver(event)" top="5"
 		itemRollOut="onItemRollOut(event)"
 		tabIndex="{partOptions.baseTabIndex+5}"
 		styleName="listLikeDatagridStyle" showHeaders="false"

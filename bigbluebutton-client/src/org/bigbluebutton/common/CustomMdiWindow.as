@@ -101,6 +101,7 @@ package org.bigbluebutton.common
 				if(lineUI==null)
 				{
 					lineUI=new UIComponent;
+					lineUI.x=0;
 					addChild(lineUI);
 				}
 				lineUI.graphics.clear();
