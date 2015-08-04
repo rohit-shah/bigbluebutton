@@ -49,6 +49,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			import mx.core.IFlexDisplayObject;
 			import mx.core.UIComponent;
 			import mx.events.CloseEvent;
+			import mx.events.ResizeEvent;
 			import mx.managers.PopUpManager;
 			
 			import org.bigbluebutton.common.IBbbToolbarComponent;
@@ -334,9 +335,20 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			
 			
+			protected function bgUI_resizeHandler(event:ResizeEvent):void
+			{
+				if(bgUI.width>0&&bgUI.height>0)
+				{
+					bgUI.graphics.clear();
+					bgUI.graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0xe0dfe0,0xecebec],[1,1,1],[0,0,0]);
+					bgUI.graphics.drawRect(0,0,bgUI.width,bgUI.height);
+					bgUI.graphics.endFill();
+				}
+			}
+			
 		]]>
 	</mx:Script>
-
+	<mx:UIComponent id="bgUI" width="100%" height="100%" resize="bgUI_resizeHandler(event)"/>
 	<mx:HBox id="quickLinks" width="1" includeInLayout="false">
 		<mx:LinkButton id="usersLinkBtn" click="onQuickLinkClicked('users')" label="{ResourceUtil.getInstance().getString('bbb.users.quickLink.label')}"
 					   accessibilityDescription="{usersLinkBtn.label}" toolTip="{usersLinkBtn.label}"
