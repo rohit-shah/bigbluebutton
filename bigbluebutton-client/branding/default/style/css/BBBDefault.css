@@ -888,7 +888,7 @@ Alert {
 .mediumObliqueLabelStyle{
 	fontFamily: Avenir-MediumOblique;
 	fontStyle: italic;
-	fontSize: 11;
+	fontSize: 12;
 }
 .whiteButtonStyle{
 	cornerRadius: 5;

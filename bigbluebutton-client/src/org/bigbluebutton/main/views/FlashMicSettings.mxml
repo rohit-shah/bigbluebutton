@@ -363,12 +363,12 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 									 dataProvider="{microphoneList}" change="selectMicrophone(event)"
 									 height="30" dropdownWidth="390" width="390" tabIndex="{baseIndex+2}" 
 									 toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.comboMicList.toolTip')}" />
-						<mx:HSlider id="micRecordVolume" 
-									maximum="100" snapInterval="1"                       
+						<mx:HSlider id="micRecordVolume" labelOffset="20"
+									maximum="100" snapInterval="1"            
 									labels="[0%,{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.label')},100%]"
 									tickInterval="10" liveDragging="true" change="changeRecordVolume(event);"
-									showTrackHighlight="true" trackColors="[ 0xEEEEEE, 0xFFFFFF ]"
-									value="60" tabIndex="{baseIndex+3}" 
+									trackColors="[ 0xEEEEEE, 0xFFFFFF ]"
+									value="60" tabIndex="{baseIndex+3}"
 									toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.toolTip')}" />                           
 					</mx:HBox>
 					<mx:ProgressBar id="micLevel" minimum="0" maximum="100" direction="right" label="" styleName="progressBarStyle"
