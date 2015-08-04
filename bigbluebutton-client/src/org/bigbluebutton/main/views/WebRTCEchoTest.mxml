@@ -241,7 +241,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				<mx:VBox width="100%">
 					<mx:HBox width="100%">
 						<mx:Text width="100%" text="{ResourceUtil.getInstance().getString('bbb.micSettings.recommendHeadset')}"
-								 styleName="boldObliqueLabelStyle" />		
+								 styleName="mediumObliqueLabelStyle" />		
 						<mx:Image source="@Embed('assets/headset-earbuds.png')"/>          
 					</mx:HBox>
 					<mx:HBox width="100%">

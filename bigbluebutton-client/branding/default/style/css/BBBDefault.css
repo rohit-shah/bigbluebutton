@@ -885,6 +885,11 @@ Alert {
 	fontStyle: italic;
 	fontSize: 11;
 }
+.mediumObliqueLabelStyle{
+	fontFamily: Avenir-MediumOblique;
+	fontStyle: italic;
+	fontSize: 11;
+}
 .whiteButtonStyle{
 	cornerRadius: 5;
 	fontSize: 12;
