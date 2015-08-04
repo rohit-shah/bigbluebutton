@@ -31,7 +31,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  verticalScrollPolicy="off" 
 					  horizontalScrollPolicy="off" 
 					  resize="resizeHandler()"
-					  resizable="false"
+					  resizable="false" layout="absolute"
 					  styleName="greyWindowStyle"
 					  implements="org.bigbluebutton.common.IBbbModuleWindow"
 					  initialize="init()"
@@ -596,17 +596,17 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				}
 			}
 			
-		override protected function updateDisplayList(w:Number, h:Number):void
-		{
-			super.updateDisplayList(w, h);
-			if(w>0)
+			override protected function updateDisplayList(w:Number, h:Number):void
 			{
-				lineUI.graphics.clear();
-				lineUI.graphics.beginFill(0xcecece);
-				lineUI.graphics.drawRect(-30,0,w+25,2);
-				lineUI.graphics.endFill();
+				super.updateDisplayList(w, h);
+				if(w>0)
+				{
+					lineUI.graphics.clear();
+					lineUI.graphics.beginFill(0xcecece);
+					lineUI.graphics.drawRect(-30,0,w+25,2);
+					lineUI.graphics.endFill();
+				}
 			}
-		}
 		]]>
 	</mx:Script>
 	
@@ -614,9 +614,9 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mx:Fade id="thumbFadeOut" alphaFrom="0" alphaTo="1" duration="100" />
 	
 	<mx:UIComponent id='lineUI' height="4"/>
-
-	<views:SlideView id="slideView" width="100%" height="100%" visible="false" mouseDown="mouseDown = true" horizontalCenter="0"
+	<views:SlideView id="slideView" width="100%" top="4" height="100%" visible="false" mouseDown="mouseDown = true"
 					 mouseUp="mouseDown = false" verticalScrollPolicy="off" horizontalScrollPolicy="off" tabIndex="{baseIndex+4}"/>			    
+	
 	<mx:ControlBar id="presCtrlBar" name="presCtrlBar" width="100%" height="{CONTROL_BAR_HEIGHT}" styleName="presentationWindowControlsStyle" >
 		<mx:Button id="uploadPres" visible="false" height="30" styleName="lightBlueButtonStyle"
 				   label="{ResourceUtil.getInstance().getString('bbb.presentation.uploadPresBtn.toolTip')}"

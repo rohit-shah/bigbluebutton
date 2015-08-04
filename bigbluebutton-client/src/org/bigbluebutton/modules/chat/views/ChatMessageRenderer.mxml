@@ -27,12 +27,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	
 	<mx:Script>
 		<![CDATA[
-			import mx.binding.utils.ChangeWatcher;
 			import mx.core.UITextField;
 			import mx.core.mx_internal;
-			
-			import org.bigbluebutton.common.LogUtil;
-			import org.bigbluebutton.modules.chat.model.ChatMessage;
 			
 			private function onLinkClick(e:TextEvent):void{
         trace("Clicked on link[" + e.text + "] from chat");
@@ -59,7 +55,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				lblName.visible = !(data.senderId == data.lastSenderId);
 				
 				//remove the header if not needed to save space
-				hbHeader.includeInLayout = hbHeader.visible = lblName.visible || lblTime.visible;
+				lblTime.includeInLayout = lblTime.visible = lblName.visible || lblTime.visible;
 				
 				// adjust the name width so that "..." are added if it's too long
 				lblName.width = this.width - lblTime.width - 22;
@@ -76,13 +72,15 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 						
 		]]>
 	</mx:Script>
-	
-  <mx:Canvas width="100%" id="hbHeader" verticalScrollPolicy="off" horizontalScrollPolicy="off">
-    <mx:Label id="lblName" text="{data.name}" visible="true" color="gray" textAlign="left" left="0"/>
-    <mx:Text id="lblTime" htmlText="{data.time}" textAlign="right"
-             visible="true" 
-             color="gray" right="0" />       
-  </mx:Canvas>
-  <mx:Text id="txtMessage" htmlText="{data.text}" link="onLinkClick(event)" color="{data.senderColor}"
-           keyDown="onKeyDown(event)" paddingLeft="5" width="100%" selectable="true"/>
+	<mx:VBox width="100%">
+		<mx:Label id="lblName" text="{data.name}" visible="true"  styleName="blackLabelStyle"/>
+		<mx:Text id="txtMessage" htmlText="{data.text}" link="onLinkClick(event)" color="{data.senderColor}"
+				 keyDown="onKeyDown(event)" styleName="mediumDarkGreyLabelStyle" selectable="true"/>
+		<mx:Text id="lblTime" htmlText="{data.time}" textAlign="center"
+				 visible="true" width="100%"
+				 styleName="mediumLightGreyLabelStyle" />  
+	</mx:VBox>
+    
+    
+  
 </mx:VBox>

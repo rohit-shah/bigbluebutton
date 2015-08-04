@@ -860,6 +860,7 @@ Alert {
 }
 .mediumLabelStyle {
 	fontFamily: Avenir-Medium;
+	color: #6e6e6e;
 	fontSize: 12; 
 	
 }
@@ -867,6 +868,18 @@ Alert {
 	fontFamily: Avenir-Medium;
 	fontSize: 12; 
 	color: #bababa;
+	
+}
+.mediumDarkGreyLabelStyle {
+	fontFamily: Avenir-Medium;
+	fontSize: 12; 
+	color: #6e6e6e;;
+	
+}
+.mediumLightGreyLabelStyle {
+	fontFamily: Avenir-Medium;
+	fontSize: 10; 
+	color: #dcdcdc;;
 	
 }
 .regularLabelStyle {
@@ -877,14 +890,23 @@ Alert {
 
 .boldLabelStyle {
 	fontFamily: HelveticaNeue-Bold;
+	fontWeight: bold;
 	fontSize: 12; 
 	
 }
 .boldObliqueLabelStyle{
 	fontFamily: Avenir-BlackOblique;
 	fontStyle: italic;
+	fontWeight: bold;
 	fontSize: 11;
 }
+.blackLabelStyle{
+	fontFamily: Avenir-Black;
+	fontWeight: bold;
+	color: #6e6e6e;
+	fontSize: 12;
+}
+
 .mediumObliqueLabelStyle{
 	fontFamily: Avenir-MediumOblique;
 	fontStyle: italic;
