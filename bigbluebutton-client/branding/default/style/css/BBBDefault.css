@@ -54,7 +54,7 @@ ApplicationControlBar {
   backgroundAlpha: 1;
   cornerRadius: 0;
   dropShadowEnabled: false;
-  borderColor: 0x000000;
+  borderColor: #000000;
   borderStyle: solid;
   borderThickness: 1;
 }
@@ -604,23 +604,7 @@ DataGrid {
 	fontWeight: bold;
 }
 
-MDIWindow { /*None of the following properties are overridden by the MDIWindow class*/
-	backgroundSize: '100%';
-	
-	cornerRadius: 5;
-	dropShadowEnabled: false;
-	titleStyleName: "mypanelTitle";
-	
-	cornerResizeImg: Embed(source="assets/swf/Blue.swf", symbol="Corner_Resize");
-	cornerResizeWidth: 2;
-	cornerResizeHeight: 2;
-	cornerResizePaddingRight: 2;
-	cornerResizePaddingBottom: 2;
-	
-	controlButtonWidth: 10;
-	controlButtonHeight: 10;
-	controlButtonGap: 4;
-}
+
 
 .mdiWindowFocus, .presentationWindowStyleFocus, .videoDockStyleFocus
 {
@@ -955,6 +939,7 @@ Alert {
 	horizontalGridLines: false;
 	verticalGridLines: false;
 	alternatingItemColors: #ffffff, #ffffff;
+	backgroundAlpha: 0;
 }
 
 .presentationFileUploadWindowStyle {

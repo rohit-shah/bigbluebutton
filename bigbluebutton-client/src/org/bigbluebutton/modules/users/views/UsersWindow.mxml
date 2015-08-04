@@ -28,7 +28,6 @@
 	creationComplete="onCreationComplete()"
 	title="{ResourceUtil.getInstance().getString('bbb.users.title')}"
 	titleStyleName="mediumLabelStyle"
-	styleName="greyWindowStyle"  cornerRadius="0"
 	showControls="false"
 	resizable="false"
 	showCloseButton="false">
