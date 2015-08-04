@@ -20,6 +20,7 @@ package org.bigbluebutton.common
 {
 	import flash.ui.ContextMenu;
 	
+	import mx.core.UIComponent;
 	import mx.utils.ObjectUtil;
 	
 	import flexlib.mdi.containers.MDIWindow;
@@ -91,16 +92,23 @@ package org.bigbluebutton.common
 			updateContextMenu();
 		}
 		
-		override public function set width(value:Number):void
+		private var lineUI:UIComponent;
+		override protected function updateDisplayList(w:Number, h:Number):void
 		{
-			super.width=value;
-			if(width>0)
+			super.updateDisplayList(w, h);
+			if(w>0&&titleBar!=null&&titleBar.height>0)
 			{
-				this.graphics.clear();
-				this.graphics.beginFill(0xcecece);
-				this.graphics.drawRect(0,40,width,2);
-				this.graphics.endFill();
+				if(lineUI==null)
+				{
+					lineUI=new UIComponent;
+					addChild(lineUI);
+				}
+				lineUI.graphics.clear();
+				lineUI.graphics.beginFill(0xcecece);
+				lineUI.graphics.drawRect(0,this.titleBar.height,w,2);
+				lineUI.graphics.endFill();
 			}
 		}
+		
 	}
 }
