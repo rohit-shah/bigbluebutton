@@ -346,10 +346,18 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					bgUI.graphics.endFill();
 				}
 			}
-			
+			override protected function updateDisplayList(w:Number, h:Number):void
+			{
+				if(w>0&&h>0)
+				{
+					graphics.clear();
+					graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0x000000,0xe0dfe0,0x000000,0xecebec],[1,1,1,1,1],[90,90,90,90,90]);
+					graphics.drawRect(0,0,w,h);
+					graphics.endFill();
+				}
+			}
 		]]>
 	</mx:Script>
-	<mx:UIComponent id="bgUI" includeInLayout="false" width="{width}" height="{height}" resize="bgUI_resizeHandler(event)"/>
 	<mx:HBox id="quickLinks" width="1" includeInLayout="false">
 		<mx:LinkButton id="usersLinkBtn" click="onQuickLinkClicked('users')" label="{ResourceUtil.getInstance().getString('bbb.users.quickLink.label')}"
 					   accessibilityDescription="{usersLinkBtn.label}" toolTip="{usersLinkBtn.label}"

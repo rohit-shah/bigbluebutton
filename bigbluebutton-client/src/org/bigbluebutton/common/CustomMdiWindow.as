@@ -50,8 +50,8 @@ package org.bigbluebutton.common
 	{
 		super.updateDisplayList(w, h);
 		this.graphics.clear();
-		this.graphics.beginFill(getStyle('borderColor'));
-		this.graphics.drawRect(0,this.titleBar.height,w,getStyle('borderThickness'));
+		this.graphics.beginFill(0xcecece);
+		this.graphics.drawRect(0,this.titleBar.height,w,4);
 		this.graphics.endFill();
 	}
 	
