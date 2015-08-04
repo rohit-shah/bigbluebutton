@@ -90,5 +90,14 @@ package org.bigbluebutton.common
       
       updateContextMenu();
     }
+	
+	override protected function updateDisplayList(w:Number, h:Number):void
+	{
+		super.updateDisplayList(w, h);
+		this.graphics.clear();
+		this.graphics.beginFill(0xcecece);
+		this.graphics.drawRect(0,this.titleBar.height,w,2);
+		this.graphics.endFill();
+	}
   }
 }
