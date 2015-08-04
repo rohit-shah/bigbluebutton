@@ -27,7 +27,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  xmlns:code="http://code.google.com/p/flexlib/" 
 					  xmlns:containers="flexlib.containers.*"
 					  xmlns:mate="http://mate.asfusion.com/"
-					  showCloseButton="false" layout="absolute"
+					  showCloseButton="false"
 					  verticalScrollPolicy="off" 
 					  horizontalScrollPolicy="off" 
 					  resize="resizeHandler()"
