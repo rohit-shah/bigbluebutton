@@ -670,12 +670,12 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  verticalScrollPolicy="off" 
 					  effectsLib="{flexlib.mdi.effects.effectsLib.MDIVistaEffects}" 
 					  width="100%" 
-					  height="{globalHeight - footerHeight - toolbarHeight - 12}">
+					  height="{globalHeigh - toolbarHeight - 12+10}">
 		<views:LoadingBar id="progressBar" horizontalCenter="0" verticalCenter="0" width="50%" />
 		<views:BrandingLogo x="{this.width - 300}" y="{this.height - 300}" />
 	</views:MainCanvas>	
 	
-	<mx:ControlBar width="100%" height="{footerHeight}" paddingTop="0" id="controlBar">
+	<mx:ControlBar width="100%" height="{footerHeight}" visible="false" includeInLayout="false" paddingTop="0" id="controlBar">
 		<mx:Label visible="false"
 				htmlText="{ResourceUtil.getInstance().getString('bbb.mainshell.copyrightLabel2',[appVersion])} test change"
 				link="onFooterLinkClicked(event)"
