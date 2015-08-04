@@ -283,8 +283,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				
 				if (chatTabs.numChildren >= 2) { 
 					chatTabs.addChildAt(chatBox, chatTabs.numChildren - 1);
+					chatTabs.getTabAt(chatTabs.numChildren-2).visible=false;
 				} else {
 					chatTabs.addChild(chatBox);
+					chatTabs.getTabAt(chatTabs.numChildren-1).visible=false;
 				}
          
 				// set the font size on tab opening
@@ -303,7 +305,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				tabBox.baseIndex = baseIndex + 10;
 				tabBox.addEventListener(KeyboardEvent.KEY_DOWN, tabBox.accessibleClick);
 				chatTabs.addChild(tabBox);
-				
+				chatTabs.getTabAt(chatTabs.numChildren-1).visible=false;
 				return tabBox;
 			}
 			
@@ -366,7 +368,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	</mx:Script>
 	<containers:SuperTabNavigator includeInLayout="false" id="chatTabs" backgroundAlpha="0"
                                 width="100%" height="100%" change="onTabNavChange()" tabHeight="0" 
-                                tabClose="onTabClose(event)" minTabWidth="20"
+                                tabClose="onTabClose(event)" minTabWidth="0" 
 								  dragEnabled="false" popUpButtonPolicy="off" tabIndex="{baseIndex}"
 								  />
 </mx:VBox>
