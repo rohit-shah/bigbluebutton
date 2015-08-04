@@ -863,6 +863,12 @@ Alert {
 	fontSize: 12; 
 	
 }
+.mediumGreyLabelStyle {
+	fontFamily: Avenir-Medium;
+	fontSize: 12; 
+	color: #bababa;
+	
+}
 .regularLabelStyle {
 	fontFamily: HelveticaNeue-Medium;
 	fontSize: 12; 
