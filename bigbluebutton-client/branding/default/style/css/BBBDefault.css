@@ -55,8 +55,7 @@ ApplicationControlBar {
   cornerRadius: 0;
   dropShadowEnabled: false;
   borderColor: 0x000000;
-  borderStyle: outset;
-  borderColor: 1;
+  borderStyle: solid;
   borderThickness: 1;
 }
 
@@ -985,7 +984,7 @@ Alert {
 	titleStyleName: "mediumLabelStyle";
 	borderAlpha: 1;
 	borderColor: #cecece;
-	borderStyle: inset;
+	borderStyle: solid;
 	borderThickness: 2;
 }
 
