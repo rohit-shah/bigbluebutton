@@ -107,10 +107,6 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				openChatBoxFor(PUBLIC_CHAT_USERID, true);
 		    makePublicChatUncloseable();
 		        
-		    if (chatOptions.privateEnabled) {
-		       createAddTabBox();
-		       makeAddPrivateChatUncloseable();
-		    }
 				
 				ResourceUtil.getInstance().addEventListener(Event.CHANGE, localeChanged); // Listen for locale changing
 				
@@ -191,19 +187,13 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				callLater(calledOnTheNextScreenRefreshToMakePublicChatUncloseable);
 			}
 			
-      private function makeAddPrivateChatUncloseable():void {
-        // See definition of callLater on Adobe Flash doc.
-        callLater(calledOnTheNextScreenRefreshToMakeTabUncloseable);        
-      }      
+           
       
-      private function calledOnTheNextScreenRefreshToMakeTabUncloseable():void {
-        chatTabs.setClosePolicyForTab(chatTabs.getChildIndex(tabBox), SuperTab.CLOSE_NEVER);
-      }
+      
       
 			private function calledOnTheNextScreenRefreshToMakePublicChatUncloseable():void {
 				var chatBox:ChatBox = getChatBoxForUser(PUBLIC_CHAT_USERID);
 				var chatIndex:int = getTabIndexFor(chatBox);
-				chatTabs.setClosePolicyForTab(chatIndex, SuperTab.CLOSE_NEVER);								
 			}
 											
 			private function isChatBoxCurrentlySelected(id:String):Boolean {
@@ -215,10 +205,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 								
 			private function notifyParticipantOfUnreadMessageFrom(userid:String):void {
 				var chatBox:ChatBox = getChatBoxForUser(userid);
-				var tabIndex:int = getTabIndexFor(chatBox);
-				var tab:Button = chatTabs.getTabAt(tabIndex);
-				tab.setStyle("fillColors", new Array(0xFFAE00, 0xD3800A));
-				tab.setStyle("fillAlphas", new Array(1.0, 0.8));
+			
 				
 				// An event to change the accessibilityDescription of the given chat tab to <existing label> + "NEW MESSAGE" should go here.
 				// However, the SuperTabNavigator does not cooperate with changes to it's accessibility properties.
@@ -229,9 +216,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			}
 			
 			private function onTabNavChange():void{
-				var tab:Button = chatTabs.getTabAt(chatTabs.selectedIndex);
-				tab.setStyle("fillColors", new Array(0xFFFFFF, 0xCCCCCC));
-				
+			
 				// An event to remove the "NEW MESSAGE" notification from the accessibilityDescription of the given chat tab (if it exists) should go here.
 				// However, the SuperTabNavigator does not cooperate with changes to it's accessibility properties.
 				
@@ -283,10 +268,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				
 				if (chatTabs.numChildren >= 2) { 
 					chatTabs.addChildAt(chatBox, chatTabs.numChildren - 1);
-					chatTabs.getTabAt(chatTabs.numChildren-2).visible=false;
 				} else {
 					chatTabs.addChild(chatBox);
-					chatTabs.getTabAt(chatTabs.numChildren-1).visible=false;
 				}
          
 				// set the font size on tab opening
@@ -305,7 +288,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				tabBox.baseIndex = baseIndex + 10;
 				tabBox.addEventListener(KeyboardEvent.KEY_DOWN, tabBox.accessibleClick);
 				chatTabs.addChild(tabBox);
-				chatTabs.getTabAt(chatTabs.numChildren-1).visible=false;
+				
 				return tabBox;
 			}
 			
@@ -366,9 +349,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 		]]>
 	</mx:Script>
-	<containers:SuperTabNavigator includeInLayout="false" id="chatTabs" backgroundAlpha="0"
-                                width="100%" height="100%" change="onTabNavChange()" tabHeight="0" 
-                                tabClose="onTabClose(event)" minTabWidth="0" 
-								  dragEnabled="false" popUpButtonPolicy="off" tabIndex="{baseIndex}"
+	<mx:ViewStack includeInLayout="false" id="chatTabs" backgroundAlpha="0"
+                                width="100%" height="100%" change="onTabNavChange()" 
+                                tabIndex="{baseIndex}"
 								  />
 </mx:VBox>
