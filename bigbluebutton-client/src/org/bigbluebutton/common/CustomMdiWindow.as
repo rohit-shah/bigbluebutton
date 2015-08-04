@@ -94,11 +94,11 @@ package org.bigbluebutton.common
 		override public function set width(value:Number):void
 		{
 			super.width=value;
-			if(width>0&&titleBar!=null&&titleBar.height>0)
+			if(width>0)
 			{
 				this.graphics.clear();
 				this.graphics.beginFill(0xcecece);
-				this.graphics.drawRect(0,this.titleBar.height,width,2);
+				this.graphics.drawRect(0,40,width,2);
 				this.graphics.endFill();
 			}
 		}
