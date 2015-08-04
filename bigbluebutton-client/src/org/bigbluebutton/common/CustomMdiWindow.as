@@ -105,7 +105,7 @@ package org.bigbluebutton.common
 				}
 				lineUI.graphics.clear();
 				lineUI.graphics.beginFill(0xcecece);
-				lineUI.graphics.drawRect(0,this.titleBar.height,w,2);
+				lineUI.graphics.drawRect(0,0,w,4);
 				lineUI.graphics.endFill();
 			}
 		}
