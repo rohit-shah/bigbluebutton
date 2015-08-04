@@ -57,6 +57,7 @@ ApplicationControlBar {
   borderColor: 0x000000;
   borderStyle: outset;
   borderColor: 1;
+  borderThickness: 1;
 }
 
 Panel {
@@ -982,6 +983,10 @@ Alert {
 	backgroundColor: #f2f2f2;
 	cornerRadius: 0;
 	titleStyleName: "mediumLabelStyle";
+	borderAlpha: 1;
+	borderColor: #cecece;
+	borderStyle: inset;
+	borderThickness: 2;
 }
 
 /*new styles*/
