@@ -336,16 +336,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			
 			
-			protected function bgUI_resizeHandler(event:ResizeEvent):void
-			{
-				if(bgUI.width>0&&bgUI.height>0)
-				{
-					bgUI.graphics.clear();
-					bgUI.graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0x000000,0xe0dfe0,0x000000,0xecebec],[1,1,1,1,1],[90,90,90,90,90]);
-					bgUI.graphics.drawRect(0,0,bgUI.width,bgUI.height);
-					bgUI.graphics.endFill();
-				}
-			}
+
 			override protected function updateDisplayList(w:Number, h:Number):void
 			{
 				if(w>0&&h>0)
