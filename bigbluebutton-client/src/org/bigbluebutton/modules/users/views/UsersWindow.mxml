@@ -517,7 +517,7 @@
 			}
 		]]>
 	</mx:Script>
-	<mx:UIComponent id='lineUI' height="4" left="-2"/>
+	<mx:UIComponent id='lineUI' height="4" left="-5"/>
 	<mx:DataGrid id="usersGrid" dataProvider="{users}" editable="false" sortableColumns="true"
     	dragEnabled="false" width="100%" height="100%" draggableColumns="false"
     	itemRollOver="onItemRollOver(event)"
