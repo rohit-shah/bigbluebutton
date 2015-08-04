@@ -198,7 +198,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				{
 					lineUI.graphics.clear();
 					lineUI.graphics.beginFill(0xcecece);
-					lineUI.graphics.drawRect(-30,0,w+25,2);
+					lineUI.graphics.drawRect(-10,0,w+5,2);
 					lineUI.graphics.endFill();
 				}
 			}
