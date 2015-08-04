@@ -66,6 +66,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			[Bindable] private var baseIndex:int;
 			private function init():void{
+				chatOptions.privateEnabled=false;
 				baseIndex = chatOptions.baseTabIndex;
 			}
 			
