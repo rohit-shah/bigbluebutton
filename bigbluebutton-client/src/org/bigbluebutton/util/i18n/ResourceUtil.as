@@ -96,11 +96,11 @@ package org.bigbluebutton.util.i18n
 		private function handleComplete(e:Event):void{
 			parse(new XML(e.target.data));		
 									
-			preferredLocale = getDefaultLocale();
+			/*preferredLocale = getDefaultLocale();
 			if (preferredLocale != MASTER_LOCALE) {
 				loadMasterLocale(MASTER_LOCALE);
-			}
-			setPreferredLocale(preferredLocale);
+			}*/
+			setPreferredLocale(MASTER_LOCALE);
 		}
 		
 		private function parse(xml:XML):void{		 	
