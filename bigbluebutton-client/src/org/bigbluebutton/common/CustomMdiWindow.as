@@ -92,24 +92,7 @@ package org.bigbluebutton.common
 			updateContextMenu();
 		}
 		
-		private var lineUI:UIComponent;
-		override protected function updateDisplayList(w:Number, h:Number):void
-		{
-			super.updateDisplayList(w, h);
-			if(w>0&&titleBar!=null&&titleBar.height>0)
-			{
-				if(lineUI==null)
-				{
-					lineUI=new UIComponent;
-					lineUI.x=0;
-					addChild(lineUI);
-				}
-				lineUI.graphics.clear();
-				lineUI.graphics.beginFill(0xcecece);
-				lineUI.graphics.drawRect(0,0,w,4);
-				lineUI.graphics.endFill();
-			}
-		}
+		
 		
 	}
 }
