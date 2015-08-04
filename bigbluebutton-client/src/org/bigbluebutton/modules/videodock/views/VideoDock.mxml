@@ -30,6 +30,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				 titleStyleName="mediumLabelStyle"
 				 styleName="greyWindowStyle"  cornerRadius="0"
 				 showControls="false"
+				 resizable="false"
 				 title="{ResourceUtil.getInstance().getString('bbb.videodock.title')}"
 				 xmlns:mate="http://mate.asfusion.com/" styleNameFocus="videoDockStyleFocus"
 				 layout="absolute" visible="false" styleNameNoFocus="videoDockStyleNoFocus"

@@ -31,6 +31,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					  verticalScrollPolicy="off" 
 					  horizontalScrollPolicy="off" 
 					  resize="resizeHandler()"
+					  resizable="false"
 					  styleNameFocus="presentationWindowStyleFocus"
 					  styleNameNoFocus="presentationWindowStyleNoFocus"
 					  implements="org.bigbluebutton.common.IBbbModuleWindow"

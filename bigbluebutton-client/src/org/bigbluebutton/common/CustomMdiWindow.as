@@ -46,6 +46,7 @@ package org.bigbluebutton.common
       return IGNORED_MENU_ITEMS.indexOf(item.caption) < 0;
     }
     
+	
     override public function updateContextMenu():void {
       super.updateContextMenu();
       

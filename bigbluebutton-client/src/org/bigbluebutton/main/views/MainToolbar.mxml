@@ -23,7 +23,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 <mx:ApplicationControlBar xmlns:mx="http://www.adobe.com/2006/mxml" 
 						  xmlns:mate="http://mate.asfusion.com/" visible="{showToolbar}"
 						  enabled="true" xmlns:views="org.bigbluebutton.main.views.*"
-						  initialize="init()" creationComplete="onCreationComplete()">   
+						  initialize="init()" creationComplete="onCreationComplete()" xmlns:shapes="org.bigbluebutton.modules.whiteboard.business.shapes.*">   
 	
 	<mate:Listener type="{ToolbarButtonEvent.ADD}" method="handleAddToolbarButtonEvent" />	
 	<mate:Listener type="{ToolbarButtonEvent.REMOVE}" method="handleRemoveToolbarButtonEvent"/>
@@ -336,6 +336,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 		]]>
 	</mx:Script>
+
 	<mx:HBox id="quickLinks" width="1" includeInLayout="false">
 		<mx:LinkButton id="usersLinkBtn" click="onQuickLinkClicked('users')" label="{ResourceUtil.getInstance().getString('bbb.users.quickLink.label')}"
 					   accessibilityDescription="{usersLinkBtn.label}" toolTip="{usersLinkBtn.label}"
