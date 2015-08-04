@@ -511,7 +511,7 @@
 				{
 					lineUI.graphics.clear();
 					lineUI.graphics.beginFill(0xcecece);
-					lineUI.graphics.drawRect(-10,0,w+10,2);
+					lineUI.graphics.drawRect(-10,0,w+5,2);
 					lineUI.graphics.endFill();
 				}
 			}
