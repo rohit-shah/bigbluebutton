@@ -606,37 +606,6 @@ DataGrid {
 
 
 
-.presentationWindowStyleFocus, .videoDockStyleFocus
-{
-  headerHeight: 26;
-  roundedBottomCorners: true;
-  backgroundColor: #b9babc;
-  backgroundAlpha: 1;
-  
-  borderStyle: solid;
-  borderColor: #b9babc;
-  borderAlpha: 1;
-  borderThicknessLeft: 3;
-  borderThicknessTop: 0;
-  borderThicknessBottom: 3;
-  borderThicknessRight: 3;
-}
-
-.mdiWindowNoFocus, .presentationWindowStyleNoFocus, .videoDockStyleNoFocus
-{
-  headerHeight: 26;
-  roundedBottomCorners: true;
-  backgroundColor: #b9babc;
-  backgroundAlpha: 0.5;
-	
-  borderStyle: solid;
-  borderColor: #b9babc;
-  borderAlpha: 0.5;
-  borderThicknessLeft: 3;
-  borderThicknessTop: 0;
-  borderThicknessBottom: 3;
-  borderThicknessRight: 3;
-}
 
 .presentationSlideViewStyle {
   backgroundColor: #b9babc;
@@ -941,6 +910,7 @@ Alert {
 	alternatingItemColors: #ffffff, #ffffff;
 	backgroundAlpha: 0;
 	borderAlpha: 0;
+	borderStyle: none;
 }
 
 .presentationFileUploadWindowStyle {
@@ -964,7 +934,7 @@ Alert {
 	fontSize: 12; 
 	skin: ClassReference("org.bigbluebutton.skins.BlueArrowDropDownListSkin");
 }
-.greyWindowStyle{
+.mdiWindowNoFocus, .mdiWindowFocus, .greyWindowStyle{
 	backgroundColor: #f2f2f2;
 	cornerRadius: 0;
 	titleStyleName: "mediumLabelStyle";
