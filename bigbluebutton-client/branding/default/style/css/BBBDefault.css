@@ -961,4 +961,9 @@ Alert {
 	barSkin: ClassReference("org.bigbluebutton.skins.ProgresBarRoundedSkin");
 	trackSkin: ClassReference("org.bigbluebutton.skins.ProgressTrackRoundedSkin");
 }
+.hSliderStyle {
+	trackColors: #eeeeee, #ffffff;
+	labelOffset: 20;
+	thumbSkin: ClassReference("org.bigbluebutton.skins.SliderTrackRoundedSkin");
+}
 /*new styles*/

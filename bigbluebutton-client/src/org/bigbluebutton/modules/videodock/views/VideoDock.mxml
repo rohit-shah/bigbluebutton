@@ -487,8 +487,21 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					minimizeBtn.accessibilityName = ResourceUtil.getInstance().getString('bbb.video.minimizeBtn.accessibilityName');
 				}
 			}	
+			
+			override protected function updateDisplayList(w:Number, h:Number):void
+			{
+				super.updateDisplayList(w, h);
+				if(w>0)
+				{
+					lineUI.graphics.clear();
+					lineUI.graphics.beginFill(0xcecece);
+					lineUI.graphics.drawRect(-10,0,w+5,2);
+					lineUI.graphics.endFill();
+				}
+			}
 		]]>
 	</mx:Script>
+	<mx:UIComponent id='lineUI' height="4"/>
 	
 	<mate:Listener type="{OpenVideoWindowEvent.OPEN_VIDEO_WINDOW_EVENT}" method="onOpenWindow" />
 	<mate:Listener type="{CloseWindowEvent.CLOSE_WINDOW_EVENT}" method="onCloseWindow" />

@@ -21,18 +21,18 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 -->
 
 <CustomMdiWindow xmlns="org.bigbluebutton.common.*" 
-	       xmlns:mx="http://www.adobe.com/2006/mxml" 
-	       xmlns:chat="org.bigbluebutton.modules.chat.views.components.*"
-	       showCloseButton="false"
-	       implements="org.bigbluebutton.common.IBbbModuleWindow" 
-	       initialize="init()"
-		   showControls="false"
-	       creationComplete="onCreationComplete()"
-		   styleName="greyWindowStyle"
-		   resizable="false"
-	       xmlns:components="org.bigbluebutton.modules.chat.view.components.*" 
-		   xmlns:mate="http://mate.asfusion.com/" 
-		   xmlns:views="org.bigbluebutton.modules.chat.views.*">
+				 xmlns:mx="http://www.adobe.com/2006/mxml" 
+				 xmlns:chat="org.bigbluebutton.modules.chat.views.components.*"
+				 showCloseButton="false"
+				 implements="org.bigbluebutton.common.IBbbModuleWindow" 
+				 initialize="init()"
+				 showControls="false"
+				 creationComplete="onCreationComplete()"
+				 styleName="greyWindowStyle"
+				 resizable="false"
+				 xmlns:components="org.bigbluebutton.modules.chat.view.components.*" 
+				 xmlns:mate="http://mate.asfusion.com/" 
+				 xmlns:views="org.bigbluebutton.modules.chat.views.*">
 	
 	<mate:Listener type="{LocaleChangeEvent.LOCALE_CHANGED}" method="localeChanged" />
 	<mate:Listener type="{ShortcutEvent.FOCUS_CHAT_WINDOW}" method="focusWindow" />
@@ -55,8 +55,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			import org.bigbluebutton.util.i18n.ResourceUtil;
 			import org.bigbluebutton.common.LogUtil;
 			
-      private static const LOG:String = "Chat::ChatWindow - ";
-      
+			private static const LOG:String = "Chat::ChatWindow - ";
+			
 			private var _xPosition:int;
 			private var _yPosition:int;
 			private var keyCombos:Object;
@@ -84,13 +84,13 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				minimizeBtn.tabIndex = baseIndex+1;
 				maximizeRestoreBtn.tabIndex = baseIndex+2;
 				closeBtn.tabIndex = baseIndex+3;
-
+				
 				resourcesChanged(); // update the window controls once they've been created
 			}
 			
 			private function loadKeyCombos(modifier:String):void {
 				keyCombos = new Object(); // always start with a fresh array
-			    keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.chat.focusTabs') as String)] = ShortcutEvent.FOCUS_CHAT_TABS;
+				keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.chat.focusTabs') as String)] = ShortcutEvent.FOCUS_CHAT_TABS;
 				
 				// Get sent to chatView
 				keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.chat.focusBox') as String)] = ShortcutEvent.FOCUS_CHAT_BOX;
@@ -101,22 +101,22 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.general.maximize') as String)] = ShortcutEvent.MAXIMIZE_CHAT;
 				keyCombos[modifier+(ResourceUtil.getInstance().getString('bbb.shortcutkey.general.minimize') as String)] = ShortcutEvent.MINIMIZE_CHAT;
 			}
-		
-		    private function hotkeyCapture():void{
-		      this.addEventListener(KeyboardEvent.KEY_DOWN, handleKeyDown);
-		      ResourceUtil.getInstance().addEventListener(Event.CHANGE, localeChanged); // Listen for locale changing
-		    }
-		
+			
+			private function hotkeyCapture():void{
+				this.addEventListener(KeyboardEvent.KEY_DOWN, handleKeyDown);
+				ResourceUtil.getInstance().addEventListener(Event.CHANGE, localeChanged); // Listen for locale changing
+			}
+			
 			// Handle general-access hotkeys, regardless of what window the user is focused in
-		    private function handleKeyDown(e:KeyboardEvent) :void {
-		      var modifier:String = ExternalInterface.call("determineModifier");
-			  loadKeyCombos(modifier);			  
-			  var keyPress:String = (e.ctrlKey  ? "control+" : "") + (e.shiftKey ? "shift+"   : "") +
-		                            (e.altKey   ? "alt+"     : "") + e.keyCode;		                              
-		      if (keyCombos[keyPress]) {
-		        disp.dispatchEvent(new ShortcutEvent(keyCombos[keyPress]));
-		      }
-		    }
+			private function handleKeyDown(e:KeyboardEvent) :void {
+				var modifier:String = ExternalInterface.call("determineModifier");
+				loadKeyCombos(modifier);			  
+				var keyPress:String = (e.ctrlKey  ? "control+" : "") + (e.shiftKey ? "shift+"   : "") +
+					(e.altKey   ? "alt+"     : "") + e.keyCode;		                              
+				if (keyCombos[keyPress]) {
+					disp.dispatchEvent(new ShortcutEvent(keyCombos[keyPress]));
+				}
+			}
 			
 			private function remoteMinimize(e:ShortcutEvent):void{
 				if (!minimized){
@@ -138,17 +138,17 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			}
 			
 			private function fullScreenHandler(evt:FullScreenEvent):void {
-/*				dispState = FlexGlobals.topLevelApplication.stage.displayState + " (fullScreen=" + evt.fullScreen.toString() + ")";
+				/*				dispState = FlexGlobals.topLevelApplication.stage.displayState + " (fullScreen=" + evt.fullScreen.toString() + ")";
 				if (evt.fullScreen) {
-					txtMsg.text = "Chat not enabled in full screen mode";
-					txtMsg.enabled = false;
-					sendBtn.enabled = false;
+				txtMsg.text = "Chat not enabled in full screen mode";
+				txtMsg.enabled = false;
+				sendBtn.enabled = false;
 				} else {
-					txtMsg.text = "";
-					txtMsg.enabled = true;
-					sendBtn.enabled = true;
+				txtMsg.text = "";
+				txtMsg.enabled = true;
+				sendBtn.enabled = true;
 				}
-*/			}		
+			*/			}		
 			
 			override protected function resourcesChanged():void{
 				super.resourcesChanged();
@@ -173,14 +173,14 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function localeChanged(e:Event):void{
 				resourcesChanged();
 			}
-            
-      private function enableMessageEntryTextBox():void {
-//        txtMsg.enabled = true;
-      }
-            
-      private function disableMessageEntryTextBox():void {
-//        txtMsg.enabled = false;
-      }
+			
+			private function enableMessageEntryTextBox():void {
+				//        txtMsg.enabled = true;
+			}
+			
+			private function disableMessageEntryTextBox():void {
+				//        txtMsg.enabled = false;
+			}
 			
 			override protected function hideAllChildren():void {
 				chatView.includeInLayout=false;
@@ -190,8 +190,20 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				chatView.includeInLayout=true;
 			}
 			
+			override protected function updateDisplayList(w:Number, h:Number):void
+			{
+				super.updateDisplayList(w, h);
+				if(w>0)
+				{
+					lineUI.graphics.clear();
+					lineUI.graphics.beginFill(0xcecece);
+					lineUI.graphics.drawRect(-10,0,w+5,2);
+					lineUI.graphics.endFill();
+				}
+			}
 		]]>
 	</mx:Script>
+	<mx:UIComponent id='lineUI' height="4"/>
 	
 	<views:ChatView id="chatView" chatOptions="{chatOptions}" includeInLayout="false"/>
 </CustomMdiWindow>
