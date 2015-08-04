@@ -603,7 +603,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			{
 				lineUI.graphics.clear();
 				lineUI.graphics.beginFill(0xcecece);
-				lineUI.graphics.drawRect(-20,0,w+15,2);
+				lineUI.graphics.drawRect(-30,0,w+25,2);
 				lineUI.graphics.endFill();
 			}
 		}
@@ -615,7 +615,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	
 	<mx:UIComponent id='lineUI' height="4"/>
 
-	<views:SlideView id="slideView" width="100%" height="100%" visible="false" mouseDown="mouseDown = true"
+	<views:SlideView id="slideView" width="100%" height="100%" visible="false" mouseDown="mouseDown = true" horizontalCenter="0"
 					 mouseUp="mouseDown = false" verticalScrollPolicy="off" horizontalScrollPolicy="off" tabIndex="{baseIndex+4}"/>			    
 	<mx:ControlBar id="presCtrlBar" name="presCtrlBar" width="100%" height="{CONTROL_BAR_HEIGHT}" styleName="presentationWindowControlsStyle" >
 		<mx:Button id="uploadPres" visible="false" height="30" styleName="lightBlueButtonStyle"
