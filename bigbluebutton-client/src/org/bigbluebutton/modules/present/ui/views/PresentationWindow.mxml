@@ -603,7 +603,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			{
 				lineUI.graphics.clear();
 				lineUI.graphics.beginFill(0xcecece);
-				lineUI.graphics.drawRect(-10,0,w+5,2);
+				lineUI.graphics.drawRect(-20,0,w+15,2);
 				lineUI.graphics.endFill();
 			}
 		}
