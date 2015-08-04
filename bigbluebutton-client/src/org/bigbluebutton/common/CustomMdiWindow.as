@@ -46,14 +46,7 @@ package org.bigbluebutton.common
       return IGNORED_MENU_ITEMS.indexOf(item.caption) < 0;
     }
 	
-	override protected function updateDisplayList(w:Number, h:Number):void
-	{
-		super.updateDisplayList(w, h);
-		this.graphics.clear();
-		this.graphics.beginFill(0xcecece);
-		this.graphics.drawRect(0,this.titleBar.height,w,4);
-		this.graphics.endFill();
-	}
+	
 	
 	
     override public function updateContextMenu():void {

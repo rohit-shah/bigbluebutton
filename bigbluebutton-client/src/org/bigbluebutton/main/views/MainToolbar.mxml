@@ -339,6 +339,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 
 			override protected function updateDisplayList(w:Number, h:Number):void
 			{
+				super.updateDisplayList(w,h);
 				if(w>0&&h>0)
 				{
 					graphics.clear();
