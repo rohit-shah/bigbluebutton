@@ -31,8 +31,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				 showControls="false"
 				 resizable="false"
 				 title="{ResourceUtil.getInstance().getString('bbb.videodock.title')}"
-				 xmlns:mate="http://mate.asfusion.com/" styleNameFocus="videoDockStyleFocus"
-				 layout="absolute" visible="false" styleNameNoFocus="videoDockStyleNoFocus"
+				 xmlns:mate="http://mate.asfusion.com/"
+				 layout="absolute" visible="false"
 				 horizontalAlign="center" 
 				 verticalAlign="middle"
 				 resize="onChildAdd()">
