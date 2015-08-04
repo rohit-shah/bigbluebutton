@@ -940,6 +940,7 @@ Alert {
 	verticalGridLines: false;
 	alternatingItemColors: #ffffff, #ffffff;
 	backgroundAlpha: 0;
+	borderAlpha: 0;
 }
 
 .presentationFileUploadWindowStyle {
