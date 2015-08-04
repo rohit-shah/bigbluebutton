@@ -952,7 +952,8 @@ Alert {
 .progressBarStyle {
 	trackColors: #dfe3ea, #dfe3ea;
 	barColor: #41e2f9;
-	trackHeight: 18;
+	trackHeight: 10;
 	barSkin: ClassReference("org.bigbluebutton.skins.ProgresBarRoundedSkin");
+	trackSkin: ClassReference("org.bigbluebutton.skins.ProgressTrackRoundedSkin");
 }
 /*new styles*/

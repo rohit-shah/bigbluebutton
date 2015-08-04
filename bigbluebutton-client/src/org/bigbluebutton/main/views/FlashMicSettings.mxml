@@ -372,7 +372,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 									toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.toolTip')}" />                           
 					</mx:HBox>
 					<mx:ProgressBar id="micLevel" minimum="0" maximum="100" direction="right" label="" styleName="progressBarStyle"
-									mode="manual" visible="true" width="100%" height="20" verticalGap="-20" 
+									mode="manual" visible="true" width="100%" height="12" verticalGap="-20" 
 									tabIndex="{baseIndex+4}" />
 				</mx:VBox>
 				
