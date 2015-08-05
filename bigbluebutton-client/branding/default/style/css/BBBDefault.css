@@ -936,7 +936,7 @@ Alert {
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
 .presentationLightBlueButtonStyle{
-	horizontalGap: -5;
+	horizontalGap: -15;
 	icon: ClassReference("org.bigbluebutton.skins.UploadButtonIconSkin");
 }
 
@@ -988,7 +988,7 @@ Alert {
 }
 .labelLightStyle {
 	color: #9ba1ae;
-	fontSize: 8;
+	fontSize: 10;
 	fontFamily: Avenir-Light;
 }
 .hSliderStyle {
