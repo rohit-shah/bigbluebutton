@@ -985,7 +985,7 @@ Alert {
 }
 .hSliderStyle {
 	trackColors: #eeeeee, #ffffff;
-	labelOffset: 20;
+	labelOffset: 30;
 	thumbSkin: ClassReference("org.bigbluebutton.skins.SliderThumbRoundedSkin");
 	trackSkin: ClassReference("org.bigbluebutton.skins.SliderTrackColoredSkin");
 
