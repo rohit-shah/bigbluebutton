@@ -923,7 +923,7 @@ Alert {
 	dropShadowEnabled: false;
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
-.lightBlueButtonStyle{
+.presentationLightBlueButtonStyle,.lightBlueButtonStyle{
 	color: #ffffff;
 	disabledColor: #ffffff;
 	textRollOverColor: #ffffff;
@@ -935,7 +935,9 @@ Alert {
 	dropShadowEnabled: false;
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
-
+.presentationLightBlueButtonStyle{
+	icon: ClassReference("org.bigbluebutton.skins.UploadButtonIconSkin");
+}
 
 .listLikeDatagridStyle{
 	horizontalGridLines: false;
