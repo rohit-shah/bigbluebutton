@@ -342,8 +342,11 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				super.updateDisplayList(w,h);
 				if(w>0&&h>0)
 				{
+					var gradientMatrix:Matrix = new Matrix();
+					gradientMatrix.createGradientBox(w, h/6, Math.PI/2);
+					
 					graphics.clear();
-					graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0x000000,0xe0dfe0,0x000000,0xecebec],[1,1,1,1,1],[90,90,90,90,90]);
+					graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0xe0dfe0,0xecebec],[1,1,1],[0,125,255],gradientMatrix,SpreadMethod.REFLECT);
 					graphics.drawRect(0,0,w,h);
 					graphics.endFill();
 				}
