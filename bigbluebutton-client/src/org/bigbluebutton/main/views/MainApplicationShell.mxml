@@ -658,7 +658,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 
 	<views:MainToolbar id="toolbar" 
 					   dock="true" 
-					   width="{width}" 
+					   width="100%" 
 					   height="{toolbarHeight}" 
 					   visible="{showToolbarOpt}" 
 					   verticalAlign="middle" 
