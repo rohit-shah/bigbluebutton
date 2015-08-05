@@ -936,6 +936,7 @@ Alert {
 	fillColors: #579fd7, #42aefc, #32a5fd, #229cfd;
 }
 .presentationLightBlueButtonStyle{
+	horizontalGap: -5;
 	icon: ClassReference("org.bigbluebutton.skins.UploadButtonIconSkin");
 }
 

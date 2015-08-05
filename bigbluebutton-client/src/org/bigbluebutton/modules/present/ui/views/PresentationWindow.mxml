@@ -620,7 +620,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 						 mouseUp="mouseDown = false" verticalScrollPolicy="off" horizontalScrollPolicy="off" tabIndex="{baseIndex+4}"/>			    
 		
 		<mx:ControlBar id="presCtrlBar" name="presCtrlBar" width="100%" height="{CONTROL_BAR_HEIGHT}" paddingTop="0" styleName="presentationWindowControlsStyle" >
-			<mx:Button id="uploadPres" visible="false" height="30" styleName="lightBlueButtonStyle"
+			<mx:Button id="uploadPres" visible="false" height="30" styleName="presentationLightBlueButtonStyle"
 					   label="{ResourceUtil.getInstance().getString('bbb.presentation.uploadPresBtn.toolTip')}"
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.presentation.uploadPresBtn.toolTip')}" 
 					   click="onUploadButtonClicked()" tabIndex="{baseIndex+5}"/>        	  
