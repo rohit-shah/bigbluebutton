@@ -913,6 +913,7 @@ Alert {
 	fontSize: 12;
 }
 .whiteButtonStyle{
+	labelPlacement: bottom;
 	cornerRadius: 5;
 	fontSize: 12;
 	color: #6e6e6e;
@@ -924,6 +925,7 @@ Alert {
 	fillColors: #ffffff, #fefefe, #fdfdfd, #fcfcfc;
 }
 .presentationLightBlueButtonStyle,.lightBlueButtonStyle{
+	labelPlacement: bottom;
 	color: #ffffff;
 	disabledColor: #ffffff;
 	textRollOverColor: #ffffff;
