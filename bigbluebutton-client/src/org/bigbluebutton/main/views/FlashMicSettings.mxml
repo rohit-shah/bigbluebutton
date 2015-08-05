@@ -25,7 +25,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				styleName="presentationFileUploadWindowStyle"
 				showCloseButton="false" 
 				close="onCancelClicked()" 
-				keyDown="handleKeyDown(event)">
+				keyDown="handleKeyDown(event)" xmlns:common="org.bigbluebutton.common.*">
 	
 	<mate:Listener type="{FlashEchoTestStartedEvent.ECHO_TEST_STARTED}" method="handleFlashEchoTestStartedEvent" />	
 	<mate:Listener type="{FlashEchoTestStoppedEvent.ECHO_TEST_STOPPED}" method="handleFlashEchoTestStoppedEvent" />
@@ -363,12 +363,12 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 									 dataProvider="{microphoneList}" change="selectMicrophone(event)"
 									 height="30" width="100%" tabIndex="{baseIndex+2}" 
 									 toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.comboMicList.toolTip')}" />
-						<mx:HSlider id="micRecordVolume" width="100%" height="30"
-									maximum="100" snapInterval="1"  styleName="hSliderStyle"          
-									labels="[0%,{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.label')},100%]"
-									liveDragging="true" change="changeRecordVolume(event);"
-									value="60" tabIndex="{baseIndex+3}"
-									toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.toolTip')}" />                           
+						<common:BBBHSlider id="micRecordVolume" width="100%" height="30"
+										   maximum="100" snapInterval="1"  styleName="hSliderStyle"          
+										   labels="[0%,{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.label')},100%]"
+										   liveDragging="true" change="changeRecordVolume(event);"
+										   value="60" tabIndex="{baseIndex+3}"
+										   toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.micRecordVolume.toolTip')}" />                           
 					</mx:HBox>
 					<mx:ProgressBar id="micLevel" minimum="0" maximum="100" direction="right" label="" styleName="progressBarStyle"
 									mode="manual" visible="true" width="100%" height="12" verticalGap="-20" 
@@ -434,7 +434,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					   styleName="whiteButtonStyle"
 					   click="onCancelClicked()" tabIndex="{baseIndex+10}"
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.cancel.toolTip')}"/>
-
+			
 			<mx:Button id="echoTestButton" label="{ResourceUtil.getInstance().getString('bbb.micSettings.nextButton')}" 
 					   click="echoTestButtonClickHandler()" styleName="lightBlueButtonStyle"
 					   toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.nextButton')}"
