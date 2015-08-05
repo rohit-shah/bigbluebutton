@@ -983,9 +983,15 @@ Alert {
 	barSkin: ClassReference("org.bigbluebutton.skins.ProgresBarRoundedSkin");
 	trackSkin: ClassReference("org.bigbluebutton.skins.ProgressTrackRoundedSkin");
 }
+.labelLightStyle {
+	color: #9ba1ae;
+	fontSize: 8;
+	fontFamily: Avenir-Light;
+}
 .hSliderStyle {
 	trackColors: #eeeeee, #ffffff;
 	labelOffset: 35;
+	labelStyleName: "labelLightStyle";
 	thumbSkin: ClassReference("org.bigbluebutton.skins.SliderThumbRoundedSkin");
 	trackSkin: ClassReference("org.bigbluebutton.skins.SliderTrackColoredSkin");
 
