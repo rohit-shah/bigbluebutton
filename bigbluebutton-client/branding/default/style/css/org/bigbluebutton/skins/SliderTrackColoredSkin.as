@@ -18,7 +18,7 @@ package org.bigbluebutton.skins
 			super.updateDisplayList(unscaledWidth, unscaledHeight);
 			graphics.clear();
 			graphics.beginFill(0xc0c7d5);
-			graphics.drawRect(0,unscaledHeight/4,unscaledWidth, unscaledHeight/2);
+			graphics.drawRect(0,unscaledHeight/2-unscaledHeight/8,unscaledWidth, unscaledHeight/4);
 			graphics.endFill();
 			if(this.parent!=null)
 			{
@@ -31,7 +31,7 @@ package org.bigbluebutton.skins
 						owner.addEventListener(SliderEvent.CHANGE, slider_changeHandler);
 					}
 					graphics.beginFill(0x2ba1fd);
-					graphics.drawRect(0,unscaledHeight/4,owner.value/owner.maximum*unscaledWidth, unscaledHeight/2);
+					graphics.drawRect(0,unscaledHeight/2-unscaledHeight/8,owner.value/owner.maximum*unscaledWidth, unscaledHeight/4);
 					graphics.endFill();
 				}
 			}
