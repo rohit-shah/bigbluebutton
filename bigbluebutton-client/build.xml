@@ -85,6 +85,7 @@
 				swf-version="13" 
 				optimize="true">
 			</mxmlc>
+			<include name="libs/BBBIcon" />
 		</sequential>
 	</target>
 	 <target name="branding-black" depends="init-ant-contrib">
