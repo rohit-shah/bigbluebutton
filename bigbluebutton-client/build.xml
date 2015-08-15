@@ -78,15 +78,15 @@
 		
 	<target name="branding" depends="init-ant-contrib">
 		<sequential>
-			<compiler.library-path dir="${BASE_DIR}/lib" append="true">
-				<include name="BBBIcon.swc"/>
-			</compiler.library-path>
 			<mxmlc file="${BASE_DIR}/branding/default/style/css/${themeFile}" 
 				output="${OUTPUT_DIR}/branding/css/${themeFile}.swf" 
 				debug="${DEBUG}" 
 				mxml.compatibility-version="3.0.0" 
 				swf-version="13" 
 				optimize="true">
+				<compiler.library-path dir="${BASE_DIR}/lib" append="true">
+								<include name="BBBIcon.swc"/>
+							</compiler.library-path>
 			</mxmlc>
 		</sequential>
 	</target>
