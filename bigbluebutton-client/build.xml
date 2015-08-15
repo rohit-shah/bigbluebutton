@@ -78,6 +78,7 @@
 		
 	<target name="branding" depends="init-ant-contrib">
 		<sequential>
+			<include name="libs/BBBIcon.swc" />
 			<mxmlc file="${BASE_DIR}/branding/default/style/css/${themeFile}" 
 				output="${OUTPUT_DIR}/branding/css/${themeFile}.swf" 
 				debug="${DEBUG}" 
@@ -85,7 +86,6 @@
 				swf-version="13" 
 				optimize="true">
 			</mxmlc>
-			<include name="libs/BBBIcon" />
 		</sequential>
 	</target>
 	 <target name="branding-black" depends="init-ant-contrib">
