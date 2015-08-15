@@ -14,7 +14,7 @@
 				super.updateDisplayList(w,h);
 				if(owner!=null&&owner is UIComponent)
 				{
-					var _iconClass:Class=UIComponent(owner).getStyle("iconClass");
+					var _iconClass:Class=UIComponent(owner).getStyle("textFieldClass");
 					
 					if(_iconClass!=null)
 					{

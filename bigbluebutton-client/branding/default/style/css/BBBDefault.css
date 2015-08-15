@@ -1001,8 +1001,7 @@ Alert {
 	trackSkin: ClassReference("org.bigbluebutton.skins.SliderTrackColoredSkin");
 
 }
-.settingButtonStyle{
-	iconClass: ClassReference("bbb.icons.SettingsIcon");
+.flashButtonStyle{
 	icon: ClassReference("org.bigbluebutton.skins.IconUI");
 }
 /*new styles*/
