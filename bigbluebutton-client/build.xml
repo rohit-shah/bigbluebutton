@@ -84,7 +84,7 @@
 				mxml.compatibility-version="3.0.0" 
 				swf-version="13" 
 				optimize="true">
-				<compiler.library-path dir="${BASE_DIR}/lib" append="true">
+				<compiler.library-path dir="${BASE_DIR}/libs" append="true">
 								<include name="BBBIcon.swc"/>
 							</compiler.library-path>
 			</mxmlc>
