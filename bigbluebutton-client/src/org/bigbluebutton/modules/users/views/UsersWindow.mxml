@@ -536,7 +536,7 @@
     </mx:DataGrid>
 	
 	<mx:ControlBar width="100%">
-		<mx:Button id="raiseHandBtn" toggle="true" icon="{images.hand_new}" selected="{UserManager.getInstance().getConference().isMyHandRaised}"
+		<mx:Button id="raiseHandBtn" toggle="true" textFieldClass="bbb.icons.HandIcon" styleName="flashButtonStyle"  selected="{UserManager.getInstance().getConference().isMyHandRaised}"
 				   width="30" height="30" toolTip="{ResourceUtil.getInstance().getString('bbb.users.raiseHandBtn.toolTip')}" click="raiseHand()"
 				   visible="true" tabIndex="{partOptions.baseTabIndex+10}" />
 		<mx:Button id="settingsBtn" textFieldClass="bbb.icons.SettingsIcon" styleName="flashButtonStyle"  width="30" height="30"

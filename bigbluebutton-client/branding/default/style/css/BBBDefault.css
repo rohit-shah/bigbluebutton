@@ -1003,5 +1003,6 @@ Alert {
 }
 .flashButtonStyle{
 	icon: ClassReference("org.bigbluebutton.skins.IconUI");
+	borderColor: #B6B7B7;
 }
 /*new styles*/
