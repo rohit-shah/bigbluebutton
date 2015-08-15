@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:UIComponent xmlns:mx="http://www.adobe.com/2006/mxml" 
+				minWidth="20" minHeight="20">
+	<mx:Script>
+		<![CDATA[
+			import mx.core.UIComponent;
+			
+			[Bindable]
+			private var icon:MovieClip;
+			
+			
+			override protected function updateDisplayList(w:Number, h:Number):void
+			{
+				super.updateDisplayList(w,h);
+				if(owner!=null&&owner is UIComponent)
+				{
+					var _iconClass:Class=UIComponent(owner).getStyle("iconClass");
+					
+					if(_iconClass!=null)
+					{
+						if(icon==null)
+						{
+							icon=new _iconClass();
+							addChild(icon);
+						}
+						icon.width=w;
+						icon.height=h;
+					}
+				}
+				
+			}
+			
+		]]>
+	</mx:Script>
+	<mx:states>
+		<mx:State name="up"/>
+		<mx:State name="over"/>
+		<mx:State name="down"/>
+	</mx:states>
+</mx:UIComponent>
