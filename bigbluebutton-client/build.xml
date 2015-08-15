@@ -78,7 +78,7 @@
 		
 	<target name="branding" depends="init-ant-contrib">
 		<sequential>
-			<include name="${BASE_DIR}/libs/BBBIcon.swc" />
+			<include file="${BASE_DIR}/libs/BBBIcon.swc" />
 			<mxmlc file="${BASE_DIR}/branding/default/style/css/${themeFile}" 
 				output="${OUTPUT_DIR}/branding/css/${themeFile}.swf" 
 				debug="${DEBUG}" 
