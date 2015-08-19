@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:UIComponent xmlns:mx="http://www.adobe.com/2006/mxml" 
-				minWidth="20" minHeight="20">
+				minWidth="10" minHeight="10">
 	<mx:Script>
 		<![CDATA[
 			import mx.core.UIComponent;
@@ -28,6 +28,8 @@
 						{
 							icon.width=icon.width*sc;
 							icon.height=icon.height*sc;
+							icon.x=w-icon.width;
+							icon.y=h-icon.height;
 						}
 					}
 				}
