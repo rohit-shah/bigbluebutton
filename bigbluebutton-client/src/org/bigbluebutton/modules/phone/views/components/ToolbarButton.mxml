@@ -25,6 +25,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		   textFieldClass="bbb.icons.HeadPhonesIcon" styleName="flashWhiteButtonStyle"
 		   mouseOver = "mouseOverHandler(event)"
 		   mouseOut = "mouseOutHandler(event)"
+		   initialize="button_initializeHandler(event)"
 		   creationComplete="onCreationComplete()"
 		   height="24"
 		   toolTip="{ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start')}"
@@ -40,6 +41,11 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mx:Script>
 		<![CDATA[
 			import com.asfusion.mate.events.Dispatcher;
+			
+			import mx.events.FlexEvent;
+			
+			import bbb.icons.GreenCheckIcon;
+			import bbb.icons.RedCrossIcon;
 			
 			import org.bigbluebutton.core.UsersUtil;
 			import org.bigbluebutton.core.managers.UserManager;
@@ -225,10 +231,28 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				this.setFocus();
 			}
 			
+			[Bindable]
+			public var innactiveUI:MovieClip;
+			[Bindable]
+			public var activeUI:MovieClip;
+
+			protected function button_initializeHandler(event:FlexEvent):void
+			{
+				innactiveUI=new RedCrossIcon;
+				activeUI=new GreenCheckIcon;
+				innactiveUI.visible=activeUI.visible=false;
+				
+				activeUI.width=innactiveUI.width=8;
+				activeUI.height=innactiveUI.height=8;
+				activeUI.x=innactiveUI.x=16;
+				activeUI.y=innactiveUI.y=16;
+
+				addChild(innactiveUI);
+				addChild(activeUI);
+
+			}
 			
 		]]>
 	</mx:Script>
-	<mx:UIComponent id="innactiveUI" visible="false" right="2" bottom="2" width="10" height="10"/>
-	<mx:UIComponent id="activeUI" visible="false" right="2" bottom="2" width="10" height="10"/>
 	
 </mx:Button>
