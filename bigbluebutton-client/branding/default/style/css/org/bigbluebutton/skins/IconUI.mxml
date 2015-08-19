@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:UIComponent xmlns:mx="http://www.adobe.com/2006/mxml" 
-				minWidth="10" minHeight="10">
+				minWidth="20" minHeight="20">
 	<mx:Script>
 		<![CDATA[
 			import mx.core.UIComponent;
@@ -15,6 +15,8 @@
 				if(owner!=null&&owner is UIComponent)
 				{
 					var _iconClass:Class=UIComponent(owner).getStyle("textFieldClass");
+					w=Math.min(w,owner.width*0.8);
+					h=Math.min(h,owner.height*0.8);
 					
 					if(_iconClass!=null)
 					{
