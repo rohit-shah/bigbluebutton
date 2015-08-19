@@ -257,7 +257,6 @@ DataGrid {
   icon: Embed('assets/images/triangle.png');    
 }
 .deskshareDefaultButtonStyle, .deskshareOffButtonStyle, .deskshareOnButtonStyle, .voiceConfDefaultButtonStyle, .voiceConfActiveButtonStyle, .voiceConfInactiveButtonStyle, .webcamDefaultButtonStyle, .webcamOnButtonStyle, .webcamOffButtonStyle {
-	borderStyle: none;
 	borderColor: #ffffff;
 	cornerRadius: 4;
 	fillColors: #ffffff, #ffffff;
