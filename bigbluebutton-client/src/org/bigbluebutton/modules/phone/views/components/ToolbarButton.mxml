@@ -22,6 +22,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 
 <mx:Button xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:mate="http://mate.asfusion.com/"
 		   click="startPhone()"
+		   textFieldClass="bbb.icons.ComputerIcon" styleName="flashWhiteButtonStyle"
 		   mouseOver = "mouseOverHandler(event)"
 		   mouseOut = "mouseOutHandler(event)"
 		   creationComplete="onCreationComplete()"
@@ -43,6 +44,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			import mx.events.FlexEvent;
 			
 			import bbb.icons.GreenCheckIcon;
+			import bbb.icons.LogOutIcon;
 			
 			import org.bigbluebutton.core.UsersUtil;
 			import org.bigbluebutton.core.managers.UserManager;
@@ -228,19 +230,10 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				this.setFocus();
 			}
 			
-			protected function innactiveUI_creationCompleteHandler(event:FlexEvent):void
-			{
-				
-			}
-			
-			protected function activeUI_creationCompleteHandler(event:FlexEvent):void
-			{
-				activeUI.addChild(new GreenCheckIcon);
-			}
 			
 		]]>
 	</mx:Script>
-	<mx:UIComponent id="innactiveUI" visible="false" right="2" bottom="2" width="30%" height="30%" creationComplete="innactiveUI_creationCompleteHandler(event)"/>
-	<mx:UIComponent id="activeUI" visible="false" right="2" bottom="2" width="30%" height="30%" creationComplete="activeUI_creationCompleteHandler(event)"/>
+	<mx:Image source="bbb.icons.GreenCheckIcon" id="innactiveUI" visible="false" right="2" bottom="2" width="30%" height="30%"/>
+	<mx:Image source="bbb.icons.GreenCheckIcon" id="activeUI" visible="false" right="2" bottom="2" width="30%" height="30%" creationComplete="activeUI_creationCompleteHandler(event)"/>
 	
 </mx:Button>
