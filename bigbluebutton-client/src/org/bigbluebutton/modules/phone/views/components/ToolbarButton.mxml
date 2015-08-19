@@ -22,7 +22,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 
 <mx:Button xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:mate="http://mate.asfusion.com/"
 		   click="startPhone()"
-		   textFieldClass="bbb.icons.ComputerIcon" styleName="flashWhiteButtonStyle"
+		   textFieldClass="bbb.icons.HeadPhonesIcon" styleName="flashWhiteButtonStyle"
 		   mouseOver = "mouseOverHandler(event)"
 		   mouseOut = "mouseOutHandler(event)"
 		   creationComplete="onCreationComplete()"
@@ -40,11 +40,6 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mx:Script>
 		<![CDATA[
 			import com.asfusion.mate.events.Dispatcher;
-			
-			import mx.events.FlexEvent;
-			
-			import bbb.icons.GreenCheckIcon;
-			import bbb.icons.LogOutIcon;
 			
 			import org.bigbluebutton.core.UsersUtil;
 			import org.bigbluebutton.core.managers.UserManager;
@@ -233,7 +228,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 		]]>
 	</mx:Script>
-	<mx:Image source="bbb.icons.GreenCheckIcon" id="innactiveUI" visible="false" right="2" bottom="2" width="30%" height="30%"/>
-	<mx:Image source="bbb.icons.GreenCheckIcon" id="activeUI" visible="false" right="2" bottom="2" width="30%" height="30%"/>
+	<mx:Image source="bbb.icons.GreenCheckIcon" id="innactiveUI" visible="false" right="2" bottom="2" width="10" height="10"/>
+	<mx:Image source="bbb.icons.GreenCheckIcon" id="activeUI" visible="false" right="2" bottom="2" width="10" height="10"/>
 	
 </mx:Button>
