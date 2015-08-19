@@ -24,8 +24,11 @@
 							addChild(icon);
 						}
 						var sc:Number=Math.min(w/icon.width,h/icon.height);
-						icon.width=icon.width*sc;
-						icon.height=icon.height*sc;
+						if(sc>0)
+						{
+							icon.width=icon.width*sc;
+							icon.height=icon.height*sc;
+						}
 					}
 				}
 				
