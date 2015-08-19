@@ -388,7 +388,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				   styleName="helpLinkButtonStyle" tabIndex="{baseIndex+numButtons+14}" 
 				   toolTip="{ResourceUtil.getInstance().getString('bbb.mainToolbar.helpBtn')}"
 				   accessibilityName="{ResourceUtil.getInstance().getString('bbb.micSettings.access.helpButton')}"/>
-	<mx:Button label="" id="btnLogout" styleName="logoutButtonStyle" textFieldClass="bbb.icons.LogOutIcon" styleName="flashButtonStyle"
+	<mx:Button label="" id="btnLogout" textFieldClass="bbb.icons.LogOutIcon" styleName="flashButtonStyle"
 			   toolTip="{ResourceUtil.getInstance().getString('bbb.mainToolbar.logoutBtn.toolTip')}" right="10" click="confirmLogout()" height="22"
 			   tabIndex="{baseIndex+numButtons+15}" />
 </mx:ApplicationControlBar>
