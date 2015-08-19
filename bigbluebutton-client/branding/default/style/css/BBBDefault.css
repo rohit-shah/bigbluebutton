@@ -1015,7 +1015,7 @@ Alert {
 
 .flashWhiteButtonStyle{
 	icon: ClassReference("org.bigbluebutton.skins.IconUI");
-	borderStyle: none;
+	borderColor: #ffffff;
 	cornerRadius: 4;
 	fillColors: #ffffff, #ffffff;
 }
