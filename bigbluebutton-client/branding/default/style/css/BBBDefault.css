@@ -256,7 +256,11 @@ DataGrid {
 .whiteboardTriangleButtonStyle {
   icon: Embed('assets/images/triangle.png');    
 }
-
+.deskshareDefaultButtonStyle, .deskshareOffButtonStyle, .deskshareOnButtonStyle, .voiceConfDefaultButtonStyle, .voiceConfActiveButtonStyle, .voiceConfInactiveButtonStyle, .webcamDefaultButtonStyle, .webcamOnButtonStyle, .webcamOffButtonStyle {
+	borderStyle: none;
+	cornerRadius: 4;
+	fillColors: #ffffff, #ffffff;
+}
 .voiceConfDefaultButtonStyle {
   icon: Embed('assets/images/headset.png');    
 }
