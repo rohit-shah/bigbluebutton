@@ -23,8 +23,9 @@
 							icon=new _iconClass();
 							addChild(icon);
 						}
-						icon.width=w;
-						icon.height=h;
+						var sc:Number=Math.min(w/icon.width,h/icon.height);
+						icon.width=icon.width*sc;
+						icon.height=icon.height*sc;
 					}
 				}
 				

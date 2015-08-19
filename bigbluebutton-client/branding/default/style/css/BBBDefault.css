@@ -1008,4 +1008,11 @@ Alert {
 	borderThickness: 1;
 	cornerRadius: 8;
 }
+
+.flashWhiteButtonStyle{
+	icon: ClassReference("org.bigbluebutton.skins.IconUI");
+	borderStyle: none;
+	cornerRadius: 4;
+	fillColors: #ffffff, #ffffff;
+}
 /*new styles*/
