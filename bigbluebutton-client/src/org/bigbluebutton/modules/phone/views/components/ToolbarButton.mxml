@@ -27,7 +27,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		   mouseOut = "mouseOutHandler(event)"
 		   initialize="button_initializeHandler(event)"
 		   creationComplete="onCreationComplete()"
-		   height="24"
+		   height="24" 
 		   toolTip="{ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start')}"
 		   implements="org.bigbluebutton.common.IBbbToolbarComponent">
 	
@@ -240,7 +240,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			{
 				innactiveUI=new RedCrossIcon;
 				activeUI=new GreenCheckIcon;
-				innactiveUI.visible=activeUI.visible=false;
+				/*innactiveUI.visible=activeUI.visible=false;
 				
 				activeUI.width=innactiveUI.width=8;
 				activeUI.height=innactiveUI.height=8;
@@ -248,7 +248,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				activeUI.y=innactiveUI.y=16;
 
 				addChild(innactiveUI);
-				addChild(activeUI);
+				addChild(activeUI);*/
 
 			}
 			
