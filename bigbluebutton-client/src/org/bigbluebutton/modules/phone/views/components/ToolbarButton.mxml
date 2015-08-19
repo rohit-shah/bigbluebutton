@@ -21,13 +21,11 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 -->
 
 <mx:Button xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:mate="http://mate.asfusion.com/"
-		   click="startPhone()"
-		   textFieldClass="bbb.icons.HeadPhonesIcon" styleName="flashWhiteButtonStyle"
+		   styleName="voiceConfDefaultButtonStyle" click="startPhone()"
 		   mouseOver = "mouseOverHandler(event)"
 		   mouseOut = "mouseOutHandler(event)"
-		   initialize="button_initializeHandler(event)"
 		   creationComplete="onCreationComplete()"
-		   height="24" 
+		   height="24"
 		   toolTip="{ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start')}"
 		   implements="org.bigbluebutton.common.IBbbToolbarComponent">
 	
@@ -41,11 +39,6 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 	<mx:Script>
 		<![CDATA[
 			import com.asfusion.mate.events.Dispatcher;
-			
-			import mx.events.FlexEvent;
-			
-			import bbb.icons.GreenCheckIcon;
-			import bbb.icons.RedCrossIcon;
 			
 			import org.bigbluebutton.core.UsersUtil;
 			import org.bigbluebutton.core.managers.UserManager;
@@ -109,28 +102,16 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			private function mouseOverHandler(event:MouseEvent):void {
 				if(_currentState == ACTIVE_STATE)
-				{
-					innactiveUI.visible=true; 
-					activeUI.visible=false;
-				}
+					this.styleName = "voiceConfInactiveButtonStyle";
 				else
-				{
-					innactiveUI.visible=false; 
-					activeUI.visible=true;
-				}
+					this.styleName = "voiceConfActiveButtonStyle"; 			
 			}
 			
 			private function mouseOutHandler(event:MouseEvent):void {
 				if(_currentState == ACTIVE_STATE)
-				{
-					innactiveUI.visible=false; 
-					activeUI.visible=true;
-				}
+					this.styleName = "voiceConfActiveButtonStyle";
 				else
-				{
-					innactiveUI.visible=false; 
-					activeUI.visible=false;
-				}
+					this.styleName = "voiceConfDefaultButtonStyle";			
 			}
 			
 			private function onCreationComplete():void {
@@ -164,8 +145,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				
 				trace(LOG + "onUserJoinedConference enabled=[" + enabled + "] selected=[" + selected + "]");
 				_currentState = ACTIVE_STATE;
-				innactiveUI.visible=false; 
-				activeUI.visible=true;
+				this.styleName = "voiceConfActiveButtonStyle";
 				this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.stop');	        
 			}
 			
@@ -174,8 +154,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				this.enabled = true;
 				trace(LOG + "onUserLeftConference enabled=[" + enabled + "] selected=[" + selected + "]");
 				_currentState = DEFAULT_STATE;
-				innactiveUI.visible=false; 
-				activeUI.visible=false;
+				this.styleName = "voiceConfDefaultButtonStyle";
 				this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start');    
 			}
 			
@@ -209,8 +188,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				this.enabled = true;
 				trace(LOG + "onClosedAudioSelection enabled=[" + enabled + "] selected=[" + selected + "]");
 				_currentState = DEFAULT_STATE;
-				innactiveUI.visible=false; 
-				activeUI.visible=false;
+				this.styleName = "voiceConfDefaultButtonStyle";
 				this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start');
 			}
 			
@@ -230,29 +208,6 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function joinVoiceFocusHead(e:BBBEvent):void{
 				this.setFocus();
 			}
-			
-			[Bindable]
-			public var innactiveUI:MovieClip;
-			[Bindable]
-			public var activeUI:MovieClip;
-
-			protected function button_initializeHandler(event:FlexEvent):void
-			{
-				innactiveUI=new RedCrossIcon;
-				activeUI=new GreenCheckIcon;
-				/*innactiveUI.visible=activeUI.visible=false;
-				
-				activeUI.width=innactiveUI.width=8;
-				activeUI.height=innactiveUI.height=8;
-				activeUI.x=innactiveUI.x=16;
-				activeUI.y=innactiveUI.y=16;
-
-				addChild(innactiveUI);
-				addChild(activeUI);*/
-
-			}
-			
 		]]>
 	</mx:Script>
-	
 </mx:Button>
