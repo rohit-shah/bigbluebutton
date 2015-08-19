@@ -258,7 +258,7 @@ DataGrid {
 }
 .deskshareDefaultButtonStyle, .deskshareOffButtonStyle, .deskshareOnButtonStyle, .voiceConfDefaultButtonStyle, .voiceConfActiveButtonStyle, .voiceConfInactiveButtonStyle, .webcamDefaultButtonStyle, .webcamOnButtonStyle, .webcamOffButtonStyle {
 	borderStyle: none;
-	borderAlpha: 0;
+	borderColor: #ffffff;
 	cornerRadius: 4;
 	fillColors: #ffffff, #ffffff;
 }
