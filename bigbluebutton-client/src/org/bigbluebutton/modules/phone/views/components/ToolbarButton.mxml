@@ -21,24 +21,28 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 -->
 
 <mx:Button xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:mate="http://mate.asfusion.com/"
-           styleName="voiceConfDefaultButtonStyle" click="startPhone()"
-	mouseOver = "mouseOverHandler(event)"
-	mouseOut = "mouseOutHandler(event)"
-	creationComplete="onCreationComplete()"
-	height="24"
-	toolTip="{ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start')}"
-	implements="org.bigbluebutton.common.IBbbToolbarComponent">
-
-  <mate:Listener type="{FlashLeftVoiceConferenceEvent.LEFT_VOICE_CONFERENCE}" method="handleFlashLeftVoiceConferenceEvent" />
-  <mate:Listener type="{FlashJoinedVoiceConferenceEvent.JOINED_VOICE_CONFERENCE}" method="handleFlashJoinedVoiceConferenceEvent" />
-  <mate:Listener type="{FlashJoinedListenOnlyVoiceConferenceEvent.JOINED_LISTEN_ONLY_VOICE_CONFERENCE}" method="handleFlashJoinedListenOnlyConferenceEvent" />
-  <mate:Listener type="{WebRTCCallEvent.WEBRTC_CALL_STARTED}" method="handleWebRTCCallStartedEvent" />
-  <mate:Listener type="{WebRTCCallEvent.WEBRTC_CALL_ENDED}" method="handleWebRTCCallEndedEvent" />
-  <mate:Listener type="{AudioSelectionWindowEvent.CLOSED_AUDIO_SELECTION}" method="handleClosedAudioSelectionWindowEvent" />
-  
+		   click="startPhone()"
+		   mouseOver = "mouseOverHandler(event)"
+		   mouseOut = "mouseOutHandler(event)"
+		   creationComplete="onCreationComplete()"
+		   height="24"
+		   toolTip="{ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start')}"
+		   implements="org.bigbluebutton.common.IBbbToolbarComponent">
+	
+	<mate:Listener type="{FlashLeftVoiceConferenceEvent.LEFT_VOICE_CONFERENCE}" method="handleFlashLeftVoiceConferenceEvent" />
+	<mate:Listener type="{FlashJoinedVoiceConferenceEvent.JOINED_VOICE_CONFERENCE}" method="handleFlashJoinedVoiceConferenceEvent" />
+	<mate:Listener type="{FlashJoinedListenOnlyVoiceConferenceEvent.JOINED_LISTEN_ONLY_VOICE_CONFERENCE}" method="handleFlashJoinedListenOnlyConferenceEvent" />
+	<mate:Listener type="{WebRTCCallEvent.WEBRTC_CALL_STARTED}" method="handleWebRTCCallStartedEvent" />
+	<mate:Listener type="{WebRTCCallEvent.WEBRTC_CALL_ENDED}" method="handleWebRTCCallEndedEvent" />
+	<mate:Listener type="{AudioSelectionWindowEvent.CLOSED_AUDIO_SELECTION}" method="handleClosedAudioSelectionWindowEvent" />
+	
 	<mx:Script>
 		<![CDATA[
 			import com.asfusion.mate.events.Dispatcher;
+			
+			import mx.events.FlexEvent;
+			
+			import bbb.icons.GreenCheckIcon;
 			
 			import org.bigbluebutton.core.UsersUtil;
 			import org.bigbluebutton.core.managers.UserManager;
@@ -57,8 +61,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			import org.bigbluebutton.modules.phone.events.WebRTCCallEvent;
 			import org.bigbluebutton.util.i18n.ResourceUtil;
 			
-      private static const LOG:String = "Phone::ToolbarButton - ";
-      
+			private static const LOG:String = "Phone::ToolbarButton - ";
+			
 			private var dispatcher:Dispatcher = new Dispatcher();
 			private var mic:Microphone;
 			
@@ -102,16 +106,28 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			
 			private function mouseOverHandler(event:MouseEvent):void {
 				if(_currentState == ACTIVE_STATE)
-          this.styleName = "voiceConfInactiveButtonStyle";
+				{
+					innactiveUI.visible=true; 
+					activeUI.visible=false;
+				}
 				else
-          this.styleName = "voiceConfActiveButtonStyle"; 			
+				{
+					innactiveUI.visible=false; 
+					activeUI.visible=true;
+				}
 			}
-
+			
 			private function mouseOutHandler(event:MouseEvent):void {
 				if(_currentState == ACTIVE_STATE)
-          this.styleName = "voiceConfActiveButtonStyle";
+				{
+					innactiveUI.visible=false; 
+					activeUI.visible=true;
+				}
 				else
-          this.styleName = "voiceConfDefaultButtonStyle";			
+				{
+					innactiveUI.visible=false; 
+					activeUI.visible=false;
+				}
 			}
 			
 			private function onCreationComplete():void {
@@ -138,60 +154,63 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					}
 				}
 			}
-
-      private function onUserJoinedConference():void {
-        this.selected = true;
-        this.enabled = true;
-
-        trace(LOG + "onUserJoinedConference enabled=[" + enabled + "] selected=[" + selected + "]");
-        _currentState = ACTIVE_STATE;
-        this.styleName = "voiceConfActiveButtonStyle";
-        this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.stop');	        
-      }
-      
-      private function onUserLeftConference():void {
-        this.selected = false;
-        this.enabled = true;
-        trace(LOG + "onUserLeftConference enabled=[" + enabled + "] selected=[" + selected + "]");
-        _currentState = DEFAULT_STATE;
-        this.styleName = "voiceConfDefaultButtonStyle";
-        this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start');    
-      }
-      
-      private function handleFlashJoinedVoiceConferenceEvent(event:FlashJoinedVoiceConferenceEvent):void {
-        trace(LOG + "User has joined the conference using flash");
-        onUserJoinedConference();
-      }
-      	
-      private function handleFlashJoinedListenOnlyConferenceEvent(event:FlashJoinedListenOnlyVoiceConferenceEvent):void {
-        trace(LOG + "User has joined the listen only conference using flash");
-        onUserJoinedConference();
-      }
-      
-      private function handleFlashLeftVoiceConferenceEvent(event:FlashLeftVoiceConferenceEvent):void {
-        trace(LOG + "User has left the conference using flash");
-        onUserLeftConference();
-      }
-      
-      private function handleWebRTCCallStartedEvent(event: WebRTCCallEvent):void {
-        trace(LOG + "User has joined the conference using webrtc");
-        onUserJoinedConference();
-      }
-						
+			
+			private function onUserJoinedConference():void {
+				this.selected = true;
+				this.enabled = true;
+				
+				trace(LOG + "onUserJoinedConference enabled=[" + enabled + "] selected=[" + selected + "]");
+				_currentState = ACTIVE_STATE;
+				innactiveUI.visible=false; 
+				activeUI.visible=true;
+				this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.stop');	        
+			}
+			
+			private function onUserLeftConference():void {
+				this.selected = false;
+				this.enabled = true;
+				trace(LOG + "onUserLeftConference enabled=[" + enabled + "] selected=[" + selected + "]");
+				_currentState = DEFAULT_STATE;
+				innactiveUI.visible=false; 
+				activeUI.visible=false;
+				this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start');    
+			}
+			
+			private function handleFlashJoinedVoiceConferenceEvent(event:FlashJoinedVoiceConferenceEvent):void {
+				trace(LOG + "User has joined the conference using flash");
+				onUserJoinedConference();
+			}
+			
+			private function handleFlashJoinedListenOnlyConferenceEvent(event:FlashJoinedListenOnlyVoiceConferenceEvent):void {
+				trace(LOG + "User has joined the listen only conference using flash");
+				onUserJoinedConference();
+			}
+			
+			private function handleFlashLeftVoiceConferenceEvent(event:FlashLeftVoiceConferenceEvent):void {
+				trace(LOG + "User has left the conference using flash");
+				onUserLeftConference();
+			}
+			
+			private function handleWebRTCCallStartedEvent(event: WebRTCCallEvent):void {
+				trace(LOG + "User has joined the conference using webrtc");
+				onUserJoinedConference();
+			}
+			
 			private function handleWebRTCCallEndedEvent(event:WebRTCCallEvent):void {
-        trace(LOG + "User has left the conference using webrtc");
-        onUserLeftConference();
+				trace(LOG + "User has left the conference using webrtc");
+				onUserLeftConference();
 			}
 			
 			private function handleClosedAudioSelectionWindowEvent(event:AudioSelectionWindowEvent):void {
 				this.selected = false;
 				this.enabled = true;
-        trace(LOG + "onClosedAudioSelection enabled=[" + enabled + "] selected=[" + selected + "]");
+				trace(LOG + "onClosedAudioSelection enabled=[" + enabled + "] selected=[" + selected + "]");
 				_currentState = DEFAULT_STATE;
-        this.styleName = "voiceConfDefaultButtonStyle";
+				innactiveUI.visible=false; 
+				activeUI.visible=false;
 				this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start');
 			}
-				
+			
 			//For whatever reason the tooltip does not update when localization is changed dynamically. Overrideing it here
 			override protected function resourcesChanged():void {
 				this.toolTip = ResourceUtil.getInstance().getString('bbb.toolbar.phone.toolTip.start');
@@ -208,6 +227,20 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function joinVoiceFocusHead(e:BBBEvent):void{
 				this.setFocus();
 			}
+			
+			protected function innactiveUI_creationCompleteHandler(event:FlexEvent):void
+			{
+				
+			}
+			
+			protected function activeUI_creationCompleteHandler(event:FlexEvent):void
+			{
+				activeUI.addChild(new GreenCheckIcon);
+			}
+			
 		]]>
 	</mx:Script>
+	<mx:UIComponent id="innactiveUI" visible="false" right="2" bottom="2" width="30%" height="30%" creationComplete="innactiveUI_creationCompleteHandler(event)"/>
+	<mx:UIComponent id="activeUI" visible="false" right="2" bottom="2" width="30%" height="30%" creationComplete="activeUI_creationCompleteHandler(event)"/>
+	
 </mx:Button>
