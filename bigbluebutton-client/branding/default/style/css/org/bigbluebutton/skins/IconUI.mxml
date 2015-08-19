@@ -31,8 +31,8 @@
 						{
 							icon.width=icon.width*sc/2;
 							icon.height=icon.height*sc/2;
-							icon.x=width-icon.width/2;
-							icon.y=height-icon.height/2;
+							icon.x=w-icon.width/2;
+							icon.y=h-icon.height/2;
 						}
 					}
 				}
