@@ -15,14 +15,15 @@
 				if(owner!=null&&owner is UIComponent)
 				{
 					var _iconClass:Class=UIComponent(owner).getStyle("textFieldClass");
-					w=Math.min(w,owner.width*0.8);
-					h=Math.min(h,owner.height*0.8);
+					w=Math.min(w,owner.width*0.75);
+					h=Math.min(h,owner.height*0.75);
 					
 					if(_iconClass!=null)
 					{
 						if(icon==null)
 						{
 							icon=new _iconClass();
+							icon
 							addChild(icon);
 						}
 						var sc:Number=Math.min(w/icon.width,h/icon.height);
@@ -30,8 +31,8 @@
 						{
 							icon.width=icon.width*sc;
 							icon.height=icon.height*sc;
-							icon.x=w-icon.width;
-							icon.y=h-icon.height;
+							icon.x=width-icon.width;
+							icon.y=height-icon.height;
 						}
 					}
 				}
