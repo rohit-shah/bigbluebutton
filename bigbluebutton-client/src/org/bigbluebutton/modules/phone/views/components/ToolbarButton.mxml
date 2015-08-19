@@ -234,6 +234,6 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 		]]>
 	</mx:Script>
 	<mx:Image source="bbb.icons.GreenCheckIcon" id="innactiveUI" visible="false" right="2" bottom="2" width="30%" height="30%"/>
-	<mx:Image source="bbb.icons.GreenCheckIcon" id="activeUI" visible="false" right="2" bottom="2" width="30%" height="30%" creationComplete="activeUI_creationCompleteHandler(event)"/>
+	<mx:Image source="bbb.icons.GreenCheckIcon" id="activeUI" visible="false" right="2" bottom="2" width="30%" height="30%"/>
 	
 </mx:Button>
