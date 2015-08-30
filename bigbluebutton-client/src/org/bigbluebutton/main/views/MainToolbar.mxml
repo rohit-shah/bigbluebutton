@@ -151,7 +151,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 				}
 				
 				if (toolbarOptions.showHelpButton) {
-					showHelpBtn = true;
+					//showHelpBtn = true;
 				} else {
 					showHelpBtn = false;
 				}
@@ -348,7 +348,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 					gradientMatrix.createGradientBox(w, h/3, Math.PI/2,0,h/6);
 					
 					graphics.clear();
-					graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0xe0dfe0,0xecebec],[0.5,0.5,0.5],[0,125,255],gradientMatrix,SpreadMethod.REPEAT);
+					graphics.beginFill(0xd6d5d6);
+					//graphics.beginGradientFill(GradientType.LINEAR,[0xd6d5d6,0xe0dfe0,0xecebec],[0.5,0.5,0.5],[0,125,255],gradientMatrix,SpreadMethod.REPEAT);
 					graphics.drawRect(0,0,w,h);
 					graphics.endFill();
 				}
